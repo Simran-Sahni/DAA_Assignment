@@ -6,7 +6,6 @@ using namespace std;
   cout.tie(0);
 #define int long long
 #define endl "\n"
-#define all(v) v.begin(), v.end()
 #define double long double
 #define trace1(x) cerr << #x << ": " << x << endl
 #define trace2(x, y) cerr << #x << ": " << x << " | " << #y << ": " << y << endl
@@ -15,11 +14,11 @@ using namespace std;
 #define trace5(a, b, c, d, e) cerr << #a << ": " << a << " | " << #b << ": " << b << " | " << #c << ": " << c << " | " << #d << ": " << d << " | " << #e << ": " << e << endl
 #define trace6(a, b, c, d, e, f) cerr << #a << ": " << a << " | " << #b << ": " << b << " | " << #c << ": " << c << " | " << #d << ": " << d << " | " << #e << ": " << e << " | " << #f << ": " << f << endl
 const int N = 200005;
+const int INF = (1LL << 62) - 1;
 static const string LEFT = "left";
 static const string RIGHT = "right";
 static const string UP = "up";
 static const string BOTTOM = "bottom";
-
 
 class Point
 {
@@ -35,8 +34,8 @@ class Interval
 public:
   int bottom;
   int top;
-  Interval(int bottom, int top) : bottom(bottom),
-                                  top(top){};
+  Interval(int bottom, int top) : bottom(min(bottom,top)),
+                                  top(max(bottom,top)){};
 };
 
 class LineSegment
@@ -74,9 +73,6 @@ class EdgeType
 public:
   string type;
 
-  string getType() { return this->type; }
-  void setType(string type) { this->type = type; }
-
   EdgeType(string type)
   {
     if (type == LEFT or type == RIGHT or type == UP or type == BOTTOM)
@@ -95,6 +91,66 @@ public:
   Edge(Interval interval, int coord, EdgeType sideType) : interval(interval),
                                                           coord(coord),
                                                           sideType(sideType){};
+};
+
+class Stripe
+{
+public:
+  Interval x_interval;
+  Interval y_interval;
+  set<Interval> x_union;
+
+  Stripe(Interval x_interval, Interval y_interval, set<Interval> x_union) : x_interval(x_interval),
+                                                                            y_interval(y_interval),
+                                                                            x_union(x_union){};
+  int measure()
+  {
+    int ans = 0;
+    for(auto &interval : x_union)ans += (interval.top - interval.bottom);
+    return ans * (y_interval.top - y_interval.bottom);
+  }
+
+
+};
+
+class MeasureHelper
+{
+
+int measure(set<Stripe> s)
+{
+  int ans = 0;
+  for(auto interval : s)ans += interval.measure();
+  return ans;
+}
+
+set<Point> _union(set<Rectangle> r)
+{
+  set<Point> ans;
+  for(auto &rectangle : r)
+  {
+    Point p1(rectangle.x_left,rectangle.y_top);
+    Point p2(rectangle.x_left,rectangle.y_bottom);
+    Point p3(rectangle.x_right,rectangle.y_top);
+    Point p4(rectangle.x_right,rectangle.y_bottom);
+    ans.insert(p1);
+    ans.insert(p2);
+    ans.insert(p3);
+    ans.insert(p4);
+  }
+  return ans;
+}
+
+set<int> y_set(set<Rectangle> r)
+{
+  set<int> ans;
+  for(auto &rectangle : r)
+  {
+    ans.insert(rectangle.y_top);
+    ans.insert(rectangle.y_bottom);
+  }
+  return ans;
+}
+
 };
 
 int32_t main()
