@@ -34,8 +34,8 @@ class Interval
 public:
   int bottom;
   int top;
-  Interval(int bottom, int top) : bottom(min(bottom,top)),
-                                  top(max(bottom,top)){};
+  Interval(int bottom, int top) : bottom(min(bottom, top)),
+                                  top(max(bottom, top)){};
 };
 
 class LineSegment
@@ -106,51 +106,50 @@ public:
   int measure()
   {
     int ans = 0;
-    for(auto &interval : x_union)ans += (interval.top - interval.bottom);
+    for (auto &interval : x_union)
+      ans += (interval.top - interval.bottom);
     return ans * (y_interval.top - y_interval.bottom);
   }
-
-
 };
 
 class MeasureHelper
 {
 
-int measure(set<Stripe> s)
-{
-  int ans = 0;
-  for(auto interval : s)ans += interval.measure();
-  return ans;
-}
-
-set<Point> _union(set<Rectangle> r)
-{
-  set<Point> ans;
-  for(auto &rectangle : r)
+  int measure(set<Stripe> s)
   {
-    Point p1(rectangle.x_left,rectangle.y_top);
-    Point p2(rectangle.x_left,rectangle.y_bottom);
-    Point p3(rectangle.x_right,rectangle.y_top);
-    Point p4(rectangle.x_right,rectangle.y_bottom);
-    ans.insert(p1);
-    ans.insert(p2);
-    ans.insert(p3);
-    ans.insert(p4);
+    int ans = 0;
+    for (auto interval : s)
+      ans += interval.measure();
+    return ans;
   }
-  return ans;
-}
 
-set<int> y_set(set<Rectangle> r)
-{
-  set<int> ans;
-  for(auto &rectangle : r)
+  set<Point> _union(set<Rectangle> r)
   {
-    ans.insert(rectangle.y_top);
-    ans.insert(rectangle.y_bottom);
+    set<Point> ans;
+    for (auto &rectangle : r)
+    {
+      Point p1(rectangle.x_left, rectangle.y_top);
+      Point p2(rectangle.x_left, rectangle.y_bottom);
+      Point p3(rectangle.x_right, rectangle.y_top);
+      Point p4(rectangle.x_right, rectangle.y_bottom);
+      ans.insert(p1);
+      ans.insert(p2);
+      ans.insert(p3);
+      ans.insert(p4);
+    }
+    return ans;
   }
-  return ans;
-}
 
+  set<int> y_set(set<Rectangle> r)
+  {
+    set<int> ans;
+    for (auto &rectangle : r)
+    {
+      ans.insert(rectangle.y_top);
+      ans.insert(rectangle.y_bottom);
+    }
+    return ans;
+  }
 };
 
 int32_t main()
