@@ -18,61 +18,81 @@ const int N = 200005;
 
 class Point
 {
+private:
+  int x;
+  int y;
+
 public:
-  int x, y;
+  int getX() { return this->x; }
+  void setX(int x) { this->x = x; }
+  int getY() { return this->y; }
+  void setY(int y) { this->y = y; }
 
-
-  Point(int x, int y)
-  {
-    this->x = x;
-    this->y = y;
-  }
+  Point(int x, int y) : x(x),
+                        y(y){};
 };
 
 class Interval
 {
-public:
-  int bottom, top;
+private:
+  int bottom;
+  int top;
 
-  Interval(int bottom, int top)
-  {
-    this->bottom = min(bottom, top);
-    this->top = max(bottom, top);
-  }
+public:
+  int getBottom() { return this->bottom; }
+  void setBottom(int bottom) { this->bottom = bottom; }
+  int getTop() { return this->top; }
+  void setTop(int top) { this->top = top; }
+
+  Interval(int bottom, int top) : bottom(bottom),
+                                  top(top){};
 };
 
 class LineSegment
 {
-public:
+private:
   Interval line;
-  int coord;
+  int coordinate;
+
+public:
+  Interval getLine() { return this->line; }
+  void setLine(Interval line) { this->line = line; }
+  int getCoordinate() { return this->coordinate; }
+  void setCoordinate(int coordinate) { this->coordinate = coordinate; }
+  LineSegment(Interval line, int coordinate) : line(line),
+                                               coordinate(coordinate){};
 };
 
 class Rectangle
 {
+private:
+  int x_left;
+  int x_right;
+  int y_bottom;
+  int y_top;
+
+  int getX_left() { return this->x_left; }
+  void setX_left(int x_left) { this->x_left = x_left; }
+  int getX_right() { return this->x_right; }
+  void setX_right(int x_right) { this->x_right = x_right; }
+  int getY_bottom() { return this->y_bottom; }
+  void setY_bottom(int y_bottom) { this->y_bottom = y_bottom; }
+  int getY_top() { return this->y_top; }
+  void setY_top(int y_top) { this->y_top = y_top; }
+
 public:
-  int x_left, x_right, y_bottom, y_top;
+  Rectangle(int x_left, int x_right, int y_bottom, int y_top) : x_left(x_left),
+                                                                x_right(x_right),
+                                                                y_bottom(y_bottom),
+                                                                y_top(y_top){};
 
-  Rectangle(int x_left, int x_right, int y_bottom, int y_top)
-  {
-    this->x_left = min(x_left, x_right);
-    this->x_right = max(x_left, x_right);
-    this->y_bottom = min(y_bottom, y_top);
-    this->y_top = max(y_bottom, y_top);
-  }
+  Rectangle(Interval xInterval, Interval yInterval) : x_left(xInterval.getBottom()),
+                                                      x_right(xInterval.getTop()),
+                                                      y_bottom(yInterval.getBottom()),
+                                                      y_top(yInterval.getTop()){};
 
-  Rectange(Interval xInterval, Interval yInterval)
-  {
-    this->x_left = xInterval.bottom;
-    this->x_right = xInterval.top;
-    this->y_bottom = yInterval.bottom;
-    this->y_top = yInterval.top;
-  }
-
-  vector<Interval> getIntervals()
-  {
-    return vector<Interval>{Interval(x_left, x_right), Interval(y_bottom, y_top)};
-  }
+  vector<Interval> getIntervals(){return vector<Interval>{Interval(x_left, x_right), 
+  Interval(y_bottom, y_top)};}
 };
 
 static const string LEFT = "left";
@@ -84,6 +104,10 @@ class EdgeType
 {
 public:
   string type;
+
+  string getType() { return this->type; }
+  void setType(string type) { this->type = type; }
+
   EdgeType(string type)
   {
     if (type == LEFT or type == RIGHT or type == UP or type == BOTTOM)
@@ -98,14 +122,20 @@ class Edge
 public:
   Interval interval;
   int coord;
-  EdgeType side;
-  Edge(Interval interval,int coord,EdgeType side)
-  {
-    this->interval = interval;
-    this->coord = coord;
-    this->side = side;
-  }
+  EdgeType sideType;
+
+  Interval getInterval() { return this->interval; }
+  void setInterval(Interval interval) { this->interval = interval; }
+  int getCoord() { return this->coord; }
+  void setCoord(int coord) { this->coord = coord; }
+  EdgeType getSideType() { return this->sideType; }
+  void setSideType(EdgeType sideType) { this->sideType = sideType; }
+
+  Edge(Interval interval, int coord, EdgeType sideType) : interval(interval),
+                                                          coord(coord),
+                                                          sideType(sideType){};
 };
+
 int32_t main()
 {
 
@@ -116,7 +146,7 @@ int32_t main()
   IOS
 
       Point p1(1, 2);
-  cout << p1.x << endl;
+  cout << p1.getX() << endl;
 
   return 0;
 }
