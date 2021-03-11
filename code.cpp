@@ -111,7 +111,7 @@ public:
     return ans * (y_interval.top - y_interval.bottom);
   }
 };
-
+ auto cmp = [](Point a, Point b) { return a.x == b.x ? a.y < b.y : a.x < b.x;};
 class MeasureHelper
 {
 
@@ -123,9 +123,9 @@ class MeasureHelper
     return ans;
   }
 
-  set<Point> _union(set<Rectangle> r)
+  set<Point,decltype(cmp)> _union(set<Rectangle> r)
   {
-    set<Point> ans;
+    set<Point,decltype(cmp)> ans(cmp);
     for (auto &rectangle : r)
     {
       Point p1(rectangle.x_left, rectangle.y_top);
