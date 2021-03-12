@@ -1,9 +1,8 @@
 #include <bits/stdc++.h>
 using namespace std;
-#define IOS                \
-  ios::sync_with_stdio(0); \
-  cin.tie(0);              \
-  cout.tie(0);
+#include "Point.h"
+
+
 #define int long long
 #define endl "\n"
 #define double long double
@@ -20,14 +19,14 @@ static const string RIGHT = "right";
 static const string UP = "up";
 static const string BOTTOM = "bottom";
 
-class Point
-{
-public:
-  int x;
-  int y;
-  Point(int x, int y) : x(x),
-                        y(y){};
-};
+// class Point
+// {
+// public:
+//   int x;
+//   int y;
+//   Point(int x, int y) : x(x),
+//                         y(y){};
+// };
 
 class Interval
 {
@@ -159,7 +158,7 @@ int32_t main()
   freopen("input.txt", "r", stdin);
   freopen("output.txt", "w", stdout);
 #endif
-  IOS
+
 
       Point p1(1, 2);
   cout << p1.x << endl;
