@@ -1,0 +1,40 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/Radhesh Sarma/CLionProjects/DAA-Assignment/include/EdgeType.h
+string
+-
+
+C:/Users/Radhesh Sarma/CLionProjects/DAA-Assignment/include/Interval.h
+
+C:/Users/Radhesh Sarma/CLionProjects/DAA-Assignment/include/LineSegment.h
+Interval.h
+C:/Users/Radhesh Sarma/CLionProjects/DAA-Assignment/include/Interval.h
+
+C:/Users/Radhesh Sarma/CLionProjects/DAA-Assignment/include/Point.h
+
+C:/Users/Radhesh Sarma/CLionProjects/DAA-Assignment/include/Rectangle.h
+vector
+-
+Interval.h
+C:/Users/Radhesh Sarma/CLionProjects/DAA-Assignment/include/Interval.h
+
+C:/Users/Radhesh Sarma/CLionProjects/DAA-Assignment/main.cpp
+iostream
+-
+include/Point.h
+C:/Users/Radhesh Sarma/CLionProjects/DAA-Assignment/include/Point.h
+include/Interval.h
+C:/Users/Radhesh Sarma/CLionProjects/DAA-Assignment/include/Interval.h
+include/LineSegment.h
+C:/Users/Radhesh Sarma/CLionProjects/DAA-Assignment/include/LineSegment.h
+include/Rectangle.h
+C:/Users/Radhesh Sarma/CLionProjects/DAA-Assignment/include/Rectangle.h
+include/EdgeType.h
+C:/Users/Radhesh Sarma/CLionProjects/DAA-Assignment/include/EdgeType.h
+
