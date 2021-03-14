@@ -62,10 +62,10 @@ RM = "C:\Program Files\JetBrains\CLion 2020.3.2\bin\cmake\win\bin\cmake.exe" -E 
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "C:\Users\Radhesh Sarma\CLionProjects\DAA-Assignment"
+CMAKE_SOURCE_DIR = D:\Dev\DAA_Assignment
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "C:\Users\Radhesh Sarma\CLionProjects\DAA-Assignment\cmake-build-debug"
+CMAKE_BINARY_DIR = D:\Dev\DAA_Assignment\cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/DAA_Assignment.dir/depend.make
@@ -78,107 +78,133 @@ include CMakeFiles/DAA_Assignment.dir/flags.make
 
 CMakeFiles/DAA_Assignment.dir/main.cpp.obj: CMakeFiles/DAA_Assignment.dir/flags.make
 CMakeFiles/DAA_Assignment.dir/main.cpp.obj: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Radhesh Sarma\CLionProjects\DAA-Assignment\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/DAA_Assignment.dir/main.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\DAA_Assignment.dir\main.cpp.obj -c "C:\Users\Radhesh Sarma\CLionProjects\DAA-Assignment\main.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Dev\DAA_Assignment\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/DAA_Assignment.dir/main.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\DAA_Assignment.dir\main.cpp.obj -c D:\Dev\DAA_Assignment\main.cpp
 
 CMakeFiles/DAA_Assignment.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/DAA_Assignment.dir/main.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Radhesh Sarma\CLionProjects\DAA-Assignment\main.cpp" > CMakeFiles\DAA_Assignment.dir\main.cpp.i
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Dev\DAA_Assignment\main.cpp > CMakeFiles\DAA_Assignment.dir\main.cpp.i
 
 CMakeFiles/DAA_Assignment.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DAA_Assignment.dir/main.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Radhesh Sarma\CLionProjects\DAA-Assignment\main.cpp" -o CMakeFiles\DAA_Assignment.dir\main.cpp.s
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Dev\DAA_Assignment\main.cpp -o CMakeFiles\DAA_Assignment.dir\main.cpp.s
 
 CMakeFiles/DAA_Assignment.dir/src/Point.cpp.obj: CMakeFiles/DAA_Assignment.dir/flags.make
 CMakeFiles/DAA_Assignment.dir/src/Point.cpp.obj: ../src/Point.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Radhesh Sarma\CLionProjects\DAA-Assignment\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/DAA_Assignment.dir/src/Point.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\DAA_Assignment.dir\src\Point.cpp.obj -c "C:\Users\Radhesh Sarma\CLionProjects\DAA-Assignment\src\Point.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Dev\DAA_Assignment\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/DAA_Assignment.dir/src/Point.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\DAA_Assignment.dir\src\Point.cpp.obj -c D:\Dev\DAA_Assignment\src\Point.cpp
 
 CMakeFiles/DAA_Assignment.dir/src/Point.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/DAA_Assignment.dir/src/Point.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Radhesh Sarma\CLionProjects\DAA-Assignment\src\Point.cpp" > CMakeFiles\DAA_Assignment.dir\src\Point.cpp.i
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Dev\DAA_Assignment\src\Point.cpp > CMakeFiles\DAA_Assignment.dir\src\Point.cpp.i
 
 CMakeFiles/DAA_Assignment.dir/src/Point.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DAA_Assignment.dir/src/Point.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Radhesh Sarma\CLionProjects\DAA-Assignment\src\Point.cpp" -o CMakeFiles\DAA_Assignment.dir\src\Point.cpp.s
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Dev\DAA_Assignment\src\Point.cpp -o CMakeFiles\DAA_Assignment.dir\src\Point.cpp.s
 
 CMakeFiles/DAA_Assignment.dir/src/Interval.cpp.obj: CMakeFiles/DAA_Assignment.dir/flags.make
 CMakeFiles/DAA_Assignment.dir/src/Interval.cpp.obj: ../src/Interval.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Radhesh Sarma\CLionProjects\DAA-Assignment\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/DAA_Assignment.dir/src/Interval.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\DAA_Assignment.dir\src\Interval.cpp.obj -c "C:\Users\Radhesh Sarma\CLionProjects\DAA-Assignment\src\Interval.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Dev\DAA_Assignment\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/DAA_Assignment.dir/src/Interval.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\DAA_Assignment.dir\src\Interval.cpp.obj -c D:\Dev\DAA_Assignment\src\Interval.cpp
 
 CMakeFiles/DAA_Assignment.dir/src/Interval.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/DAA_Assignment.dir/src/Interval.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Radhesh Sarma\CLionProjects\DAA-Assignment\src\Interval.cpp" > CMakeFiles\DAA_Assignment.dir\src\Interval.cpp.i
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Dev\DAA_Assignment\src\Interval.cpp > CMakeFiles\DAA_Assignment.dir\src\Interval.cpp.i
 
 CMakeFiles/DAA_Assignment.dir/src/Interval.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DAA_Assignment.dir/src/Interval.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Radhesh Sarma\CLionProjects\DAA-Assignment\src\Interval.cpp" -o CMakeFiles\DAA_Assignment.dir\src\Interval.cpp.s
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Dev\DAA_Assignment\src\Interval.cpp -o CMakeFiles\DAA_Assignment.dir\src\Interval.cpp.s
 
 CMakeFiles/DAA_Assignment.dir/src/LineSegment.cpp.obj: CMakeFiles/DAA_Assignment.dir/flags.make
 CMakeFiles/DAA_Assignment.dir/src/LineSegment.cpp.obj: ../src/LineSegment.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Radhesh Sarma\CLionProjects\DAA-Assignment\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/DAA_Assignment.dir/src/LineSegment.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\DAA_Assignment.dir\src\LineSegment.cpp.obj -c "C:\Users\Radhesh Sarma\CLionProjects\DAA-Assignment\src\LineSegment.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Dev\DAA_Assignment\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/DAA_Assignment.dir/src/LineSegment.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\DAA_Assignment.dir\src\LineSegment.cpp.obj -c D:\Dev\DAA_Assignment\src\LineSegment.cpp
 
 CMakeFiles/DAA_Assignment.dir/src/LineSegment.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/DAA_Assignment.dir/src/LineSegment.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Radhesh Sarma\CLionProjects\DAA-Assignment\src\LineSegment.cpp" > CMakeFiles\DAA_Assignment.dir\src\LineSegment.cpp.i
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Dev\DAA_Assignment\src\LineSegment.cpp > CMakeFiles\DAA_Assignment.dir\src\LineSegment.cpp.i
 
 CMakeFiles/DAA_Assignment.dir/src/LineSegment.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DAA_Assignment.dir/src/LineSegment.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Radhesh Sarma\CLionProjects\DAA-Assignment\src\LineSegment.cpp" -o CMakeFiles\DAA_Assignment.dir\src\LineSegment.cpp.s
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Dev\DAA_Assignment\src\LineSegment.cpp -o CMakeFiles\DAA_Assignment.dir\src\LineSegment.cpp.s
 
 CMakeFiles/DAA_Assignment.dir/src/EdgeType.cpp.obj: CMakeFiles/DAA_Assignment.dir/flags.make
 CMakeFiles/DAA_Assignment.dir/src/EdgeType.cpp.obj: ../src/EdgeType.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Radhesh Sarma\CLionProjects\DAA-Assignment\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/DAA_Assignment.dir/src/EdgeType.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\DAA_Assignment.dir\src\EdgeType.cpp.obj -c "C:\Users\Radhesh Sarma\CLionProjects\DAA-Assignment\src\EdgeType.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Dev\DAA_Assignment\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/DAA_Assignment.dir/src/EdgeType.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\DAA_Assignment.dir\src\EdgeType.cpp.obj -c D:\Dev\DAA_Assignment\src\EdgeType.cpp
 
 CMakeFiles/DAA_Assignment.dir/src/EdgeType.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/DAA_Assignment.dir/src/EdgeType.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Radhesh Sarma\CLionProjects\DAA-Assignment\src\EdgeType.cpp" > CMakeFiles\DAA_Assignment.dir\src\EdgeType.cpp.i
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Dev\DAA_Assignment\src\EdgeType.cpp > CMakeFiles\DAA_Assignment.dir\src\EdgeType.cpp.i
 
 CMakeFiles/DAA_Assignment.dir/src/EdgeType.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DAA_Assignment.dir/src/EdgeType.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Radhesh Sarma\CLionProjects\DAA-Assignment\src\EdgeType.cpp" -o CMakeFiles\DAA_Assignment.dir\src\EdgeType.cpp.s
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Dev\DAA_Assignment\src\EdgeType.cpp -o CMakeFiles\DAA_Assignment.dir\src\EdgeType.cpp.s
 
 CMakeFiles/DAA_Assignment.dir/src/Rectangle.cpp.obj: CMakeFiles/DAA_Assignment.dir/flags.make
 CMakeFiles/DAA_Assignment.dir/src/Rectangle.cpp.obj: ../src/Rectangle.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Radhesh Sarma\CLionProjects\DAA-Assignment\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/DAA_Assignment.dir/src/Rectangle.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\DAA_Assignment.dir\src\Rectangle.cpp.obj -c "C:\Users\Radhesh Sarma\CLionProjects\DAA-Assignment\src\Rectangle.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Dev\DAA_Assignment\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/DAA_Assignment.dir/src/Rectangle.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\DAA_Assignment.dir\src\Rectangle.cpp.obj -c D:\Dev\DAA_Assignment\src\Rectangle.cpp
 
 CMakeFiles/DAA_Assignment.dir/src/Rectangle.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/DAA_Assignment.dir/src/Rectangle.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Radhesh Sarma\CLionProjects\DAA-Assignment\src\Rectangle.cpp" > CMakeFiles\DAA_Assignment.dir\src\Rectangle.cpp.i
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Dev\DAA_Assignment\src\Rectangle.cpp > CMakeFiles\DAA_Assignment.dir\src\Rectangle.cpp.i
 
 CMakeFiles/DAA_Assignment.dir/src/Rectangle.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DAA_Assignment.dir/src/Rectangle.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Radhesh Sarma\CLionProjects\DAA-Assignment\src\Rectangle.cpp" -o CMakeFiles\DAA_Assignment.dir\src\Rectangle.cpp.s
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Dev\DAA_Assignment\src\Rectangle.cpp -o CMakeFiles\DAA_Assignment.dir\src\Rectangle.cpp.s
 
 CMakeFiles/DAA_Assignment.dir/src/Stripe.cpp.obj: CMakeFiles/DAA_Assignment.dir/flags.make
 CMakeFiles/DAA_Assignment.dir/src/Stripe.cpp.obj: ../src/Stripe.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Radhesh Sarma\CLionProjects\DAA-Assignment\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/DAA_Assignment.dir/src/Stripe.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\DAA_Assignment.dir\src\Stripe.cpp.obj -c "C:\Users\Radhesh Sarma\CLionProjects\DAA-Assignment\src\Stripe.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Dev\DAA_Assignment\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/DAA_Assignment.dir/src/Stripe.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\DAA_Assignment.dir\src\Stripe.cpp.obj -c D:\Dev\DAA_Assignment\src\Stripe.cpp
 
 CMakeFiles/DAA_Assignment.dir/src/Stripe.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/DAA_Assignment.dir/src/Stripe.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Radhesh Sarma\CLionProjects\DAA-Assignment\src\Stripe.cpp" > CMakeFiles\DAA_Assignment.dir\src\Stripe.cpp.i
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Dev\DAA_Assignment\src\Stripe.cpp > CMakeFiles\DAA_Assignment.dir\src\Stripe.cpp.i
 
 CMakeFiles/DAA_Assignment.dir/src/Stripe.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DAA_Assignment.dir/src/Stripe.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Radhesh Sarma\CLionProjects\DAA-Assignment\src\Stripe.cpp" -o CMakeFiles\DAA_Assignment.dir\src\Stripe.cpp.s
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Dev\DAA_Assignment\src\Stripe.cpp -o CMakeFiles\DAA_Assignment.dir\src\Stripe.cpp.s
 
 CMakeFiles/DAA_Assignment.dir/src/MeasureHelper.cpp.obj: CMakeFiles/DAA_Assignment.dir/flags.make
 CMakeFiles/DAA_Assignment.dir/src/MeasureHelper.cpp.obj: ../src/MeasureHelper.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Radhesh Sarma\CLionProjects\DAA-Assignment\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/DAA_Assignment.dir/src/MeasureHelper.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\DAA_Assignment.dir\src\MeasureHelper.cpp.obj -c "C:\Users\Radhesh Sarma\CLionProjects\DAA-Assignment\src\MeasureHelper.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Dev\DAA_Assignment\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/DAA_Assignment.dir/src/MeasureHelper.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\DAA_Assignment.dir\src\MeasureHelper.cpp.obj -c D:\Dev\DAA_Assignment\src\MeasureHelper.cpp
 
 CMakeFiles/DAA_Assignment.dir/src/MeasureHelper.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/DAA_Assignment.dir/src/MeasureHelper.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Radhesh Sarma\CLionProjects\DAA-Assignment\src\MeasureHelper.cpp" > CMakeFiles\DAA_Assignment.dir\src\MeasureHelper.cpp.i
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Dev\DAA_Assignment\src\MeasureHelper.cpp > CMakeFiles\DAA_Assignment.dir\src\MeasureHelper.cpp.i
 
 CMakeFiles/DAA_Assignment.dir/src/MeasureHelper.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DAA_Assignment.dir/src/MeasureHelper.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Radhesh Sarma\CLionProjects\DAA-Assignment\src\MeasureHelper.cpp" -o CMakeFiles\DAA_Assignment.dir\src\MeasureHelper.cpp.s
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Dev\DAA_Assignment\src\MeasureHelper.cpp -o CMakeFiles\DAA_Assignment.dir\src\MeasureHelper.cpp.s
+
+CMakeFiles/DAA_Assignment.dir/src/Edge.cpp.obj: CMakeFiles/DAA_Assignment.dir/flags.make
+CMakeFiles/DAA_Assignment.dir/src/Edge.cpp.obj: ../src/Edge.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Dev\DAA_Assignment\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/DAA_Assignment.dir/src/Edge.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\DAA_Assignment.dir\src\Edge.cpp.obj -c D:\Dev\DAA_Assignment\src\Edge.cpp
+
+CMakeFiles/DAA_Assignment.dir/src/Edge.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/DAA_Assignment.dir/src/Edge.cpp.i"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Dev\DAA_Assignment\src\Edge.cpp > CMakeFiles\DAA_Assignment.dir\src\Edge.cpp.i
+
+CMakeFiles/DAA_Assignment.dir/src/Edge.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DAA_Assignment.dir/src/Edge.cpp.s"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Dev\DAA_Assignment\src\Edge.cpp -o CMakeFiles\DAA_Assignment.dir\src\Edge.cpp.s
+
+CMakeFiles/DAA_Assignment.dir/src/IntervalHelper.cpp.obj: CMakeFiles/DAA_Assignment.dir/flags.make
+CMakeFiles/DAA_Assignment.dir/src/IntervalHelper.cpp.obj: ../src/IntervalHelper.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Dev\DAA_Assignment\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/DAA_Assignment.dir/src/IntervalHelper.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\DAA_Assignment.dir\src\IntervalHelper.cpp.obj -c D:\Dev\DAA_Assignment\src\IntervalHelper.cpp
+
+CMakeFiles/DAA_Assignment.dir/src/IntervalHelper.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/DAA_Assignment.dir/src/IntervalHelper.cpp.i"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Dev\DAA_Assignment\src\IntervalHelper.cpp > CMakeFiles\DAA_Assignment.dir\src\IntervalHelper.cpp.i
+
+CMakeFiles/DAA_Assignment.dir/src/IntervalHelper.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DAA_Assignment.dir/src/IntervalHelper.cpp.s"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Dev\DAA_Assignment\src\IntervalHelper.cpp -o CMakeFiles\DAA_Assignment.dir\src\IntervalHelper.cpp.s
 
 # Object files for target DAA_Assignment
 DAA_Assignment_OBJECTS = \
@@ -189,7 +215,9 @@ DAA_Assignment_OBJECTS = \
 "CMakeFiles/DAA_Assignment.dir/src/EdgeType.cpp.obj" \
 "CMakeFiles/DAA_Assignment.dir/src/Rectangle.cpp.obj" \
 "CMakeFiles/DAA_Assignment.dir/src/Stripe.cpp.obj" \
-"CMakeFiles/DAA_Assignment.dir/src/MeasureHelper.cpp.obj"
+"CMakeFiles/DAA_Assignment.dir/src/MeasureHelper.cpp.obj" \
+"CMakeFiles/DAA_Assignment.dir/src/Edge.cpp.obj" \
+"CMakeFiles/DAA_Assignment.dir/src/IntervalHelper.cpp.obj"
 
 # External object files for target DAA_Assignment
 DAA_Assignment_EXTERNAL_OBJECTS =
@@ -202,11 +230,13 @@ DAA_Assignment.exe: CMakeFiles/DAA_Assignment.dir/src/EdgeType.cpp.obj
 DAA_Assignment.exe: CMakeFiles/DAA_Assignment.dir/src/Rectangle.cpp.obj
 DAA_Assignment.exe: CMakeFiles/DAA_Assignment.dir/src/Stripe.cpp.obj
 DAA_Assignment.exe: CMakeFiles/DAA_Assignment.dir/src/MeasureHelper.cpp.obj
+DAA_Assignment.exe: CMakeFiles/DAA_Assignment.dir/src/Edge.cpp.obj
+DAA_Assignment.exe: CMakeFiles/DAA_Assignment.dir/src/IntervalHelper.cpp.obj
 DAA_Assignment.exe: CMakeFiles/DAA_Assignment.dir/build.make
 DAA_Assignment.exe: CMakeFiles/DAA_Assignment.dir/linklibs.rsp
 DAA_Assignment.exe: CMakeFiles/DAA_Assignment.dir/objects1.rsp
 DAA_Assignment.exe: CMakeFiles/DAA_Assignment.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="C:\Users\Radhesh Sarma\CLionProjects\DAA-Assignment\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable DAA_Assignment.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=D:\Dev\DAA_Assignment\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable DAA_Assignment.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\DAA_Assignment.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -219,6 +249,6 @@ CMakeFiles/DAA_Assignment.dir/clean:
 .PHONY : CMakeFiles/DAA_Assignment.dir/clean
 
 CMakeFiles/DAA_Assignment.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" "C:\Users\Radhesh Sarma\CLionProjects\DAA-Assignment" "C:\Users\Radhesh Sarma\CLionProjects\DAA-Assignment" "C:\Users\Radhesh Sarma\CLionProjects\DAA-Assignment\cmake-build-debug" "C:\Users\Radhesh Sarma\CLionProjects\DAA-Assignment\cmake-build-debug" "C:\Users\Radhesh Sarma\CLionProjects\DAA-Assignment\cmake-build-debug\CMakeFiles\DAA_Assignment.dir\DependInfo.cmake" --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" D:\Dev\DAA_Assignment D:\Dev\DAA_Assignment D:\Dev\DAA_Assignment\cmake-build-debug D:\Dev\DAA_Assignment\cmake-build-debug D:\Dev\DAA_Assignment\cmake-build-debug\CMakeFiles\DAA_Assignment.dir\DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/DAA_Assignment.dir/depend
 

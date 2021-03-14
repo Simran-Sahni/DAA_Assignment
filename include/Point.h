@@ -4,13 +4,11 @@
 #ifndef DAA_ASSIGNMENT_POINT_H
 #define DAA_ASSIGNMENT_POINT_H
 
-
 class Point {
 public:
-    int x;
-    int y;
-    Point(int x, int y);
+  int x;
+  int y;
+  Point(int x, int y);
 };
 
-
-#endif //DAA_ASSIGNMENT_POINT_H
+#endif // DAA_ASSIGNMENT_POINT_H

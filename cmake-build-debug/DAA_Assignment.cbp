@@ -8,18 +8,18 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="C:/Users/Radhesh Sarma/CLionProjects/DAA-Assignment/cmake-build-debug"/>
+				<Option working_dir="D:/Dev/DAA_Assignment/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Radhesh Sarma/CLionProjects/DAA-Assignment/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Radhesh Sarma/CLionProjects/DAA-Assignment/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Radhesh Sarma/CLionProjects/DAA-Assignment/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Radhesh Sarma/CLionProjects/DAA-Assignment/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Dev/DAA_Assignment/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Dev/DAA_Assignment/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Dev/DAA_Assignment/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Dev/DAA_Assignment/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="DAA_Assignment">
-				<Option output="C:/Users/Radhesh Sarma/CLionProjects/DAA-Assignment/cmake-build-debug/DAA_Assignment.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/Radhesh Sarma/CLionProjects/DAA-Assignment/cmake-build-debug"/>
+				<Option output="D:/Dev/DAA_Assignment/cmake-build-debug/DAA_Assignment.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/Dev/DAA_Assignment/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -32,15 +32,15 @@
 					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include-fixed"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Radhesh Sarma/CLionProjects/DAA-Assignment/cmake-build-debug/Makefile&quot;  VERBOSE=1 DAA_Assignment"/>
-					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Radhesh Sarma/CLionProjects/DAA-Assignment/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Radhesh Sarma/CLionProjects/DAA-Assignment/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Radhesh Sarma/CLionProjects/DAA-Assignment/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Dev/DAA_Assignment/cmake-build-debug/Makefile&quot;  VERBOSE=1 DAA_Assignment"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Dev/DAA_Assignment/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Dev/DAA_Assignment/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Dev/DAA_Assignment/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="DAA_Assignment/fast">
-				<Option output="C:/Users/Radhesh Sarma/CLionProjects/DAA-Assignment/cmake-build-debug/DAA_Assignment.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/Radhesh Sarma/CLionProjects/DAA-Assignment/cmake-build-debug"/>
+				<Option output="D:/Dev/DAA_Assignment/cmake-build-debug/DAA_Assignment.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/Dev/DAA_Assignment/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -53,79 +53,91 @@
 					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include-fixed"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Radhesh Sarma/CLionProjects/DAA-Assignment/cmake-build-debug/Makefile&quot;  VERBOSE=1 DAA_Assignment/fast"/>
-					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Radhesh Sarma/CLionProjects/DAA-Assignment/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Radhesh Sarma/CLionProjects/DAA-Assignment/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Radhesh Sarma/CLionProjects/DAA-Assignment/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Dev/DAA_Assignment/cmake-build-debug/Makefile&quot;  VERBOSE=1 DAA_Assignment/fast"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Dev/DAA_Assignment/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Dev/DAA_Assignment/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Dev/DAA_Assignment/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="C:/Users/Radhesh Sarma/CLionProjects/DAA-Assignment/cmake-build-debug"/>
+				<Option working_dir="D:/Dev/DAA_Assignment/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Radhesh Sarma/CLionProjects/DAA-Assignment/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Radhesh Sarma/CLionProjects/DAA-Assignment/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Radhesh Sarma/CLionProjects/DAA-Assignment/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Radhesh Sarma/CLionProjects/DAA-Assignment/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Dev/DAA_Assignment/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Dev/DAA_Assignment/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Dev/DAA_Assignment/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Dev/DAA_Assignment/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="C:/Users/Radhesh Sarma/CLionProjects/DAA-Assignment/cmake-build-debug"/>
+				<Option working_dir="D:/Dev/DAA_Assignment/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Radhesh Sarma/CLionProjects/DAA-Assignment/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Radhesh Sarma/CLionProjects/DAA-Assignment/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Radhesh Sarma/CLionProjects/DAA-Assignment/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Radhesh Sarma/CLionProjects/DAA-Assignment/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Dev/DAA_Assignment/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Dev/DAA_Assignment/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Dev/DAA_Assignment/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Dev/DAA_Assignment/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="C:/Users/Radhesh Sarma/CLionProjects/DAA-Assignment/include/EdgeType.h">
+		<Unit filename="D:/Dev/DAA_Assignment/include/EdgeType.h">
 			<Option target="DAA_Assignment"/>
 		</Unit>
-		<Unit filename="C:/Users/Radhesh Sarma/CLionProjects/DAA-Assignment/include/Interval.h">
+		<Unit filename="D:/Dev/DAA_Assignment/include/Interval.h">
 			<Option target="DAA_Assignment"/>
 		</Unit>
-		<Unit filename="C:/Users/Radhesh Sarma/CLionProjects/DAA-Assignment/include/LineSegment.h">
+		<Unit filename="D:/Dev/DAA_Assignment/include/IntervalHelper.h">
 			<Option target="DAA_Assignment"/>
 		</Unit>
-		<Unit filename="C:/Users/Radhesh Sarma/CLionProjects/DAA-Assignment/include/MeasureHelper.h">
+		<Unit filename="D:/Dev/DAA_Assignment/include/LineSegment.h">
 			<Option target="DAA_Assignment"/>
 		</Unit>
-		<Unit filename="C:/Users/Radhesh Sarma/CLionProjects/DAA-Assignment/include/Point.h">
+		<Unit filename="D:/Dev/DAA_Assignment/include/MeasureHelper.h">
 			<Option target="DAA_Assignment"/>
 		</Unit>
-		<Unit filename="C:/Users/Radhesh Sarma/CLionProjects/DAA-Assignment/include/Rectangle.h">
+		<Unit filename="D:/Dev/DAA_Assignment/include/Point.h">
 			<Option target="DAA_Assignment"/>
 		</Unit>
-		<Unit filename="C:/Users/Radhesh Sarma/CLionProjects/DAA-Assignment/include/Stripe.h">
+		<Unit filename="D:/Dev/DAA_Assignment/include/Rectangle.h">
 			<Option target="DAA_Assignment"/>
 		</Unit>
-		<Unit filename="C:/Users/Radhesh Sarma/CLionProjects/DAA-Assignment/main.cpp">
+		<Unit filename="D:/Dev/DAA_Assignment/include/Stripe.h">
 			<Option target="DAA_Assignment"/>
 		</Unit>
-		<Unit filename="C:/Users/Radhesh Sarma/CLionProjects/DAA-Assignment/src/EdgeType.cpp">
+		<Unit filename="D:/Dev/DAA_Assignment/main.cpp">
 			<Option target="DAA_Assignment"/>
 		</Unit>
-		<Unit filename="C:/Users/Radhesh Sarma/CLionProjects/DAA-Assignment/src/Interval.cpp">
+		<Unit filename="D:/Dev/DAA_Assignment/src/Edge.cpp">
 			<Option target="DAA_Assignment"/>
 		</Unit>
-		<Unit filename="C:/Users/Radhesh Sarma/CLionProjects/DAA-Assignment/src/LineSegment.cpp">
+		<Unit filename="D:/Dev/DAA_Assignment/src/Edge.h">
 			<Option target="DAA_Assignment"/>
 		</Unit>
-		<Unit filename="C:/Users/Radhesh Sarma/CLionProjects/DAA-Assignment/src/MeasureHelper.cpp">
+		<Unit filename="D:/Dev/DAA_Assignment/src/EdgeType.cpp">
 			<Option target="DAA_Assignment"/>
 		</Unit>
-		<Unit filename="C:/Users/Radhesh Sarma/CLionProjects/DAA-Assignment/src/Point.cpp">
+		<Unit filename="D:/Dev/DAA_Assignment/src/Interval.cpp">
 			<Option target="DAA_Assignment"/>
 		</Unit>
-		<Unit filename="C:/Users/Radhesh Sarma/CLionProjects/DAA-Assignment/src/Rectangle.cpp">
+		<Unit filename="D:/Dev/DAA_Assignment/src/IntervalHelper.cpp">
 			<Option target="DAA_Assignment"/>
 		</Unit>
-		<Unit filename="C:/Users/Radhesh Sarma/CLionProjects/DAA-Assignment/src/Stripe.cpp">
+		<Unit filename="D:/Dev/DAA_Assignment/src/LineSegment.cpp">
 			<Option target="DAA_Assignment"/>
 		</Unit>
-		<Unit filename="C:/Users/Radhesh Sarma/CLionProjects/DAA-Assignment/CMakeLists.txt">
+		<Unit filename="D:/Dev/DAA_Assignment/src/MeasureHelper.cpp">
+			<Option target="DAA_Assignment"/>
+		</Unit>
+		<Unit filename="D:/Dev/DAA_Assignment/src/Point.cpp">
+			<Option target="DAA_Assignment"/>
+		</Unit>
+		<Unit filename="D:/Dev/DAA_Assignment/src/Rectangle.cpp">
+			<Option target="DAA_Assignment"/>
+		</Unit>
+		<Unit filename="D:/Dev/DAA_Assignment/src/Stripe.cpp">
+			<Option target="DAA_Assignment"/>
+		</Unit>
+		<Unit filename="D:/Dev/DAA_Assignment/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

@@ -3,5 +3,5 @@
 //
 
 #include "../include/LineSegment.h"
-LineSegment ::  LineSegment(Interval line, int coordinate) : line(line),
-                                                             coordinate(coordinate) {}
+LineSegment ::LineSegment(Interval line, int coordinate)
+    : line(line), coordinate(coordinate) {}
