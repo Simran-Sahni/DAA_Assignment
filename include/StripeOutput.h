@@ -8,7 +8,7 @@
 #include "Interval.h"
 #include "Stripe.h"
 #include <vector>
-using std :: vector;
+using std ::vector;
 class StripeOutput {
 public:
   vector<Interval> L;
@@ -22,4 +22,3 @@ public:
 };
 
 #endif // DAA_ASSIGNMENT_STRIPEOUTPUT_H
-

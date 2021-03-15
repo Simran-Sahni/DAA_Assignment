@@ -12,5 +12,6 @@ Rectangle ::Rectangle(Interval xInterval, Interval yInterval)
 }
 
 vector<Edge> Rectangle ::getVerticalEdges() const {
-  return vector<Edge>{Edge(LEFT,Interval(y_bottom,y_top),x_left),Edge(LEFT,Interval(y_bottom,y_top),x_right)};
+  return vector<Edge>{Edge(LEFT, Interval(y_bottom, y_top), x_left),
+                      Edge(LEFT, Interval(y_bottom, y_top), x_right)};
 }

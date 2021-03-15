@@ -171,17 +171,18 @@ StripeOutput MeasureHelper::stripes(vector<Edge> V, Interval x_ext) {
 }
 long double MeasureHelper::rectangle_dac(vector<Rectangle> r) {
   vector<Edge> vrx;
-  for(auto &rectangle : r){
-    for(auto &edge : rectangle.getVerticalEdges()){
+  for (auto &rectangle : r) {
+    for (auto &edge : rectangle.getVerticalEdges()) {
       vrx.push_back(edge);
     }
   }
-  StripeOutput ans = stripes(vrx,Interval(-INF,INF));
+  StripeOutput ans = stripes(vrx, Interval(-INF, INF));
 
   long double measure = 0;
 
-  for(auto &stripe : ans.S){
-    measure += stripe.x_measure * (stripe.y_interval.top - stripe.y_interval.bottom);
+  for (auto &stripe : ans.S) {
+    measure +=
+        stripe.x_measure * (stripe.y_interval.top - stripe.y_interval.bottom);
   }
   return measure;
 }
