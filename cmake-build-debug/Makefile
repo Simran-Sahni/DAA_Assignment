@@ -142,33 +142,6 @@ DAA_Assignment/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\DAA_Assignment.dir\build.make CMakeFiles/DAA_Assignment.dir/build
 .PHONY : DAA_Assignment/fast
 
-include/StripeOutput.obj: include/StripeOutput.cpp.obj
-
-.PHONY : include/StripeOutput.obj
-
-# target to build an object file
-include/StripeOutput.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\DAA_Assignment.dir\build.make CMakeFiles/DAA_Assignment.dir/include/StripeOutput.cpp.obj
-.PHONY : include/StripeOutput.cpp.obj
-
-include/StripeOutput.i: include/StripeOutput.cpp.i
-
-.PHONY : include/StripeOutput.i
-
-# target to preprocess a source file
-include/StripeOutput.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\DAA_Assignment.dir\build.make CMakeFiles/DAA_Assignment.dir/include/StripeOutput.cpp.i
-.PHONY : include/StripeOutput.cpp.i
-
-include/StripeOutput.s: include/StripeOutput.cpp.s
-
-.PHONY : include/StripeOutput.s
-
-# target to generate assembly for a file
-include/StripeOutput.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\DAA_Assignment.dir\build.make CMakeFiles/DAA_Assignment.dir/include/StripeOutput.cpp.s
-.PHONY : include/StripeOutput.cpp.s
-
 main.obj: main.cpp.obj
 
 .PHONY : main.obj
@@ -412,6 +385,33 @@ src/Stripe.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\DAA_Assignment.dir\build.make CMakeFiles/DAA_Assignment.dir/src/Stripe.cpp.s
 .PHONY : src/Stripe.cpp.s
 
+src/StripeOutput.obj: src/StripeOutput.cpp.obj
+
+.PHONY : src/StripeOutput.obj
+
+# target to build an object file
+src/StripeOutput.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DAA_Assignment.dir\build.make CMakeFiles/DAA_Assignment.dir/src/StripeOutput.cpp.obj
+.PHONY : src/StripeOutput.cpp.obj
+
+src/StripeOutput.i: src/StripeOutput.cpp.i
+
+.PHONY : src/StripeOutput.i
+
+# target to preprocess a source file
+src/StripeOutput.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DAA_Assignment.dir\build.make CMakeFiles/DAA_Assignment.dir/src/StripeOutput.cpp.i
+.PHONY : src/StripeOutput.cpp.i
+
+src/StripeOutput.s: src/StripeOutput.cpp.s
+
+.PHONY : src/StripeOutput.s
+
+# target to generate assembly for a file
+src/StripeOutput.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DAA_Assignment.dir\build.make CMakeFiles/DAA_Assignment.dir/src/StripeOutput.cpp.s
+.PHONY : src/StripeOutput.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -421,9 +421,6 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... DAA_Assignment
-	@echo ... include/StripeOutput.obj
-	@echo ... include/StripeOutput.i
-	@echo ... include/StripeOutput.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
@@ -451,6 +448,9 @@ help:
 	@echo ... src/Stripe.obj
 	@echo ... src/Stripe.i
 	@echo ... src/Stripe.s
+	@echo ... src/StripeOutput.obj
+	@echo ... src/StripeOutput.i
+	@echo ... src/StripeOutput.s
 .PHONY : help
 
 

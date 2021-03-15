@@ -104,9 +104,6 @@
 		<Unit filename="D:/Dev/DAA_Assignment/include/Stripe.h">
 			<Option target="DAA_Assignment"/>
 		</Unit>
-		<Unit filename="D:/Dev/DAA_Assignment/include/StripeOutput.cpp">
-			<Option target="DAA_Assignment"/>
-		</Unit>
 		<Unit filename="D:/Dev/DAA_Assignment/include/StripeOutput.h">
 			<Option target="DAA_Assignment"/>
 		</Unit>
@@ -135,6 +132,9 @@
 			<Option target="DAA_Assignment"/>
 		</Unit>
 		<Unit filename="D:/Dev/DAA_Assignment/src/Stripe.cpp">
+			<Option target="DAA_Assignment"/>
+		</Unit>
+		<Unit filename="D:/Dev/DAA_Assignment/src/StripeOutput.cpp">
 			<Option target="DAA_Assignment"/>
 		</Unit>
 		<Unit filename="D:/Dev/DAA_Assignment/CMakeLists.txt">
