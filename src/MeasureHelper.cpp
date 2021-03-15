@@ -129,6 +129,5 @@ StripeOutput MeasureHelper::stripes(vector<Edge> V, Interval x_ext) {
   } else {
     vector<Edge> V1;
     vector<Edge> V2;
-
   }
 }
