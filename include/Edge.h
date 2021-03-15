@@ -18,7 +18,9 @@ public:
   string type;
   Interval interval;
   int coord;
+  int partner_coordinate;
   Edge(string type, Interval interval, int coord);
+  Edge(string type, Interval interval, int coord,int partner_coordinate);
 };
 
 #endif // DAA_ASSIGNMENT_EDGE_H

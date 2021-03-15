@@ -7,3 +7,5 @@
 using std::runtime_error;
 Edge::Edge(string type, Interval interval, int coord)
     : type(type), interval(interval), coord(coord) {}
+Edge::Edge(string type, Interval interval, int coord,int partner_coordinate)
+    : type(type), interval(interval), coord(coord),partner_coordinate(partner_coordinate) {}
