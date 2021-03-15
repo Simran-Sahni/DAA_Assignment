@@ -18,6 +18,8 @@ public:
   static bool is_subset_of(Interval i1,
                            Interval i2); // checks if i1 is a subset of i2
   static bool do_they_intersect(Interval i1, Interval i2);
+  static vector<Interval> compliment(vector<Interval> i1,vector<Interval> i2);
+  static Interval compliment(Interval i1,Interval i2);
 };
 
 #endif // DAA_ASSIGNMENT_INTERVALHELPER_H

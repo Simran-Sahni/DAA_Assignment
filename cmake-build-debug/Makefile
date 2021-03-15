@@ -142,6 +142,33 @@ DAA_Assignment/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\DAA_Assignment.dir\build.make CMakeFiles/DAA_Assignment.dir/build
 .PHONY : DAA_Assignment/fast
 
+include/StripeOutput.obj: include/StripeOutput.cpp.obj
+
+.PHONY : include/StripeOutput.obj
+
+# target to build an object file
+include/StripeOutput.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DAA_Assignment.dir\build.make CMakeFiles/DAA_Assignment.dir/include/StripeOutput.cpp.obj
+.PHONY : include/StripeOutput.cpp.obj
+
+include/StripeOutput.i: include/StripeOutput.cpp.i
+
+.PHONY : include/StripeOutput.i
+
+# target to preprocess a source file
+include/StripeOutput.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DAA_Assignment.dir\build.make CMakeFiles/DAA_Assignment.dir/include/StripeOutput.cpp.i
+.PHONY : include/StripeOutput.cpp.i
+
+include/StripeOutput.s: include/StripeOutput.cpp.s
+
+.PHONY : include/StripeOutput.s
+
+# target to generate assembly for a file
+include/StripeOutput.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DAA_Assignment.dir\build.make CMakeFiles/DAA_Assignment.dir/include/StripeOutput.cpp.s
+.PHONY : include/StripeOutput.cpp.s
+
 main.obj: main.cpp.obj
 
 .PHONY : main.obj
@@ -394,6 +421,9 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... DAA_Assignment
+	@echo ... include/StripeOutput.obj
+	@echo ... include/StripeOutput.i
+	@echo ... include/StripeOutput.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

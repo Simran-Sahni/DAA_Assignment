@@ -9,6 +9,7 @@
 #include "Point.h"
 #include "Rectangle.h"
 #include "Stripe.h"
+#include "StripeOutput.h"
 #include <vector>
 const int INF = (1LL << 30) - 1;
 
@@ -22,9 +23,7 @@ public:
   static void blacken(vector<Stripe> &S, vector<Interval> &J);
   static vector<Stripe> concat(vector<Stripe> &s1, vector<Stripe> &s2,
                                vector<int> &coord_p, Interval x_int);
-  static void stripes(vector<Edge> V, Interval x_ext, vector<Interval> &L,
-                      vector<Interval> &R, vector<int> &coord_P,
-                      vector<Stripe> &S);
+  static StripeOutput stripes(vector<Edge> V, Interval x_ext);
 };
 
 #endif // DAA_ASSIGNMENT_MEASUREHELPER_H

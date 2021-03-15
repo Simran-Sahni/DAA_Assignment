@@ -94,9 +94,12 @@ void MeasureHelper::blacken(vector<Stripe> &S, vector<Interval> &J) {
     }
   }
 }
-void MeasureHelper::stripes(vector<Edge> V, Interval x_ext, vector<Interval> &L,
-                            vector<Interval> &R, vector<int> &coord_P,
-                            vector<Stripe> &S) {
+StripeOutput MeasureHelper::stripes(vector<Edge> V, Interval x_ext) {
+  vector<Interval> L;
+  vector<Interval> R;
+  vector<int> coord_P;
+  vector<Stripe> S;
+
   if (V.size() == 1) {
     Edge v = V[0];
     if (v.type == LEFT) {
@@ -124,5 +127,8 @@ void MeasureHelper::stripes(vector<Edge> V, Interval x_ext, vector<Interval> &L,
     }
 
   } else {
+    vector<Edge> V1;
+    vector<Edge> V2;
+
   }
 }

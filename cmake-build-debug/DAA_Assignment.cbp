@@ -104,6 +104,12 @@
 		<Unit filename="D:/Dev/DAA_Assignment/include/Stripe.h">
 			<Option target="DAA_Assignment"/>
 		</Unit>
+		<Unit filename="D:/Dev/DAA_Assignment/include/StripeOutput.cpp">
+			<Option target="DAA_Assignment"/>
+		</Unit>
+		<Unit filename="D:/Dev/DAA_Assignment/include/StripeOutput.h">
+			<Option target="DAA_Assignment"/>
+		</Unit>
 		<Unit filename="D:/Dev/DAA_Assignment/main.cpp">
 			<Option target="DAA_Assignment"/>
 		</Unit>
