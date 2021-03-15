@@ -21,6 +21,12 @@ vector<Interval> IntervalHelper::compliment(vector<Interval> i1,
                                             vector<Interval> i2) {
   return vector<Interval>();
 }
+Interval IntervalHelper::find_union(Interval &i1, Interval &i2) {
+  return Interval(0, 0);
+}
+Interval IntervalHelper::find_intersection(Interval &i1, Interval &i2) {
+  return Interval(0, 0);
+}
 Interval IntervalHelper::compliment(Interval i1, Interval i2) {
   return Interval(0, 0);
 }
