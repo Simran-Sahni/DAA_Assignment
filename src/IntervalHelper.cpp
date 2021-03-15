@@ -11,8 +11,8 @@ const int INF = (1LL << 30) - 1;
 bool IntervalHelper ::is_subset_of(Interval i1, Interval i2) {
   return i1.bottom >= i2.bottom and i1.top <= i2.top;
 }
-vector<Interval> IntervalHelper::find_union(vector<Interval> &i1,
-                                            vector<Interval> &i2) {
+vector<Interval> IntervalHelper::find_union(vector<Interval> i1,
+                                            vector<Interval> i2) {
 
   i1.insert(i1.end(), i2.begin(), i2.end());
   vector<pair<int, int>> v;
@@ -42,8 +42,8 @@ vector<Interval> IntervalHelper::find_union(vector<Interval> &i1,
   }
   return ans;
 }
-vector<Interval> IntervalHelper::find_intersection(vector<Interval> &i1,
-                                                   vector<Interval> &i2) {
+vector<Interval> IntervalHelper::find_intersection(vector<Interval> i1,
+                                                   vector<Interval> i2) {
   vector<Interval> ans;
   i1.insert(i1.end(), i2.begin(), i2.end());
   Interval prev = i1[0];
@@ -79,14 +79,14 @@ bool IntervalHelper::do_they_intersect(Interval i1, Interval i2) {
   return intersect;
 }
 
-Interval IntervalHelper::find_union(Interval &i1, Interval &i2) {
+Interval IntervalHelper::find_union(Interval i1, Interval i2) {
   int first = min(i1.bottom, i2.bottom);
   int second = max(i1.top, i2.top);
   Interval united(first, second);
 
   return united;
 }
-Interval IntervalHelper::find_intersection(Interval &i1, Interval &i2) {
+Interval IntervalHelper::find_intersection(Interval i1, Interval i2) {
   int a, b, c, d;
   if (i1.bottom > i2.bottom) {
     a = i2.bottom;
@@ -115,16 +115,18 @@ Interval IntervalHelper::compliment(Interval i1, Interval i2) {
 }
 
 vector<int> IntervalHelper::find_union(vector<int> v1, vector<int> v2) {
-  set<int> s1(v1.begin(), v1.end());
-  set<int> s2(v2.begin(), v2.end());
-  set<int> fin;
-  for (auto x : s1)
-    fin.insert(x);
-  for (auto x : s2)
-    fin.insert(x);
-
-  vector<int> ans;
-  for (auto x : fin)
-    ans.push_back(x);
+  set<int> s(v1.begin(),v1.end());
+  for(auto &i : v2)s.insert(i);
+  vector<int> ans(s.begin(),s.end());
   return ans;
 }
+// to make L
+ // put L2 in L
+// then iteratate L1
+// take edge in L1 which does not have partner in R2
+
+// to Make R
+ // put R1
+ // then iterate R2
+// take edge in R2 which does not have partner in L1
+

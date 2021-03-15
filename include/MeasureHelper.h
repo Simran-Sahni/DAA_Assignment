@@ -20,7 +20,7 @@ public:
   static vector<Interval> partition(vector<int> &coordinates);
   static vector<Stripe> copy(vector<Stripe> S, vector<int> coord_P,
                              Interval x_int);
-  static void blacken(vector<Stripe> &S, vector<Interval> &J);
+  static void blacken(vector<Stripe> &S, vector<Edge> &J);
   static vector<Stripe> concat(vector<Stripe> &s1, vector<Stripe> &s2,
                                vector<int> &coord_p, Interval x_int);
   static StripeOutput stripes(vector<Edge> V, Interval x_ext);

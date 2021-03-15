@@ -7,16 +7,16 @@
 
 #include "Interval.h"
 #include "Stripe.h"
+#include "Edge.h"
 #include <vector>
 using std ::vector;
 class StripeOutput {
 public:
-  vector<Interval> L;
-
-  vector<Interval> R;
+  vector<Edge> L;
+  vector<Edge> R;
   vector<int> coord_p;
   vector<Stripe> S;
-  StripeOutput(const vector<Interval> l, const vector<Interval> r,
+  StripeOutput(const vector<Edge> l, const vector<Edge> r,
                const vector<int> coordP, const vector<Stripe> s);
   StripeOutput();
 };
