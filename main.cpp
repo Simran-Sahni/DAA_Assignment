@@ -3,7 +3,6 @@
 #include "include/Interval.h"
 #include "include/LineSegment.h"
 #include "include/Rectangle.h"
-#include "include/EdgeType.h"
 using std:: cout;
 int main() {
 
@@ -15,7 +14,7 @@ int main() {
 
     Rectangle r1(1, 2, 3, 4);
 
-    EdgeType e1("LEFT");
+
 
     cout << "DAA";
 

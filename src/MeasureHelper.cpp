@@ -45,7 +45,7 @@ vector<Stripe> MeasureHelper ::copy(vector<Stripe> S, vector<int> coord_P,
   vector<Interval> partition_P = partition(coord_P);
 
   for (auto &y_interval : partition_P) {
-    Stripe new_stripe(x_interval, y_interval, vector<Interval>());
+    Stripe new_stripe(x_interval, y_interval, 0);
     ans.push_back(new_stripe);
   }
 
@@ -67,7 +67,7 @@ vector<Stripe> MeasureHelper::concat(vector<Stripe> &s1, vector<Stripe> &s2,
   vector<Interval> partition_P = partition(coord_P);
 
   for (auto &y_interval : partition_P) {
-    Stripe new_stripe(x_interval, y_interval, vector<Interval>());
+    Stripe new_stripe(x_interval, y_interval, 0);
     ans.push_back(new_stripe);
   }
 
@@ -86,11 +86,48 @@ vector<Stripe> MeasureHelper::concat(vector<Stripe> &s1, vector<Stripe> &s2,
 
 void MeasureHelper::blacken(vector<Stripe> &S, vector<Interval> &J) {
 
-  for(int i = 0; i < S.size(); i++){
-    for(int j = 0; j < J.size(); j++){
-      if(IntervalHelper :: is_subset_of(S[i].y_interval,J[j])){
+  for (int i = 0; i < S.size(); i++) {
+    for (int j = 0; j < J.size(); j++) {
+      if (IntervalHelper ::is_subset_of(S[i].y_interval, J[j])) {
         S[i].setXMeasure(S[i].x_interval.top - S[i].x_interval.bottom);
       }
     }
+  }
+}
+StripeOutput MeasureHelper::stripes(vector<Edge> V, Interval x_ext) {
+  vector<Interval> L;
+  vector<Interval> R;
+  vector<int> coord_P;
+  vector<Stripe> S;
+
+  if (V.size() == 1) {
+    Edge v = V[0];
+    if (v.type == LEFT) {
+      L = {v.interval};
+      R = {};
+    } else {
+      L = {};
+      R = {v.interval};
+    }
+
+    coord_P = {-INF, v.interval.bottom, v.interval.top, INF};
+    vector<Interval> partition_P = partition(coord_P);
+    S.clear();
+    for (auto &interval : partition_P) {
+      Stripe new_stripe(x_ext, interval, 0);
+
+      S.push_back(new_stripe);
+    }
+    for (auto &stripe : S) {
+      if (v.type == LEFT) {
+        stripe.setXMeasure(x_ext.top - v.coord);
+      } else {
+        stripe.setXMeasure(v.coord - x_ext.bottom);
+      }
+    }
+
+  } else {
+    vector<Edge> V1;
+    vector<Edge> V2;
   }
 }

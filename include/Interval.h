@@ -10,7 +10,7 @@ public:
   int bottom;
   int top;
   Interval(int bottom, int top);
-  bool operator== ( const Interval &i);
+  bool operator==(const Interval &i);
 };
 
 #endif // DAA_ASSIGNMENT_INTERVAL_H

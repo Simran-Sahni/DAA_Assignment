@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/DAA_Assignment.dir/include/StripeOutput.cpp.obj"
   "CMakeFiles/DAA_Assignment.dir/main.cpp.obj"
   "CMakeFiles/DAA_Assignment.dir/src/Edge.cpp.obj"
-  "CMakeFiles/DAA_Assignment.dir/src/EdgeType.cpp.obj"
   "CMakeFiles/DAA_Assignment.dir/src/Interval.cpp.obj"
   "CMakeFiles/DAA_Assignment.dir/src/IntervalHelper.cpp.obj"
   "CMakeFiles/DAA_Assignment.dir/src/LineSegment.cpp.obj"

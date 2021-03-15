@@ -15,7 +15,7 @@ public:
   int y_top;
   Rectangle(int x_left, int x_right, int y_bottom, int y_top);
   Rectangle(Interval xInterval, Interval yInterval);
-  vector<Interval>  getIntervals() const;
+  vector<Interval> getIntervals() const;
 };
 
 #endif // DAA_ASSIGNMENT_RECTANGLE_H

@@ -17,4 +17,10 @@ vector<Interval> IntervalHelper::find_intersection(vector<Interval> &i1,
 bool IntervalHelper::do_they_intersect(Interval i1, Interval i2) {
   return false;
 }
-
+vector<Interval> IntervalHelper::compliment(vector<Interval> i1,
+                                            vector<Interval> i2) {
+  return vector<Interval>();
+}
+Interval IntervalHelper::compliment(Interval i1, Interval i2) {
+  return Interval(0, 0);
+}

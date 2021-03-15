@@ -142,6 +142,33 @@ DAA_Assignment/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\DAA_Assignment.dir\build.make CMakeFiles/DAA_Assignment.dir/build
 .PHONY : DAA_Assignment/fast
 
+include/StripeOutput.obj: include/StripeOutput.cpp.obj
+
+.PHONY : include/StripeOutput.obj
+
+# target to build an object file
+include/StripeOutput.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DAA_Assignment.dir\build.make CMakeFiles/DAA_Assignment.dir/include/StripeOutput.cpp.obj
+.PHONY : include/StripeOutput.cpp.obj
+
+include/StripeOutput.i: include/StripeOutput.cpp.i
+
+.PHONY : include/StripeOutput.i
+
+# target to preprocess a source file
+include/StripeOutput.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DAA_Assignment.dir\build.make CMakeFiles/DAA_Assignment.dir/include/StripeOutput.cpp.i
+.PHONY : include/StripeOutput.cpp.i
+
+include/StripeOutput.s: include/StripeOutput.cpp.s
+
+.PHONY : include/StripeOutput.s
+
+# target to generate assembly for a file
+include/StripeOutput.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DAA_Assignment.dir\build.make CMakeFiles/DAA_Assignment.dir/include/StripeOutput.cpp.s
+.PHONY : include/StripeOutput.cpp.s
+
 main.obj: main.cpp.obj
 
 .PHONY : main.obj
@@ -195,33 +222,6 @@ src/Edge.s: src/Edge.cpp.s
 src/Edge.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\DAA_Assignment.dir\build.make CMakeFiles/DAA_Assignment.dir/src/Edge.cpp.s
 .PHONY : src/Edge.cpp.s
-
-src/EdgeType.obj: src/EdgeType.cpp.obj
-
-.PHONY : src/EdgeType.obj
-
-# target to build an object file
-src/EdgeType.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\DAA_Assignment.dir\build.make CMakeFiles/DAA_Assignment.dir/src/EdgeType.cpp.obj
-.PHONY : src/EdgeType.cpp.obj
-
-src/EdgeType.i: src/EdgeType.cpp.i
-
-.PHONY : src/EdgeType.i
-
-# target to preprocess a source file
-src/EdgeType.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\DAA_Assignment.dir\build.make CMakeFiles/DAA_Assignment.dir/src/EdgeType.cpp.i
-.PHONY : src/EdgeType.cpp.i
-
-src/EdgeType.s: src/EdgeType.cpp.s
-
-.PHONY : src/EdgeType.s
-
-# target to generate assembly for a file
-src/EdgeType.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\DAA_Assignment.dir\build.make CMakeFiles/DAA_Assignment.dir/src/EdgeType.cpp.s
-.PHONY : src/EdgeType.cpp.s
 
 src/Interval.obj: src/Interval.cpp.obj
 
@@ -421,15 +421,15 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... DAA_Assignment
+	@echo ... include/StripeOutput.obj
+	@echo ... include/StripeOutput.i
+	@echo ... include/StripeOutput.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
 	@echo ... src/Edge.obj
 	@echo ... src/Edge.i
 	@echo ... src/Edge.s
-	@echo ... src/EdgeType.obj
-	@echo ... src/EdgeType.i
-	@echo ... src/EdgeType.s
 	@echo ... src/Interval.obj
 	@echo ... src/Interval.i
 	@echo ... src/Interval.s

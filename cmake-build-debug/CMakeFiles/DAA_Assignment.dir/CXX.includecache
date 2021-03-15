@@ -6,6 +6,12 @@
 
 #IncludeRegexTransform: 
 
+D:/Dev/DAA_Assignment/include/Edge.h
+Interval.h
+D:/Dev/DAA_Assignment/include/Interval.h
+iostream
+-
+
 D:/Dev/DAA_Assignment/include/Interval.h
 
 D:/Dev/DAA_Assignment/include/IntervalHelper.h
@@ -21,6 +27,8 @@ Rectangle.h
 D:/Dev/DAA_Assignment/include/Rectangle.h
 Stripe.h
 D:/Dev/DAA_Assignment/include/Stripe.h
+Edge.h
+D:/Dev/DAA_Assignment/include/Edge.h
 vector
 -
 

@@ -13,7 +13,7 @@ class Stripe {
 public:
   Interval x_interval;
   Interval y_interval;
-  Stripe(Interval x_interval, Interval y_interval, vector<Interval> x_union);
+  Stripe(Interval x_interval, Interval y_interval, long double x_measure);
   long double x_measure;
   void setXMeasure(long double xMeasure);
 };
