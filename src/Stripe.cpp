@@ -3,3 +3,8 @@
 //
 
 #include "../include/Stripe.h"
+
+Stripe ::Stripe(Interval x_interval, Interval y_interval,
+                vector<Interval> x_union)
+    : x_interval(x_interval), y_interval(y_interval), x_measure(x_measure) {}
+void Stripe::setXMeasure(long double xMeasure) { x_measure = xMeasure; }

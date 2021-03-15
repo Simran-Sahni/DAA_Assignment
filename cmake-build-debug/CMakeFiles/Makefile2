@@ -63,10 +63,10 @@ RM = "C:\Program Files\JetBrains\CLion 2020.3.2\bin\cmake\win\bin\cmake.exe" -E 
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "C:\Users\Radhesh Sarma\CLionProjects\DAA-Assignment"
+CMAKE_SOURCE_DIR = D:\Dev\DAA_Assignment
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "C:\Users\Radhesh Sarma\CLionProjects\DAA-Assignment\cmake-build-debug"
+CMAKE_BINARY_DIR = D:\Dev\DAA_Assignment\cmake-build-debug
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -93,14 +93,14 @@ clean: CMakeFiles/DAA_Assignment.dir/clean
 CMakeFiles/DAA_Assignment.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\DAA_Assignment.dir\build.make CMakeFiles/DAA_Assignment.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\DAA_Assignment.dir\build.make CMakeFiles/DAA_Assignment.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="C:\Users\Radhesh Sarma\CLionProjects\DAA-Assignment\cmake-build-debug\CMakeFiles" --progress-num=1,2,3,4,5,6,7,8,9 "Built target DAA_Assignment"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\Dev\DAA_Assignment\cmake-build-debug\CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11 "Built target DAA_Assignment"
 .PHONY : CMakeFiles/DAA_Assignment.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/DAA_Assignment.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Radhesh Sarma\CLionProjects\DAA-Assignment\cmake-build-debug\CMakeFiles" 9
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\Dev\DAA_Assignment\cmake-build-debug\CMakeFiles 11
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/DAA_Assignment.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Radhesh Sarma\CLionProjects\DAA-Assignment\cmake-build-debug\CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\Dev\DAA_Assignment\cmake-build-debug\CMakeFiles 0
 .PHONY : CMakeFiles/DAA_Assignment.dir/rule
 
 # Convenience name for target.

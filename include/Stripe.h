@@ -6,18 +6,16 @@
 #define DAA_ASSIGNMENT_STRIPE_H
 
 #include "Interval.h"
-#include <set>
-using std :: set;
+#include <vector>
+using std ::vector;
 
 class Stripe {
- public:
-    Interval x_interval;
-    Interval y_interval;
-    set<Interval> x_union;
-
-    Stripe(Interval x_interval, Interval y_interval, set<Interval> x_union);
-    int measure();
+public:
+  Interval x_interval;
+  Interval y_interval;
+  Stripe(Interval x_interval, Interval y_interval, vector<Interval> x_union);
+  long double x_measure;
+  void setXMeasure(long double xMeasure);
 };
 
-
-#endif //DAA_ASSIGNMENT_STRIPE_H
+#endif // DAA_ASSIGNMENT_STRIPE_H

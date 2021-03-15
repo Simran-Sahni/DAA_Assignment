@@ -5,13 +5,12 @@
 #ifndef DAA_ASSIGNMENT_INTERVAL_H
 #define DAA_ASSIGNMENT_INTERVAL_H
 
-
 class Interval {
- public:
-    int bottom;
-    int top;
-    Interval(int bottom, int top);
+public:
+  int bottom;
+  int top;
+  Interval(int bottom, int top);
+  bool operator== ( const Interval &i);
 };
 
-
-#endif //DAA_ASSIGNMENT_INTERVAL_H
+#endif // DAA_ASSIGNMENT_INTERVAL_H
