@@ -23,7 +23,6 @@ public:
   static vector<Interval> compliment(vector<Interval> i1, vector<Interval> i2);
   static Interval compliment(Interval i1, Interval i2);
   static vector<int> find_union(vector<int> v1,vector<int> v2);
-
 };
 
 #endif // DAA_ASSIGNMENT_INTERVALHELPER_H
