@@ -5,8 +5,8 @@
 #include "../include/Edge.h"
 #include <iostream>
 using std::runtime_error;
-Edge::Edge(const string &type, const Interval &interval)
-    : type(type), interval(interval) {
+Edge::Edge(string &type, Interval &interval, int coord)
+    : type(type), interval(interval), coord(coord) {
   if (type == LEFT || type == RIGHT || type == UP || type == BOTTOM)
     this->type = type;
   else

@@ -17,4 +17,3 @@ vector<Interval> IntervalHelper::find_intersection(vector<Interval> &i1,
 bool IntervalHelper::do_they_intersect(Interval i1, Interval i2) {
   return false;
 }
-

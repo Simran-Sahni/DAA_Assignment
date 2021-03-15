@@ -6,7 +6,7 @@
 #define DAA_ASSIGNMENT_EDGE_H
 
 #include "Interval.h"
-#include<iostream>
+#include <iostream>
 using std ::string;
 static const char LEFT[] = "LEFT";
 static const char RIGHT[] = "RIGHT";
@@ -15,9 +15,10 @@ static const char BOTTOM[] = "BOTTOM";
 
 class Edge {
 public:
- string type;
- Interval interval;
- Edge(const string &type, const Interval &interval);
+  string type;
+  Interval interval;
+  int coord;
+  Edge(string &type, Interval &interval, int coord);
 };
 
-#endif //DAA_ASSIGNMENT_EDGE_H
+#endif // DAA_ASSIGNMENT_EDGE_H
