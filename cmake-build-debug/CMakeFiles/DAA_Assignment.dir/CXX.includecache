@@ -8,21 +8,9 @@
 
 D:/Dev/DAA_Assignment/include/Interval.h
 
-D:/Dev/DAA_Assignment/include/IntervalHelper.h
-vector
-D:/Dev/DAA_Assignment/include/vector
+D:/Dev/DAA_Assignment/include/LineSegment.h
 Interval.h
 D:/Dev/DAA_Assignment/include/Interval.h
-
-D:/Dev/DAA_Assignment/include/MeasureHelper.h
-Point.h
-D:/Dev/DAA_Assignment/include/Point.h
-Rectangle.h
-D:/Dev/DAA_Assignment/include/Rectangle.h
-Stripe.h
-D:/Dev/DAA_Assignment/include/Stripe.h
-vector
--
 
 D:/Dev/DAA_Assignment/include/Point.h
 
@@ -32,15 +20,15 @@ D:/Dev/DAA_Assignment/include/Interval.h
 vector
 -
 
-D:/Dev/DAA_Assignment/include/Stripe.h
-Interval.h
-D:/Dev/DAA_Assignment/include/Interval.h
-vector
+D:/Dev/DAA_Assignment/main.cpp
+iostream
 -
-
-D:/Dev/DAA_Assignment/src/MeasureHelper.cpp
-../include/MeasureHelper.h
-D:/Dev/DAA_Assignment/include/MeasureHelper.h
-../include/IntervalHelper.h
-D:/Dev/DAA_Assignment/include/IntervalHelper.h
+include/Point.h
+D:/Dev/DAA_Assignment/include/Point.h
+include/Interval.h
+D:/Dev/DAA_Assignment/include/Interval.h
+include/LineSegment.h
+D:/Dev/DAA_Assignment/include/LineSegment.h
+include/Rectangle.h
+D:/Dev/DAA_Assignment/include/Rectangle.h
 

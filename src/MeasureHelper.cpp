@@ -94,3 +94,12 @@ void MeasureHelper::blacken(vector<Stripe> &S, vector<Interval> &J) {
     }
   }
 }
+void MeasureHelper::stripes(vector<Edge> V, Interval x_ext, vector<Interval> &L,
+                            vector<Interval> &R, vector<int> &coord,
+                            vector<Stripe> &S) {
+  if(V.size() == 1){
+    if(V[0].type == LEFT){
+
+    }
+  }
+}

@@ -196,33 +196,6 @@ src/Edge.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\DAA_Assignment.dir\build.make CMakeFiles/DAA_Assignment.dir/src/Edge.cpp.s
 .PHONY : src/Edge.cpp.s
 
-src/EdgeType.obj: src/EdgeType.cpp.obj
-
-.PHONY : src/EdgeType.obj
-
-# target to build an object file
-src/EdgeType.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\DAA_Assignment.dir\build.make CMakeFiles/DAA_Assignment.dir/src/EdgeType.cpp.obj
-.PHONY : src/EdgeType.cpp.obj
-
-src/EdgeType.i: src/EdgeType.cpp.i
-
-.PHONY : src/EdgeType.i
-
-# target to preprocess a source file
-src/EdgeType.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\DAA_Assignment.dir\build.make CMakeFiles/DAA_Assignment.dir/src/EdgeType.cpp.i
-.PHONY : src/EdgeType.cpp.i
-
-src/EdgeType.s: src/EdgeType.cpp.s
-
-.PHONY : src/EdgeType.s
-
-# target to generate assembly for a file
-src/EdgeType.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\DAA_Assignment.dir\build.make CMakeFiles/DAA_Assignment.dir/src/EdgeType.cpp.s
-.PHONY : src/EdgeType.cpp.s
-
 src/Interval.obj: src/Interval.cpp.obj
 
 .PHONY : src/Interval.obj
@@ -427,9 +400,6 @@ help:
 	@echo ... src/Edge.obj
 	@echo ... src/Edge.i
 	@echo ... src/Edge.s
-	@echo ... src/EdgeType.obj
-	@echo ... src/EdgeType.i
-	@echo ... src/EdgeType.s
 	@echo ... src/Interval.obj
 	@echo ... src/Interval.i
 	@echo ... src/Interval.s
