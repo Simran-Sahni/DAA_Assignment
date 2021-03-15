@@ -80,6 +80,9 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="D:/Dev/DAA_Assignment/include/Edge.h">
+			<Option target="DAA_Assignment"/>
+		</Unit>
 		<Unit filename="D:/Dev/DAA_Assignment/include/EdgeType.h">
 			<Option target="DAA_Assignment"/>
 		</Unit>
@@ -108,9 +111,6 @@
 			<Option target="DAA_Assignment"/>
 		</Unit>
 		<Unit filename="D:/Dev/DAA_Assignment/src/Edge.cpp">
-			<Option target="DAA_Assignment"/>
-		</Unit>
-		<Unit filename="D:/Dev/DAA_Assignment/src/Edge.h">
 			<Option target="DAA_Assignment"/>
 		</Unit>
 		<Unit filename="D:/Dev/DAA_Assignment/src/EdgeType.cpp">

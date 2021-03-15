@@ -13,11 +13,9 @@ class Stripe {
 public:
   Interval x_interval;
   Interval y_interval;
-  vector<Interval> x_union;
-  void setXUnion(const vector<Interval> &xUnion);
   Stripe(Interval x_interval, Interval y_interval, vector<Interval> x_union);
-  int measure();
   long double x_measure;
+  void setXMeasure(long double xMeasure);
 };
 
 #endif // DAA_ASSIGNMENT_STRIPE_H

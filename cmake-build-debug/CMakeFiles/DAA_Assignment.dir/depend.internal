@@ -9,8 +9,10 @@ CMakeFiles/DAA_Assignment.dir/main.cpp.obj
  D:/Dev/DAA_Assignment/include/Rectangle.h
  D:/Dev/DAA_Assignment/main.cpp
 CMakeFiles/DAA_Assignment.dir/src/Edge.cpp.obj
+ D:/Dev/DAA_Assignment/include/Edge.h
+ D:/Dev/DAA_Assignment/include/EdgeType.h
+ D:/Dev/DAA_Assignment/include/Interval.h
  D:/Dev/DAA_Assignment/src/Edge.cpp
- D:/Dev/DAA_Assignment/src/Edge.h
 CMakeFiles/DAA_Assignment.dir/src/EdgeType.cpp.obj
  D:/Dev/DAA_Assignment/include/EdgeType.h
  D:/Dev/DAA_Assignment/src/EdgeType.cpp

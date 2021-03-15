@@ -8,13 +8,39 @@
 
 D:/Dev/DAA_Assignment/include/Interval.h
 
+D:/Dev/DAA_Assignment/include/IntervalHelper.h
+vector
+D:/Dev/DAA_Assignment/include/vector
+Interval.h
+D:/Dev/DAA_Assignment/include/Interval.h
+
+D:/Dev/DAA_Assignment/include/MeasureHelper.h
+Point.h
+D:/Dev/DAA_Assignment/include/Point.h
+Rectangle.h
+D:/Dev/DAA_Assignment/include/Rectangle.h
+Stripe.h
+D:/Dev/DAA_Assignment/include/Stripe.h
+vector
+-
+
+D:/Dev/DAA_Assignment/include/Point.h
+
+D:/Dev/DAA_Assignment/include/Rectangle.h
+Interval.h
+D:/Dev/DAA_Assignment/include/Interval.h
+vector
+-
+
 D:/Dev/DAA_Assignment/include/Stripe.h
 Interval.h
 D:/Dev/DAA_Assignment/include/Interval.h
 vector
 -
 
-D:/Dev/DAA_Assignment/src/Stripe.cpp
-../include/Stripe.h
-D:/Dev/DAA_Assignment/include/Stripe.h
+D:/Dev/DAA_Assignment/src/MeasureHelper.cpp
+../include/MeasureHelper.h
+D:/Dev/DAA_Assignment/include/MeasureHelper.h
+../include/IntervalHelper.h
+D:/Dev/DAA_Assignment/include/IntervalHelper.h
 

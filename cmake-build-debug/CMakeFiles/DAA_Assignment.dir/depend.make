@@ -8,8 +8,10 @@ CMakeFiles/DAA_Assignment.dir/main.cpp.obj: ../include/Point.h
 CMakeFiles/DAA_Assignment.dir/main.cpp.obj: ../include/Rectangle.h
 CMakeFiles/DAA_Assignment.dir/main.cpp.obj: ../main.cpp
 
+CMakeFiles/DAA_Assignment.dir/src/Edge.cpp.obj: ../include/Edge.h
+CMakeFiles/DAA_Assignment.dir/src/Edge.cpp.obj: ../include/EdgeType.h
+CMakeFiles/DAA_Assignment.dir/src/Edge.cpp.obj: ../include/Interval.h
 CMakeFiles/DAA_Assignment.dir/src/Edge.cpp.obj: ../src/Edge.cpp
-CMakeFiles/DAA_Assignment.dir/src/Edge.cpp.obj: ../src/Edge.h
 
 CMakeFiles/DAA_Assignment.dir/src/EdgeType.cpp.obj: ../include/EdgeType.h
 CMakeFiles/DAA_Assignment.dir/src/EdgeType.cpp.obj: ../src/EdgeType.cpp

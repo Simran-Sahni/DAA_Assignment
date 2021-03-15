@@ -12,7 +12,6 @@
 
 class MeasureHelper {
 public:
-  static int measure(vector<Stripe> &s);
   static vector<Point> union_of_rectangle(vector<Rectangle> &r);
   static vector<int> y_set(vector<Rectangle> &r);
   static vector<Interval> partition(vector<int> &coordinates);

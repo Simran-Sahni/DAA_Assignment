@@ -4,12 +4,7 @@
 
 #include "../include/MeasureHelper.h"
 #include "../include/IntervalHelper.h"
-int MeasureHelper ::measure(vector<Stripe> &s) {
-  int ans = 0;
-  for (auto &interval : s)
-    ans += interval.measure();
-  return ans;
-}
+
 vector<Point> MeasureHelper ::union_of_rectangle(vector<Rectangle> &r) {
   vector<Point> ans;
 
@@ -57,7 +52,7 @@ vector<Stripe> MeasureHelper ::copy(vector<Stripe> S, vector<int> coord_P,
   for (int i = 0; i < S.size(); i++) {
     for (int j = 0; j < ans.size(); j++) {
       if (IntervalHelper ::is_subset_of(ans[i].y_interval, S[i].y_interval)) {
-        ans[i].setXUnion(S[i].x_union);
+        ans[i].setXMeasure(S[i].x_measure);
       }
     }
   }
@@ -81,8 +76,7 @@ vector<Stripe> MeasureHelper::concat(vector<Stripe> &s1, vector<Stripe> &s2,
       for (int k = 0; k < ans.size(); k++) {
         if (s1[i].y_interval == s2[i].y_interval and
             s2[i].y_interval == ans[i].y_interval) {
-          ans[i].setXUnion(
-              IntervalHelper ::find_union(s1[i].x_union, s2[i].x_union));
+          ans[i].setXMeasure(s1[i].x_measure + s2[i].x_measure);
         }
       }
     }
@@ -95,7 +89,7 @@ void MeasureHelper::blacken(vector<Stripe> &S, vector<Interval> &J) {
   for(int i = 0; i < S.size(); i++){
     for(int j = 0; j < J.size(); j++){
       if(IntervalHelper :: is_subset_of(S[i].y_interval,J[j])){
-        S[i].setXUnion(vector<Interval> ({S[i].x_interval}));
+        S[i].setXMeasure(S[i].x_interval.top - S[i].x_interval.bottom);
       }
     }
   }
