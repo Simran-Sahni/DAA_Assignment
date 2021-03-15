@@ -1,5 +1,4 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/DAA_Assignment.dir/include/StripeOutput.cpp.obj"
   "CMakeFiles/DAA_Assignment.dir/main.cpp.obj"
   "CMakeFiles/DAA_Assignment.dir/src/Edge.cpp.obj"
   "CMakeFiles/DAA_Assignment.dir/src/Interval.cpp.obj"
@@ -9,6 +8,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/DAA_Assignment.dir/src/Point.cpp.obj"
   "CMakeFiles/DAA_Assignment.dir/src/Rectangle.cpp.obj"
   "CMakeFiles/DAA_Assignment.dir/src/Stripe.cpp.obj"
+  "CMakeFiles/DAA_Assignment.dir/src/StripeOutput.cpp.obj"
   "DAA_Assignment.exe"
   "DAA_Assignment.exe.manifest"
   "DAA_Assignment.pdb"

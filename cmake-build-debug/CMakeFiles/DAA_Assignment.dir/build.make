@@ -193,18 +193,18 @@ CMakeFiles/DAA_Assignment.dir/src/IntervalHelper.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DAA_Assignment.dir/src/IntervalHelper.cpp.s"
 	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Dev\DAA_Assignment\src\IntervalHelper.cpp -o CMakeFiles\DAA_Assignment.dir\src\IntervalHelper.cpp.s
 
-CMakeFiles/DAA_Assignment.dir/include/StripeOutput.cpp.obj: CMakeFiles/DAA_Assignment.dir/flags.make
-CMakeFiles/DAA_Assignment.dir/include/StripeOutput.cpp.obj: ../include/StripeOutput.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Dev\DAA_Assignment\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/DAA_Assignment.dir/include/StripeOutput.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\DAA_Assignment.dir\include\StripeOutput.cpp.obj -c D:\Dev\DAA_Assignment\include\StripeOutput.cpp
+CMakeFiles/DAA_Assignment.dir/src/StripeOutput.cpp.obj: CMakeFiles/DAA_Assignment.dir/flags.make
+CMakeFiles/DAA_Assignment.dir/src/StripeOutput.cpp.obj: ../src/StripeOutput.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Dev\DAA_Assignment\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/DAA_Assignment.dir/src/StripeOutput.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\DAA_Assignment.dir\src\StripeOutput.cpp.obj -c D:\Dev\DAA_Assignment\src\StripeOutput.cpp
 
-CMakeFiles/DAA_Assignment.dir/include/StripeOutput.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/DAA_Assignment.dir/include/StripeOutput.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Dev\DAA_Assignment\include\StripeOutput.cpp > CMakeFiles\DAA_Assignment.dir\include\StripeOutput.cpp.i
+CMakeFiles/DAA_Assignment.dir/src/StripeOutput.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/DAA_Assignment.dir/src/StripeOutput.cpp.i"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Dev\DAA_Assignment\src\StripeOutput.cpp > CMakeFiles\DAA_Assignment.dir\src\StripeOutput.cpp.i
 
-CMakeFiles/DAA_Assignment.dir/include/StripeOutput.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DAA_Assignment.dir/include/StripeOutput.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Dev\DAA_Assignment\include\StripeOutput.cpp -o CMakeFiles\DAA_Assignment.dir\include\StripeOutput.cpp.s
+CMakeFiles/DAA_Assignment.dir/src/StripeOutput.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DAA_Assignment.dir/src/StripeOutput.cpp.s"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Dev\DAA_Assignment\src\StripeOutput.cpp -o CMakeFiles\DAA_Assignment.dir\src\StripeOutput.cpp.s
 
 # Object files for target DAA_Assignment
 DAA_Assignment_OBJECTS = \
@@ -217,7 +217,7 @@ DAA_Assignment_OBJECTS = \
 "CMakeFiles/DAA_Assignment.dir/src/MeasureHelper.cpp.obj" \
 "CMakeFiles/DAA_Assignment.dir/src/Edge.cpp.obj" \
 "CMakeFiles/DAA_Assignment.dir/src/IntervalHelper.cpp.obj" \
-"CMakeFiles/DAA_Assignment.dir/include/StripeOutput.cpp.obj"
+"CMakeFiles/DAA_Assignment.dir/src/StripeOutput.cpp.obj"
 
 # External object files for target DAA_Assignment
 DAA_Assignment_EXTERNAL_OBJECTS =
@@ -231,7 +231,7 @@ DAA_Assignment.exe: CMakeFiles/DAA_Assignment.dir/src/Stripe.cpp.obj
 DAA_Assignment.exe: CMakeFiles/DAA_Assignment.dir/src/MeasureHelper.cpp.obj
 DAA_Assignment.exe: CMakeFiles/DAA_Assignment.dir/src/Edge.cpp.obj
 DAA_Assignment.exe: CMakeFiles/DAA_Assignment.dir/src/IntervalHelper.cpp.obj
-DAA_Assignment.exe: CMakeFiles/DAA_Assignment.dir/include/StripeOutput.cpp.obj
+DAA_Assignment.exe: CMakeFiles/DAA_Assignment.dir/src/StripeOutput.cpp.obj
 DAA_Assignment.exe: CMakeFiles/DAA_Assignment.dir/build.make
 DAA_Assignment.exe: CMakeFiles/DAA_Assignment.dir/linklibs.rsp
 DAA_Assignment.exe: CMakeFiles/DAA_Assignment.dir/objects1.rsp

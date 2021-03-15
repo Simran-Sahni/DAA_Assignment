@@ -4,7 +4,7 @@
 
 #include "../include/MeasureHelper.h"
 #include "../include/IntervalHelper.h"
-
+#include <algorithm>
 vector<Point> MeasureHelper ::union_of_rectangle(vector<Rectangle> &r) {
   vector<Point> ans;
 
@@ -129,5 +129,59 @@ StripeOutput MeasureHelper::stripes(vector<Edge> V, Interval x_ext) {
   } else {
     vector<Edge> V1;
     vector<Edge> V2;
+    sort(V.begin(), V.end(), [](const auto &lhs, const auto &rhs) {
+      return lhs.coord < rhs.coord;
+    });
+    int m = V.size() / 2;
+    for (int i = 0; i < V.size(); i++) {
+      if (i <= m)
+        V1.push_back(V[i]);
+      else
+        V2.push_back(V[i]);
+    }
+    int xm = V[m].coord;
+    Interval left_interval(x_ext.bottom, xm);
+    Interval right_interval(xm, x_ext.top);
+
+    StripeOutput left = stripes(V1, left_interval);
+    StripeOutput right = stripes(V2, right_interval);
+
+    vector<Interval> LR = IntervalHelper ::find_intersection(left.L, right.R);
+
+    StripeOutput ans;
+    vector<Interval> L1_compliment_LR = IntervalHelper ::compliment(left.L, LR);
+    ans.L = IntervalHelper::find_union(L1_compliment_LR, right.L);
+
+    vector<Interval> R2_compliment_LR =
+        IntervalHelper ::compliment(right.R, LR);
+    ans.R = IntervalHelper ::find_union(left.R, R2_compliment_LR);
+
+    ans.coord_p = IntervalHelper ::find_union(left.coord_p, right.coord_p);
+
+    vector<Stripe> S_left = copy(left.S, ans.coord_p, left_interval);
+    vector<Stripe> S_right = copy(right.S, ans.coord_p, right_interval);
+
+    blacken(S_left, R2_compliment_LR);
+    blacken(S_right, L1_compliment_LR);
+
+    ans.S = concat(S_left, S_right, ans.coord_p, x_ext);
+
+    return ans;
   }
+}
+long double MeasureHelper::rectangle_dac(vector<Rectangle> r) {
+  vector<Edge> vrx;
+  for(auto &rectangle : r){
+    for(auto &edge : rectangle.getVerticalEdges()){
+      vrx.push_back(edge);
+    }
+  }
+  StripeOutput ans = stripes(vrx,Interval(-INF,INF));
+
+  long double measure = 0;
+
+  for(auto &stripe : ans.S){
+    measure += stripe.x_measure * (stripe.y_interval.top - stripe.y_interval.bottom);
+  }
+  return measure;
 }

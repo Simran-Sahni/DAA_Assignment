@@ -30,3 +30,6 @@ Interval IntervalHelper::find_intersection(Interval &i1, Interval &i2) {
 Interval IntervalHelper::compliment(Interval i1, Interval i2) {
   return Interval(0, 0);
 }
+vector<int> IntervalHelper::find_union(vector<int> v1, vector<int> v2) {
+  return vector<int>();
+}

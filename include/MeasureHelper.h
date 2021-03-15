@@ -24,6 +24,7 @@ public:
   static vector<Stripe> concat(vector<Stripe> &s1, vector<Stripe> &s2,
                                vector<int> &coord_p, Interval x_int);
   static StripeOutput stripes(vector<Edge> V, Interval x_ext);
+  static long double rectangle_dac(vector<Rectangle> r);
 };
 
 #endif // DAA_ASSIGNMENT_MEASUREHELPER_H
