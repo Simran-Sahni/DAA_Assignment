@@ -6,6 +6,7 @@
 #define DAA_ASSIGNMENT_STRIPE_H
 
 #include "Interval.h"
+#include "Ctree.h"
 #include <vector>
 using std ::vector;
 
@@ -13,8 +14,10 @@ class Stripe {
 public:
   Interval x_interval;
   Interval y_interval;
-  Stripe(Interval x_interval, Interval y_interval, long double x_measure);
+  Ctree tree;
   long double x_measure;
+  Stripe(Interval x_interval, Interval y_interval, long double x_measure);
+  Stripe(Interval x_interval, Interval y_interval, long double x_measure, Ctree tree);
   void setXMeasure(long double xMeasure);
 };
 

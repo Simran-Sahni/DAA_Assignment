@@ -1,51 +1,15 @@
 //
-// Created by Radhesh Sarma on 14-03-2021.
+// Created by Radhesh Sarma on 16-03-2021.
 //
 
+#include "../include/ContourHelper.h"
 #include "../include/MeasureHelper.h"
 #include "../include/IntervalHelper.h"
 #include <algorithm>
-//using std :: cout ;
-//using std :: endl;
-using namespace std;
-vector<Point> MeasureHelper ::union_of_rectangle(vector<Rectangle> &r) {
-  vector<Point> ans;
-
-  for (auto &rectangle : r) {
-    Point p1(rectangle.x_left, rectangle.y_top);
-    Point p2(rectangle.x_left, rectangle.y_bottom);
-    Point p3(rectangle.x_right, rectangle.y_top);
-    Point p4(rectangle.x_right, rectangle.y_bottom);
-    ans.push_back(p1);
-    ans.push_back(p2);
-    ans.push_back(p3);
-    ans.push_back(p4);
-  }
-  return ans;
-}
-
-vector<int> MeasureHelper ::y_set(vector<Rectangle> &r) {
-  vector<int> ans;
-  for (auto &rectangle : r) {
-    ans.push_back(rectangle.y_top);
-    ans.push_back(rectangle.y_bottom);
-  }
-  return ans;
-}
-
-vector<Interval> MeasureHelper ::partition(vector<int> &coordinates) {
-  vector<Interval> ans;
-  for (int i = 1; i < coordinates.size(); i++) {
-    Interval new_interval(coordinates[i], coordinates[i - 1]);
-    ans.push_back(new_interval);
-  }
-  return ans;
-}
-
-vector<Stripe> MeasureHelper ::copy(vector<Stripe> S, vector<int> coord_P,
-                                    Interval x_interval) {
+vector<Stripe> ContourHelper::copy(vector<Stripe> S, vector<int> coord_P,
+                                   Interval x_interval){
   vector<Stripe> ans;
-  vector<Interval> partition_P = partition(coord_P);
+  vector<Interval> partition_P = MeasureHelper :: partition(coord_P);
 
 //  cerr << x_interval.bottom << " " << x_interval.top << endl;
 //    for(auto &e: coord_P){
@@ -68,12 +32,22 @@ vector<Stripe> MeasureHelper ::copy(vector<Stripe> S, vector<int> coord_P,
 
   return ans;
 }
+void ContourHelper::blacken(vector<Stripe> &S, vector<Edge> &J) {
+  for (int i = 0; i < S.size(); i++) {
+    for (int j = 0; j < J.size(); j++) {
+      if (IntervalHelper ::is_subset_of(S[i].y_interval, J[j].interval)) {
+        S[i].setXMeasure(S[i].x_interval.top - S[i].x_interval.bottom);
+      }
+    }
+  }
+}
 
-vector<Stripe> MeasureHelper::concat(vector<Stripe> &s1, vector<Stripe> &s2,
+
+vector<Stripe> ContourHelper::concat(vector<Stripe> &s1, vector<Stripe> &s2,
                                      vector<int> &coord_P,
                                      Interval x_interval) {
   vector<Stripe> ans;
-  vector<Interval> partition_P = partition(coord_P);
+  vector<Interval> partition_P = MeasureHelper :: partition(coord_P);
 
   for (auto &y_interval : partition_P) {
     Stripe new_stripe(x_interval, y_interval, 0);
@@ -84,18 +58,7 @@ vector<Stripe> MeasureHelper::concat(vector<Stripe> &s1, vector<Stripe> &s2,
   }
   return ans;
 }
-
-void MeasureHelper::blacken(vector<Stripe> &S, vector<Edge> &J) {
-
-  for (int i = 0; i < S.size(); i++) {
-    for (int j = 0; j < J.size(); j++) {
-      if (IntervalHelper ::is_subset_of(S[i].y_interval, J[j].interval)) {
-        S[i].setXMeasure(S[i].x_interval.top - S[i].x_interval.bottom);
-      }
-    }
-  }
-}
-StripeOutput MeasureHelper::stripes(vector<Edge> V, Interval x_ext) {
+StripeOutput ContourHelper::stripes(vector<Edge> V, Interval x_ext) {
   vector<Edge> L;
   vector<Edge> R;
   vector<int> coord_P;
@@ -123,7 +86,7 @@ StripeOutput MeasureHelper::stripes(vector<Edge> V, Interval x_ext) {
     coord_P = {-INF, v.interval.bottom, v.interval.top, INF};
 
 
-    vector<Interval> partition_P = partition(coord_P);
+    vector<Interval> partition_P = MeasureHelper :: partition(coord_P);
 
 //    for(auto e : partition_P){
 //      cerr << e.bottom << " " << e.top << endl;
@@ -157,7 +120,7 @@ StripeOutput MeasureHelper::stripes(vector<Edge> V, Interval x_ext) {
 //    for(auto &stripe : S){
 //      cerr <<  stripe.y_interval.bottom << " " << stripe.y_interval.top << " " << stripe.x_measure << endl;
 //    }
-  return ans;
+    return ans;
 //    cerr << endl;
 //
 
@@ -183,7 +146,6 @@ StripeOutput MeasureHelper::stripes(vector<Edge> V, Interval x_ext) {
 //      cerr << e.coord << endl;
 //    }
 
-//    int xm = V[xm];
 
     double xm = (V1.back().coord + V2.front().coord) /2.0;
     Interval left_interval(x_ext.bottom, xm);
@@ -291,7 +253,7 @@ StripeOutput MeasureHelper::stripes(vector<Edge> V, Interval x_ext) {
     return ans;
   }
 }
-long double MeasureHelper::rectangle_dac(vector<Rectangle> r) {
+long double ContourHelper::rectangle_dac(vector<Rectangle> r) {
   vector<Edge> vrx;
   for (auto &rectangle : r) {
     for (auto &edge : rectangle.getVerticalEdges()) {
@@ -310,7 +272,7 @@ long double MeasureHelper::rectangle_dac(vector<Rectangle> r) {
   long double measure = 0;
 
   for (auto &stripe : ans.S) {
-  //  cerr <<  stripe.x_interval.top << " " << stripe.x_interval.bottom << " " <<  stripe.y_interval.bottom << " " << stripe.y_interval.top << " " << stripe.x_measure << endl;
+    //  cerr <<  stripe.x_interval.top << " " << stripe.x_interval.bottom << " " <<  stripe.y_interval.bottom << " " << stripe.y_interval.top << " " << stripe.x_measure << endl;
 
     measure +=
         stripe.x_measure * (stripe.y_interval.top - stripe.y_interval.bottom);
