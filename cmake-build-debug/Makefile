@@ -169,6 +169,60 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\DAA_Assignment.dir\build.make CMakeFiles/DAA_Assignment.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+src/ContourHelper.obj: src/ContourHelper.cpp.obj
+
+.PHONY : src/ContourHelper.obj
+
+# target to build an object file
+src/ContourHelper.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DAA_Assignment.dir\build.make CMakeFiles/DAA_Assignment.dir/src/ContourHelper.cpp.obj
+.PHONY : src/ContourHelper.cpp.obj
+
+src/ContourHelper.i: src/ContourHelper.cpp.i
+
+.PHONY : src/ContourHelper.i
+
+# target to preprocess a source file
+src/ContourHelper.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DAA_Assignment.dir\build.make CMakeFiles/DAA_Assignment.dir/src/ContourHelper.cpp.i
+.PHONY : src/ContourHelper.cpp.i
+
+src/ContourHelper.s: src/ContourHelper.cpp.s
+
+.PHONY : src/ContourHelper.s
+
+# target to generate assembly for a file
+src/ContourHelper.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DAA_Assignment.dir\build.make CMakeFiles/DAA_Assignment.dir/src/ContourHelper.cpp.s
+.PHONY : src/ContourHelper.cpp.s
+
+src/Ctree.obj: src/Ctree.cpp.obj
+
+.PHONY : src/Ctree.obj
+
+# target to build an object file
+src/Ctree.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DAA_Assignment.dir\build.make CMakeFiles/DAA_Assignment.dir/src/Ctree.cpp.obj
+.PHONY : src/Ctree.cpp.obj
+
+src/Ctree.i: src/Ctree.cpp.i
+
+.PHONY : src/Ctree.i
+
+# target to preprocess a source file
+src/Ctree.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DAA_Assignment.dir\build.make CMakeFiles/DAA_Assignment.dir/src/Ctree.cpp.i
+.PHONY : src/Ctree.cpp.i
+
+src/Ctree.s: src/Ctree.cpp.s
+
+.PHONY : src/Ctree.s
+
+# target to generate assembly for a file
+src/Ctree.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DAA_Assignment.dir\build.make CMakeFiles/DAA_Assignment.dir/src/Ctree.cpp.s
+.PHONY : src/Ctree.cpp.s
+
 src/Edge.obj: src/Edge.cpp.obj
 
 .PHONY : src/Edge.obj
@@ -424,6 +478,12 @@ help:
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
+	@echo ... src/ContourHelper.obj
+	@echo ... src/ContourHelper.i
+	@echo ... src/ContourHelper.s
+	@echo ... src/Ctree.obj
+	@echo ... src/Ctree.i
+	@echo ... src/Ctree.s
 	@echo ... src/Edge.obj
 	@echo ... src/Edge.i
 	@echo ... src/Edge.s

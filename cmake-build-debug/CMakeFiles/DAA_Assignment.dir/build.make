@@ -206,6 +206,32 @@ CMakeFiles/DAA_Assignment.dir/src/StripeOutput.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DAA_Assignment.dir/src/StripeOutput.cpp.s"
 	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Dev\DAA_Assignment\src\StripeOutput.cpp -o CMakeFiles\DAA_Assignment.dir\src\StripeOutput.cpp.s
 
+CMakeFiles/DAA_Assignment.dir/src/Ctree.cpp.obj: CMakeFiles/DAA_Assignment.dir/flags.make
+CMakeFiles/DAA_Assignment.dir/src/Ctree.cpp.obj: ../src/Ctree.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Dev\DAA_Assignment\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/DAA_Assignment.dir/src/Ctree.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\DAA_Assignment.dir\src\Ctree.cpp.obj -c D:\Dev\DAA_Assignment\src\Ctree.cpp
+
+CMakeFiles/DAA_Assignment.dir/src/Ctree.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/DAA_Assignment.dir/src/Ctree.cpp.i"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Dev\DAA_Assignment\src\Ctree.cpp > CMakeFiles\DAA_Assignment.dir\src\Ctree.cpp.i
+
+CMakeFiles/DAA_Assignment.dir/src/Ctree.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DAA_Assignment.dir/src/Ctree.cpp.s"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Dev\DAA_Assignment\src\Ctree.cpp -o CMakeFiles\DAA_Assignment.dir\src\Ctree.cpp.s
+
+CMakeFiles/DAA_Assignment.dir/src/ContourHelper.cpp.obj: CMakeFiles/DAA_Assignment.dir/flags.make
+CMakeFiles/DAA_Assignment.dir/src/ContourHelper.cpp.obj: ../src/ContourHelper.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Dev\DAA_Assignment\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/DAA_Assignment.dir/src/ContourHelper.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\DAA_Assignment.dir\src\ContourHelper.cpp.obj -c D:\Dev\DAA_Assignment\src\ContourHelper.cpp
+
+CMakeFiles/DAA_Assignment.dir/src/ContourHelper.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/DAA_Assignment.dir/src/ContourHelper.cpp.i"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Dev\DAA_Assignment\src\ContourHelper.cpp > CMakeFiles\DAA_Assignment.dir\src\ContourHelper.cpp.i
+
+CMakeFiles/DAA_Assignment.dir/src/ContourHelper.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DAA_Assignment.dir/src/ContourHelper.cpp.s"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Dev\DAA_Assignment\src\ContourHelper.cpp -o CMakeFiles\DAA_Assignment.dir\src\ContourHelper.cpp.s
+
 # Object files for target DAA_Assignment
 DAA_Assignment_OBJECTS = \
 "CMakeFiles/DAA_Assignment.dir/main.cpp.obj" \
@@ -217,7 +243,9 @@ DAA_Assignment_OBJECTS = \
 "CMakeFiles/DAA_Assignment.dir/src/MeasureHelper.cpp.obj" \
 "CMakeFiles/DAA_Assignment.dir/src/Edge.cpp.obj" \
 "CMakeFiles/DAA_Assignment.dir/src/IntervalHelper.cpp.obj" \
-"CMakeFiles/DAA_Assignment.dir/src/StripeOutput.cpp.obj"
+"CMakeFiles/DAA_Assignment.dir/src/StripeOutput.cpp.obj" \
+"CMakeFiles/DAA_Assignment.dir/src/Ctree.cpp.obj" \
+"CMakeFiles/DAA_Assignment.dir/src/ContourHelper.cpp.obj"
 
 # External object files for target DAA_Assignment
 DAA_Assignment_EXTERNAL_OBJECTS =
@@ -232,11 +260,13 @@ DAA_Assignment.exe: CMakeFiles/DAA_Assignment.dir/src/MeasureHelper.cpp.obj
 DAA_Assignment.exe: CMakeFiles/DAA_Assignment.dir/src/Edge.cpp.obj
 DAA_Assignment.exe: CMakeFiles/DAA_Assignment.dir/src/IntervalHelper.cpp.obj
 DAA_Assignment.exe: CMakeFiles/DAA_Assignment.dir/src/StripeOutput.cpp.obj
+DAA_Assignment.exe: CMakeFiles/DAA_Assignment.dir/src/Ctree.cpp.obj
+DAA_Assignment.exe: CMakeFiles/DAA_Assignment.dir/src/ContourHelper.cpp.obj
 DAA_Assignment.exe: CMakeFiles/DAA_Assignment.dir/build.make
 DAA_Assignment.exe: CMakeFiles/DAA_Assignment.dir/linklibs.rsp
 DAA_Assignment.exe: CMakeFiles/DAA_Assignment.dir/objects1.rsp
 DAA_Assignment.exe: CMakeFiles/DAA_Assignment.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=D:\Dev\DAA_Assignment\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable DAA_Assignment.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=D:\Dev\DAA_Assignment\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Linking CXX executable DAA_Assignment.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\DAA_Assignment.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
