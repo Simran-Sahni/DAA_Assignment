@@ -12,7 +12,7 @@ using std :: cin;
 
 int main() {
 //  freopen("input.txt", "r", stdin);
-//  freopen("output.txt", "w", stdout);
+//  freopen("output_edges.txt", "w", stdout);
 //    Point p1(1, 2);
 //
 //    Interval i1(2, 5);
