@@ -5,9 +5,14 @@
 #include "../include/MeasureHelper.h"
 #include "../include/IntervalHelper.h"
 #include <algorithm>
-//using std :: cout ;
-//using std :: endl;
 using namespace std;
+
+
+/**
+ * Unites and returns set of all points in the set of rectangles
+ * @param r set of rectangles
+ * @return set of points
+ */
 vector<Point> MeasureHelper ::union_of_rectangle(vector<Rectangle> &r) {
   vector<Point> ans;
 
@@ -24,6 +29,11 @@ vector<Point> MeasureHelper ::union_of_rectangle(vector<Rectangle> &r) {
   return ans;
 }
 
+/**
+ * Returns a set containing the y_co-ordinates of the set of rectangles
+ * @param r Set of rectangles
+ * @return vector of integer y-coordinates
+ */
 vector<int> MeasureHelper ::y_set(vector<Rectangle> &r) {
   vector<int> ans;
   for (auto &rectangle : r) {
@@ -33,6 +43,12 @@ vector<int> MeasureHelper ::y_set(vector<Rectangle> &r) {
   return ans;
 }
 
+
+/**
+ * returns a set of distinct Y-intervals from the set of Y_co-ordinates
+ * @param coordinates set of Y-coordinates
+ * @return set of Y-intervals
+ */
 vector<Interval> MeasureHelper ::partition(vector<int> &coordinates) {
   vector<Interval> ans;
   for (int i = 1; i < coordinates.size(); i++) {
@@ -42,6 +58,13 @@ vector<Interval> MeasureHelper ::partition(vector<int> &coordinates) {
   return ans;
 }
 
+/**
+ * Returns the extended set of stripes from both sides
+ * @param S set of Stripes
+ * @param coord_P y-projections of all segments in V
+ * @param x_interval
+ * @return set of stripes extended
+ */
 vector<Stripe> MeasureHelper ::copy(vector<Stripe> S, vector<int> coord_P,
                                     Interval x_interval) {
   vector<Stripe> ans;
@@ -70,6 +93,15 @@ vector<Stripe> MeasureHelper ::copy(vector<Stripe> S, vector<int> coord_P,
   return ans;
 }
 
+
+/**
+ * Every two adjacent stripes in S-left and S-right, with the same y-interval are concatenated
+ * @param s1 Left set of stripes
+ * @param s2 Right set of stripes
+ * @param coord_P y-projections of all segments in V
+ * @param x_interval
+ * @return set of concatenated stripes
+ */
 vector<Stripe> MeasureHelper::concat(vector<Stripe> &s1, vector<Stripe> &s2,
                                      vector<int> &coord_P,
                                      Interval x_interval) {
@@ -99,6 +131,12 @@ vector<Stripe> MeasureHelper::concat(vector<Stripe> &s1, vector<Stripe> &s2,
   return ans;
 }
 
+
+/**
+ * Update the x_union coverage of the set of stripes who have y_interval covered in set of intervals
+ * @param S set of stripes
+ * @param J set of Y_intervals/edges
+ */
 void MeasureHelper::blacken(vector<Stripe> &S, vector<Edge> &J) {
 
   for (int i = 0; i < S.size(); i++) {
@@ -110,6 +148,13 @@ void MeasureHelper::blacken(vector<Stripe> &S, vector<Edge> &J) {
     }
   }
 }
+
+/**
+ * function to return the Stripes in the format expected by STRIPES algorithm
+ * @param V vector of edges
+ * @param x_ext set of x intervals
+ * @return StripeOutput object
+ */
 StripeOutput MeasureHelper::stripes(vector<Edge> V, Interval x_ext) {
   vector<Edge> L;
   vector<Edge> R;
@@ -308,6 +353,12 @@ StripeOutput MeasureHelper::stripes(vector<Edge> V, Interval x_ext) {
     return ans;
   }
 }
+
+/**
+ * Most important RECTANGLE_DAC subroutine, crux of the algorithm
+ * @param r set of Rectangles
+ * @return double value: measure, that is the extent of union of these rectangles
+ */
 long double MeasureHelper::rectangle_dac(vector<Rectangle> r) {
   vector<Edge> vrx;
   for (auto &rectangle : r) {
