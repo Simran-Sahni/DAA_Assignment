@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['linesegment_10',['LineSegment',['../class_line_segment.html',1,'']]]
+  ['interval_16',['Interval',['../class_interval.html',1,'']]],
+  ['intervalhelper_17',['IntervalHelper',['../class_interval_helper.html',1,'']]]
 ];

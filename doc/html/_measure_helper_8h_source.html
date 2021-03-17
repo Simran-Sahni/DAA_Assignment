@@ -76,26 +76,33 @@ $(function() {
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#ifndef DAA_ASSIGNMENT_MEASUREHELPER_H</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#define DAA_ASSIGNMENT_MEASUREHELPER_H</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;Stripe.h&quot;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;Edge.h&quot;</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;Point.h&quot;</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;Rectangle.h&quot;</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;set&gt;</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">using</span> std :: set;</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">auto</span> cmp = [](<a class="code" href="class_point.html">Point</a> a, <a class="code" href="class_point.html">Point</a> b) {</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keywordflow">return</span> a.x == b.x ? a.y &lt; b.y : a.x &lt; b.x;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;};</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
-<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="class_measure_helper.html">   17</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_measure_helper.html">MeasureHelper</a> {</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keywordtype">int</span> measure(set&lt;Stripe&gt; s);</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    set&lt;<a class="code" href="class_point.html">Point</a>, decltype(cmp)&gt; _union(set&lt;Rectangle&gt; r);</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    set&lt;int&gt; y_set(set&lt;Rectangle&gt; r);</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;};</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#endif </span><span class="comment">//DAA_ASSIGNMENT_MEASUREHELPER_H</span></div>
-<div class="ttc" id="aclass_measure_helper_html"><div class="ttname"><a href="class_measure_helper.html">MeasureHelper</a></div><div class="ttdef"><b>Definition:</b> MeasureHelper.h:17</div></div>
-<div class="ttc" id="aclass_point_html"><div class="ttname"><a href="class_point.html">Point</a></div><div class="ttdef"><b>Definition:</b> Point.h:8</div></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;Stripe.h&quot;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;StripeOutput.h&quot;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">const</span> <span class="keywordtype">int</span> INF = (1LL &lt;&lt; 30) - 1;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="class_measure_helper.html">   16</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_measure_helper.html">MeasureHelper</a> {</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;  <span class="keyword">static</span> vector&lt;Point&gt; union_of_rectangle(vector&lt;Rectangle&gt; &amp;r);</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;  <span class="keyword">static</span> vector&lt;int&gt; y_set(vector&lt;Rectangle&gt; &amp;r);</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  <span class="keyword">static</span> vector&lt;Interval&gt; partition(vector&lt;int&gt; &amp;coordinates);</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  <span class="keyword">static</span> vector&lt;Stripe&gt; copy(vector&lt;Stripe&gt; S, vector&lt;int&gt; coord_P,</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;                             <a class="code" href="class_interval.html">Interval</a> x_int);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">void</span> blacken(vector&lt;Stripe&gt; &amp;S, vector&lt;Edge&gt; &amp;J);</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  <span class="keyword">static</span> vector&lt;Stripe&gt; concat(vector&lt;Stripe&gt; &amp;s1, vector&lt;Stripe&gt; &amp;s2,</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;                               vector&lt;int&gt; &amp;coord_p, <a class="code" href="class_interval.html">Interval</a> x_int);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  <span class="keyword">static</span> <a class="code" href="class_stripe_output.html">StripeOutput</a> stripes(vector&lt;Edge&gt; V, <a class="code" href="class_interval.html">Interval</a> x_ext);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">long</span> <span class="keywordtype">double</span> rectangle_dac(vector&lt;Rectangle&gt; r);</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">void</span> dfs(<a class="code" href="class_interval.html">Interval</a> query,vector&lt;Interval&gt; &amp;s);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;};</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// DAA_ASSIGNMENT_MEASUREHELPER_H</span></div>
+<div class="ttc" id="aclass_interval_html"><div class="ttname"><a href="class_interval.html">Interval</a></div><div class="ttdef"><b>Definition:</b> Interval.h:8</div></div>
+<div class="ttc" id="aclass_measure_helper_html"><div class="ttname"><a href="class_measure_helper.html">MeasureHelper</a></div><div class="ttdef"><b>Definition:</b> MeasureHelper.h:16</div></div>
+<div class="ttc" id="aclass_stripe_output_html"><div class="ttname"><a href="class_stripe_output.html">StripeOutput</a></div><div class="ttdef"><b>Definition:</b> StripeOutput.h:13</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

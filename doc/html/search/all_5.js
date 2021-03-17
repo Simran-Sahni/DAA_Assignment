@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['point_5',['Point',['../class_point.html',1,'']]]
+  ['linesegment_7',['LineSegment',['../class_line_segment.html',1,'']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['rectangle_6',['Rectangle',['../class_rectangle.html',1,'']]]
+  ['measurehelper_8',['MeasureHelper',['../class_measure_helper.html',1,'']]]
 ];

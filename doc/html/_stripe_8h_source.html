@@ -77,23 +77,25 @@ $(function() {
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#define DAA_ASSIGNMENT_STRIPE_H</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;Interval.h&quot;</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;set&gt;</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">using</span> std :: set;</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
-<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="class_stripe.html">   12</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_stripe.html">Stripe</a> {</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <a class="code" href="class_interval.html">Interval</a> x_interval;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <a class="code" href="class_interval.html">Interval</a> y_interval;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    set&lt;Interval&gt; x_union;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <a class="code" href="class_stripe.html">Stripe</a>(<a class="code" href="class_interval.html">Interval</a> x_interval, <a class="code" href="class_interval.html">Interval</a> y_interval, set&lt;Interval&gt; x_union);</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keywordtype">int</span> measure();</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;};</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#endif </span><span class="comment">//DAA_ASSIGNMENT_STRIPE_H</span></div>
-<div class="ttc" id="aclass_interval_html"><div class="ttname"><a href="class_interval.html">Interval</a></div><div class="ttdef"><b>Definition:</b> Interval.h:9</div></div>
-<div class="ttc" id="aclass_stripe_html"><div class="ttname"><a href="class_stripe.html">Stripe</a></div><div class="ttdef"><b>Definition:</b> Stripe.h:12</div></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;Ctree.h&quot;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">using</span> std ::vector;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="class_stripe.html">   13</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_stripe.html">Stripe</a> {</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;  <a class="code" href="class_interval.html">Interval</a> x_interval;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;  <a class="code" href="class_interval.html">Interval</a> y_interval;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;  <a class="code" href="class_ctree.html">Ctree</a> *tree;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;  <span class="keywordtype">long</span> <span class="keywordtype">double</span> x_measure;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;  <a class="code" href="class_stripe.html">Stripe</a>(<a class="code" href="class_interval.html">Interval</a> x_interval, <a class="code" href="class_interval.html">Interval</a> y_interval, <span class="keywordtype">long</span> <span class="keywordtype">double</span> x_measure);</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  <a class="code" href="class_stripe.html">Stripe</a>(<a class="code" href="class_interval.html">Interval</a> x_interval, <a class="code" href="class_interval.html">Interval</a> y_interval, <span class="keywordtype">long</span> <span class="keywordtype">double</span> x_measure, <a class="code" href="class_ctree.html">Ctree</a> *tree);</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  <span class="keywordtype">void</span> setXMeasure(<span class="keywordtype">long</span> <span class="keywordtype">double</span> xMeasure);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;};</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// DAA_ASSIGNMENT_STRIPE_H</span></div>
+<div class="ttc" id="aclass_ctree_html"><div class="ttname"><a href="class_ctree.html">Ctree</a></div><div class="ttdef"><b>Definition:</b> Ctree.h:13</div></div>
+<div class="ttc" id="aclass_interval_html"><div class="ttname"><a href="class_interval.html">Interval</a></div><div class="ttdef"><b>Definition:</b> Interval.h:8</div></div>
+<div class="ttc" id="aclass_stripe_html"><div class="ttname"><a href="class_stripe.html">Stripe</a></div><div class="ttdef"><b>Definition:</b> Stripe.h:13</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

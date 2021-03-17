@@ -1,19 +1,38 @@
 \hypertarget{class_measure_helper}{}\doxysection{Measure\+Helper Class Reference}
 \label{class_measure_helper}\index{MeasureHelper@{MeasureHelper}}
-\doxysubsection*{Public Member Functions}
+\doxysubsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_measure_helper_a075747deeff8354a867ef607c2ba713e}\label{class_measure_helper_a075747deeff8354a867ef607c2ba713e}} 
-int {\bfseries measure} (set$<$ \mbox{\hyperlink{class_stripe}{Stripe}} $>$ s)
+\mbox{\Hypertarget{class_measure_helper_ae018c18ef25ebe33ffeb0cd4bba83f10}\label{class_measure_helper_ae018c18ef25ebe33ffeb0cd4bba83f10}} 
+static vector$<$ \mbox{\hyperlink{class_point}{Point}} $>$ {\bfseries union\+\_\+of\+\_\+rectangle} (vector$<$ \mbox{\hyperlink{class_rectangle}{Rectangle}} $>$ \&r)
 \item 
-\mbox{\Hypertarget{class_measure_helper_ac04a116762f8c8c5a0f6dc57560e2563}\label{class_measure_helper_ac04a116762f8c8c5a0f6dc57560e2563}} 
-set$<$ \mbox{\hyperlink{class_point}{Point}}, decltype(cmp)$>$ {\bfseries \+\_\+union} (set$<$ \mbox{\hyperlink{class_rectangle}{Rectangle}} $>$ r)
+\mbox{\Hypertarget{class_measure_helper_a1e297f8a4e6a388614bd3d88814e9b14}\label{class_measure_helper_a1e297f8a4e6a388614bd3d88814e9b14}} 
+static vector$<$ int $>$ {\bfseries y\+\_\+set} (vector$<$ \mbox{\hyperlink{class_rectangle}{Rectangle}} $>$ \&r)
 \item 
-\mbox{\Hypertarget{class_measure_helper_ac9521c1a1d184efe66397014e9ab8962}\label{class_measure_helper_ac9521c1a1d184efe66397014e9ab8962}} 
-set$<$ int $>$ {\bfseries y\+\_\+set} (set$<$ \mbox{\hyperlink{class_rectangle}{Rectangle}} $>$ r)
+\mbox{\Hypertarget{class_measure_helper_a1df909322c932bd56d65ef33f6cfd32c}\label{class_measure_helper_a1df909322c932bd56d65ef33f6cfd32c}} 
+static vector$<$ \mbox{\hyperlink{class_interval}{Interval}} $>$ {\bfseries partition} (vector$<$ int $>$ \&coordinates)
+\item 
+\mbox{\Hypertarget{class_measure_helper_a34196b7313b3159a642c88aa534fb20c}\label{class_measure_helper_a34196b7313b3159a642c88aa534fb20c}} 
+static vector$<$ \mbox{\hyperlink{class_stripe}{Stripe}} $>$ {\bfseries copy} (vector$<$ \mbox{\hyperlink{class_stripe}{Stripe}} $>$ S, vector$<$ int $>$ coord\+\_\+P, \mbox{\hyperlink{class_interval}{Interval}} x\+\_\+int)
+\item 
+\mbox{\Hypertarget{class_measure_helper_aa12b6249b4d10fbd5bf0ce1764c12798}\label{class_measure_helper_aa12b6249b4d10fbd5bf0ce1764c12798}} 
+static void {\bfseries blacken} (vector$<$ \mbox{\hyperlink{class_stripe}{Stripe}} $>$ \&S, vector$<$ \mbox{\hyperlink{class_edge}{Edge}} $>$ \&J)
+\item 
+\mbox{\Hypertarget{class_measure_helper_a9551ccdb338961c532fca91867a834a4}\label{class_measure_helper_a9551ccdb338961c532fca91867a834a4}} 
+static vector$<$ \mbox{\hyperlink{class_stripe}{Stripe}} $>$ {\bfseries concat} (vector$<$ \mbox{\hyperlink{class_stripe}{Stripe}} $>$ \&s1, vector$<$ \mbox{\hyperlink{class_stripe}{Stripe}} $>$ \&s2, vector$<$ int $>$ \&coord\+\_\+p, \mbox{\hyperlink{class_interval}{Interval}} x\+\_\+int)
+\item 
+\mbox{\Hypertarget{class_measure_helper_a3d8e8819f89d6070ccdbe3ca840879e6}\label{class_measure_helper_a3d8e8819f89d6070ccdbe3ca840879e6}} 
+static \mbox{\hyperlink{class_stripe_output}{Stripe\+Output}} {\bfseries stripes} (vector$<$ \mbox{\hyperlink{class_edge}{Edge}} $>$ V, \mbox{\hyperlink{class_interval}{Interval}} x\+\_\+ext)
+\item 
+\mbox{\Hypertarget{class_measure_helper_ae37ad25ad9617edaf770931e5884a176}\label{class_measure_helper_ae37ad25ad9617edaf770931e5884a176}} 
+static long double {\bfseries rectangle\+\_\+dac} (vector$<$ \mbox{\hyperlink{class_rectangle}{Rectangle}} $>$ r)
+\item 
+\mbox{\Hypertarget{class_measure_helper_a6835bfdf121d875527c9f373716f30a9}\label{class_measure_helper_a6835bfdf121d875527c9f373716f30a9}} 
+static void {\bfseries dfs} (\mbox{\hyperlink{class_interval}{Interval}} query, vector$<$ \mbox{\hyperlink{class_interval}{Interval}} $>$ \&s)
 \end{DoxyCompactItemize}
 
 
-The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-include/Measure\+Helper.\+h\end{DoxyCompactItemize}
+include/Measure\+Helper.\+h\item 
+src/Measure\+Helper.\+cpp\end{DoxyCompactItemize}

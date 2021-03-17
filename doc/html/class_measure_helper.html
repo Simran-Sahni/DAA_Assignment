@@ -62,27 +62,46 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="class_measure_helper-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">MeasureHelper Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
-Public Member Functions</h2></td></tr>
-<tr class="memitem:a075747deeff8354a867ef607c2ba713e"><td class="memItemLeft" align="right" valign="top"><a id="a075747deeff8354a867ef607c2ba713e"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>measure</b> (set&lt; <a class="el" href="class_stripe.html">Stripe</a> &gt; s)</td></tr>
-<tr class="separator:a075747deeff8354a867ef607c2ba713e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac04a116762f8c8c5a0f6dc57560e2563"><td class="memItemLeft" align="right" valign="top"><a id="ac04a116762f8c8c5a0f6dc57560e2563"></a>
-set&lt; <a class="el" href="class_point.html">Point</a>, decltype(cmp)&gt;&#160;</td><td class="memItemRight" valign="bottom"><b>_union</b> (set&lt; <a class="el" href="class_rectangle.html">Rectangle</a> &gt; r)</td></tr>
-<tr class="separator:ac04a116762f8c8c5a0f6dc57560e2563"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac9521c1a1d184efe66397014e9ab8962"><td class="memItemLeft" align="right" valign="top"><a id="ac9521c1a1d184efe66397014e9ab8962"></a>
-set&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>y_set</b> (set&lt; <a class="el" href="class_rectangle.html">Rectangle</a> &gt; r)</td></tr>
-<tr class="separator:ac9521c1a1d184efe66397014e9ab8962"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:ae018c18ef25ebe33ffeb0cd4bba83f10"><td class="memItemLeft" align="right" valign="top"><a id="ae018c18ef25ebe33ffeb0cd4bba83f10"></a>
+static vector&lt; <a class="el" href="class_point.html">Point</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>union_of_rectangle</b> (vector&lt; <a class="el" href="class_rectangle.html">Rectangle</a> &gt; &amp;r)</td></tr>
+<tr class="separator:ae018c18ef25ebe33ffeb0cd4bba83f10"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e297f8a4e6a388614bd3d88814e9b14"><td class="memItemLeft" align="right" valign="top"><a id="a1e297f8a4e6a388614bd3d88814e9b14"></a>
+static vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>y_set</b> (vector&lt; <a class="el" href="class_rectangle.html">Rectangle</a> &gt; &amp;r)</td></tr>
+<tr class="separator:a1e297f8a4e6a388614bd3d88814e9b14"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1df909322c932bd56d65ef33f6cfd32c"><td class="memItemLeft" align="right" valign="top"><a id="a1df909322c932bd56d65ef33f6cfd32c"></a>
+static vector&lt; <a class="el" href="class_interval.html">Interval</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>partition</b> (vector&lt; int &gt; &amp;coordinates)</td></tr>
+<tr class="separator:a1df909322c932bd56d65ef33f6cfd32c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34196b7313b3159a642c88aa534fb20c"><td class="memItemLeft" align="right" valign="top"><a id="a34196b7313b3159a642c88aa534fb20c"></a>
+static vector&lt; <a class="el" href="class_stripe.html">Stripe</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>copy</b> (vector&lt; <a class="el" href="class_stripe.html">Stripe</a> &gt; S, vector&lt; int &gt; coord_P, <a class="el" href="class_interval.html">Interval</a> x_int)</td></tr>
+<tr class="separator:a34196b7313b3159a642c88aa534fb20c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa12b6249b4d10fbd5bf0ce1764c12798"><td class="memItemLeft" align="right" valign="top"><a id="aa12b6249b4d10fbd5bf0ce1764c12798"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>blacken</b> (vector&lt; <a class="el" href="class_stripe.html">Stripe</a> &gt; &amp;S, vector&lt; <a class="el" href="class_edge.html">Edge</a> &gt; &amp;J)</td></tr>
+<tr class="separator:aa12b6249b4d10fbd5bf0ce1764c12798"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9551ccdb338961c532fca91867a834a4"><td class="memItemLeft" align="right" valign="top"><a id="a9551ccdb338961c532fca91867a834a4"></a>
+static vector&lt; <a class="el" href="class_stripe.html">Stripe</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>concat</b> (vector&lt; <a class="el" href="class_stripe.html">Stripe</a> &gt; &amp;s1, vector&lt; <a class="el" href="class_stripe.html">Stripe</a> &gt; &amp;s2, vector&lt; int &gt; &amp;coord_p, <a class="el" href="class_interval.html">Interval</a> x_int)</td></tr>
+<tr class="separator:a9551ccdb338961c532fca91867a834a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d8e8819f89d6070ccdbe3ca840879e6"><td class="memItemLeft" align="right" valign="top"><a id="a3d8e8819f89d6070ccdbe3ca840879e6"></a>
+static <a class="el" href="class_stripe_output.html">StripeOutput</a>&#160;</td><td class="memItemRight" valign="bottom"><b>stripes</b> (vector&lt; <a class="el" href="class_edge.html">Edge</a> &gt; V, <a class="el" href="class_interval.html">Interval</a> x_ext)</td></tr>
+<tr class="separator:a3d8e8819f89d6070ccdbe3ca840879e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae37ad25ad9617edaf770931e5884a176"><td class="memItemLeft" align="right" valign="top"><a id="ae37ad25ad9617edaf770931e5884a176"></a>
+static long double&#160;</td><td class="memItemRight" valign="bottom"><b>rectangle_dac</b> (vector&lt; <a class="el" href="class_rectangle.html">Rectangle</a> &gt; r)</td></tr>
+<tr class="separator:ae37ad25ad9617edaf770931e5884a176"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6835bfdf121d875527c9f373716f30a9"><td class="memItemLeft" align="right" valign="top"><a id="a6835bfdf121d875527c9f373716f30a9"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>dfs</b> (<a class="el" href="class_interval.html">Interval</a> query, vector&lt; <a class="el" href="class_interval.html">Interval</a> &gt; &amp;s)</td></tr>
+<tr class="separator:a6835bfdf121d875527c9f373716f30a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<hr/>The documentation for this class was generated from the following file:<ul>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>include/<a class="el" href="_measure_helper_8h_source.html">MeasureHelper.h</a></li>
+<li>src/MeasureHelper.cpp</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
