@@ -25,6 +25,9 @@ public:
                                vector<int> &coord_p, Interval x_int);
   static StripeOutput stripes(vector<Edge> V, Interval x_ext);
   static long double rectangle_dac(vector<Rectangle> r);
+  static void dfs(Ctree *root,Interval query,vector<Interval> &s);
+  static void dfs(Ctree *root);
+  static void contour();
 };
 
 #endif // DAA_ASSIGNMENT_MEASUREHELPER_H

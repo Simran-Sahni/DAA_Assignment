@@ -377,11 +377,68 @@ long double MeasureHelper::rectangle_dac(vector<Rectangle> r) {
 //  StripeOutput ans;
   long double measure = 0;
 
+
   for (auto &stripe : ans.S) {
   //  cerr <<  stripe.x_interval.top << " " << stripe.x_interval.bottom << " " <<  stripe.y_interval.bottom << " " << stripe.y_interval.top << " " << stripe.x_measure << endl;
 
+    Stripe ss = stripe;
+    Interval sss(-10,10);
+
+    vector<Interval> ii;
+
+    dfs(ss.tree,sss,ii);
+
+    for(auto &i : ii){
+      cerr << i.bottom << " " << i.top << endl;
+      // nothing coming here
+
+    }
     measure +=
         stripe.x_measure * (stripe.y_interval.top - stripe.y_interval.bottom);
   }
   return measure;
+}
+
+void MeasureHelper ::dfs(Ctree *root) {
+  if(!root)return;
+  cerr << root->x << endl;
+  dfs(root->leftson);
+  dfs(root->rightson);
+}
+void MeasureHelper::dfs(Ctree *root, Interval query, vector<Interval> &s) {
+  if(root == nullptr or (root->leftson == nullptr and root->rightson == nullptr) )return;
+
+  if(root->leftson == nullptr and root->rightson != nullptr)
+  {
+    cerr << "FFF1" << endl;
+  }
+
+  if(root->rightson == nullptr and root-> leftson != nullptr)
+  {
+    cerr << "FFF2" << endl;
+  }  dfs(root->rightson,query,s);
+  dfs(root->leftson,query,s);
+
+//  if(root == nullptr or (root->leftson == nullptr and root->rightson == nullptr))return;
+//
+//  if(root->rightson->rightson == nullptr and
+//      root->rightson->leftson == nullptr and
+//      root->leftson->leftson == nullptr and
+//      root->leftson->rightson == nullptr){
+//     s.push_back(Interval(root->leftson->x, root->rightson->x));
+//     return;
+//  }
+//  if(root->x < query.bottom){
+//    dfs(root->rightson,query,s);
+//  }
+//  else if(root->x > query.top){
+//    dfs(root->leftson,query,s);
+//  }
+//  else
+//  {
+//    dfs(root->leftson,query,s);
+//    dfs(root->rightson,query,s);
+//  }
+
+
 }

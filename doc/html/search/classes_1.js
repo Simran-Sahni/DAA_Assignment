@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['interval_9',['Interval',['../class_interval.html',1,'']]]
+  ['edge_15',['Edge',['../class_edge.html',1,'']]]
 ];
