@@ -62,6 +62,7 @@ vector<Stripe> MeasureHelper ::copy(vector<Stripe> S, vector<int> coord_P,
     for (int j = 0; j < ans.size(); j++) {
       if (IntervalHelper ::is_subset_of(ans[j].y_interval, S[i].y_interval)) {
         ans[j].setXMeasure(S[i].x_measure);
+        ans[j].tree = S[i].tree;
       }
     }
   }
@@ -81,6 +82,19 @@ vector<Stripe> MeasureHelper::concat(vector<Stripe> &s1, vector<Stripe> &s2,
   }
   for(int i = 0; i < s1.size(); i++){
     ans[i].setXMeasure(s1[i].x_measure + s2[i].x_measure);
+    if(s1[i].tree != s2[i].tree and s1[i].tree != nullptr){
+      ans[i].tree = new Ctree(s1[i].x_interval.top,UNDEFINED,s1[i].tree,s2[i].tree);
+    }
+    else if(s2[i].tree == nullptr){
+      ans[i].tree = s1[i].tree;
+    }
+    else if(s1[i].tree == nullptr){
+      ans[i].tree = s2[i].tree;
+    }
+    else{
+      ans[i].tree = nullptr;
+    }
+
   }
   return ans;
 }
@@ -91,6 +105,7 @@ void MeasureHelper::blacken(vector<Stripe> &S, vector<Edge> &J) {
     for (int j = 0; j < J.size(); j++) {
       if (IntervalHelper ::is_subset_of(S[i].y_interval, J[j].interval)) {
         S[i].setXMeasure(S[i].x_interval.top - S[i].x_interval.bottom);
+        S[i].tree = nullptr;
       }
     }
   }
@@ -131,7 +146,7 @@ StripeOutput MeasureHelper::stripes(vector<Edge> V, Interval x_ext) {
 
 
     for (auto &interval : partition_P) {
-      Stripe new_stripe(x_ext, interval, 0);
+      Stripe new_stripe(x_ext, interval, 0,nullptr);
 //      cerr << x_ext.bottom << " " << x_ext.top << " " << interval.bottom << " " << interval.top << endl;
       S.push_back(new_stripe);
     }
@@ -142,8 +157,10 @@ StripeOutput MeasureHelper::stripes(vector<Edge> V, Interval x_ext) {
       if(v.interval == stripe.y_interval){
         if (v.type == LEFT) {
           stripe.setXMeasure(x_ext.top - v.coord);
+          stripe.tree = new Ctree(v.coord,LEFT,nullptr,nullptr);
         } else {
           stripe.setXMeasure(v.coord - x_ext.bottom);
+          stripe.tree = new Ctree(v.coord,RIGHT, nullptr, nullptr);
         }
       }
 

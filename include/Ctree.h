@@ -9,15 +9,16 @@ using std :: string;
 
 //static const char LEFT[] = "LEFT";
 //static const char RIGHT[] = "RIGHT";
-//static const char UNDEFINED[] = "UNDEFINED";
+static const char UNDEFINED[] = "UNDEFINED";
 class Ctree {
 public:
-  long double x{};
+  long double x;
   string lru;
- Ctree *leftson{};
- Ctree *rightson{};
- Ctree();
- Ctree(long double x, const string &lru, Ctree *leftson, Ctree *rightson);
+ Ctree *leftson;
+ Ctree *rightson;
+ Ctree(long double x, string lru, Ctree *leftson, Ctree *rightson);
+ Ctree(long double x, string lru);
+ Ctree(long double x);
 };
 
 #endif // DAA_ASSIGNMENT_CTREE_H

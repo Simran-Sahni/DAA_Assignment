@@ -62,15 +62,18 @@ int main() {
 //  v.push_back(Rectangle(5,10,0,10));
 //  v.push_back(Rectangle(0,10,0,10));
 //  v.push_back(Rectangle(0,10,0,10));
-//  v.push_back(Rectangle(0,10,0,10));
+//  v.push_back(Rectangle(0,10,0,10));q
 
   int n;
   cin >> n;
+
+//  cout << n << endl;
 
   for(int i = 0; i < n; i++)
   {
     int x,y,z,w;
     cin >> x >> y >> z >> w;
+//    cout << x << " " << y << " " << z << " " << " " << w << endl;
      v.push_back(Rectangle(x,y,z,w));
   }
   long double ans = MeasureHelper :: rectangle_dac(v);
