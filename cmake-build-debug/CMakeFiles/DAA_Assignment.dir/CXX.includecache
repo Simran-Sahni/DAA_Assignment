@@ -6,16 +6,6 @@
 
 #IncludeRegexTransform: 
 
-D:/Dev/DAA_Assignment/include/ContourHelper.h
-Stripe.h
-D:/Dev/DAA_Assignment/include/Stripe.h
-Edge.h
-D:/Dev/DAA_Assignment/include/Edge.h
-StripeOutput.h
-D:/Dev/DAA_Assignment/include/StripeOutput.h
-Rectangle.h
-D:/Dev/DAA_Assignment/include/Rectangle.h
-
 D:/Dev/DAA_Assignment/include/Ctree.h
 string
 -
@@ -74,9 +64,7 @@ D:/Dev/DAA_Assignment/include/Edge.h
 vector
 -
 
-D:/Dev/DAA_Assignment/src/ContourHelper.cpp
-../include/ContourHelper.h
-D:/Dev/DAA_Assignment/include/ContourHelper.h
+D:/Dev/DAA_Assignment/src/MeasureHelper.cpp
 ../include/MeasureHelper.h
 D:/Dev/DAA_Assignment/include/MeasureHelper.h
 ../include/IntervalHelper.h

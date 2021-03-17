@@ -3,6 +3,7 @@
 //
 
 #include "../include/Ctree.h"
-Ctree::Ctree(long double x, const string &lru, Ctree *leftson, Ctree *rightson)
+Ctree::Ctree(long double x, string lru, Ctree *leftson, Ctree *rightson)
     : x(x), lru(lru), leftson(leftson), rightson(rightson) {}
-Ctree::Ctree() {}
+Ctree::Ctree(long double x, string lru)
+    : x(x), lru(lru), leftson(nullptr), rightson(nullptr) {}
