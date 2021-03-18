@@ -1,3 +1,4 @@
+
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -11,5 +12,6 @@ for i in x:
 
 plt.savefig("output.png")
 plt.show()
+
 		
 			

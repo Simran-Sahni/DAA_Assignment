@@ -9,6 +9,7 @@
 using std:: cout;
 using std :: endl;
 using std :: cin;
+using std :: swap;
 
 int main() {
 //  freopen("input.txt", "r", stdin);
@@ -73,14 +74,19 @@ int main() {
   {
     int x,y,z,w;
     cin >> x >> y >> z >> w;
-//    cout << x << " " << y << " " << z << " " << " " << w << endl;
+    if(x > y)swap(x,y);
+    if(z > w)swap(z,w);
+
      v.push_back(Rectangle(x,y,z,w));
+
+
   }
   long double ans = MeasureHelper :: rectangle_dac(v);
 
 //  for(auto e: v){
 //    cout << e.type << endl;
 //  }
-  cout << std :: setprecision(15) << ans << endl;
+  cout << "Measure is " << std :: setprecision(15) << ans << endl;
+
     return 0;
 }

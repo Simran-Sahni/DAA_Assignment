@@ -5,8 +5,13 @@
 #include "../include/MeasureHelper.h"
 #include "../include/IntervalHelper.h"
 #include <algorithm>
-using namespace std;
+#include <map>
 
+using std :: max;
+using std ::min;
+using std :: map;
+
+using namespace std;
 
 /**
  * Unites and returns set of all points in the set of rectangles
@@ -116,6 +121,8 @@ vector<Stripe> MeasureHelper::concat(vector<Stripe> &s1, vector<Stripe> &s2,
     ans[i].setXMeasure(s1[i].x_measure + s2[i].x_measure);
     if(s1[i].tree != s2[i].tree and s1[i].tree != nullptr){
       ans[i].tree = new Ctree(s1[i].x_interval.top,UNDEFINED,s1[i].tree,s2[i].tree);
+      ans[i].tree->leftson = s1[i].tree;
+      ans[i].tree->rightson = s2[i].tree;
     }
     else if(s2[i].tree == nullptr){
       ans[i].tree = s1[i].tree;
@@ -202,10 +209,10 @@ StripeOutput MeasureHelper::stripes(vector<Edge> V, Interval x_ext) {
       if(v.interval == stripe.y_interval){
         if (v.type == LEFT) {
           stripe.setXMeasure(x_ext.top - v.coord);
-          stripe.tree = new Ctree(v.coord,LEFT,nullptr,nullptr);
+          stripe.tree = new Ctree(v.coord,LEFT);
         } else {
           stripe.setXMeasure(v.coord - x_ext.bottom);
-          stripe.tree = new Ctree(v.coord,RIGHT, nullptr, nullptr);
+          stripe.tree = new Ctree(v.coord,RIGHT);
         }
       }
 
@@ -360,75 +367,116 @@ StripeOutput MeasureHelper::stripes(vector<Edge> V, Interval x_ext) {
  * @return double value: measure, that is the extent of union of these rectangles
  */
 long double MeasureHelper::rectangle_dac(vector<Rectangle> r) {
-  vector<Edge> vrx;
+  vector<Edge> vrx, hrx;
   for (auto &rectangle : r) {
     for (auto &edge : rectangle.getVerticalEdges()) {
       vrx.push_back(edge);
     }
+    for (auto &edge : rectangle.getHorizontalEdges()){
+      hrx.push_back(edge);
+    }
   }
+  sort(vrx.begin(),vrx.end(), [](const auto &lhs, const auto &rhs) {
+    return lhs.coord < rhs.coord;
+  });
+  sort(hrx.begin(),hrx.end(),[](const auto &lhs, const auto &rhs) {
+    if(lhs.coord == rhs.coord){
+      if(lhs.interval.bottom != rhs.interval.bottom)return lhs.interval.bottom < rhs.interval.bottom;
+      return lhs.interval.top < rhs.interval.top;
+      if(lhs.type == BOTTOM)return true;
+      if(rhs.type == BOTTOM)return true;
+      return false;
+    }
+
+    return lhs.coord < rhs.coord;
+  });
+
+  for(auto &i : hrx){
+  //  cout << i.coord << " " <<i.interval.bottom << " " << i.interval.top << endl;
+    cout << i.interval.bottom << " " << i.coord << " " << i.interval.top << " " << i.coord << " " << 0 << endl;
+
+  }
+
+  for(auto &i : vrx){
+    cout << i.coord << " " <<i.interval.bottom << " " << i.coord << " " << i.interval.top << " " << 0 << endl;
+  }
+
+
+
   if(vrx.empty())return 0.0;
 
-//  for(auto e : vrx){
-//    cerr << e.coord << endl;
-//    cerr << e.type << endl;
+//  for(auto &i : hrx){
+//    cerr << i.coord << " " << i.interval.bottom << " " << i.interval.top << endl;
 //  }
-
   StripeOutput ans = stripes(vrx, Interval(-INF, INF));
 //  StripeOutput ans;
   long double measure = 0;
 
 
+  int i = 1;
+
   for (auto &stripe : ans.S) {
   //  cerr <<  stripe.x_interval.top << " " << stripe.x_interval.bottom << " " <<  stripe.y_interval.bottom << " " << stripe.y_interval.top << " " << stripe.x_measure << endl;
 
-    Stripe ss = stripe;
-    Interval sss(-10,10);
+   // cerr << ii.size() << endl;
 
-    vector<Interval> ii;
+//    for(auto &i : ii){
+//      cerr << i.bottom << " " << i.top << endl;
+//      // nothing coming here
+//
+//    }
 
-    dfs(ss.tree,sss,ii);
+  vector<long double> v;
+  v.push_back(-INF);
 
-    for(auto &i : ii){
-      cerr << i.bottom << " " << i.top << endl;
-      // nothing coming here
+  inorder(stripe.tree,v);
+    v.push_back(INF);
+    stripe.setV(v);
 
-    }
     measure +=
         stripe.x_measure * (stripe.y_interval.top - stripe.y_interval.bottom);
   }
+  vector<vector<int>> contour = getContourEdges(ans.S, hrx);
+
+  cout << "Contour Edges are " << endl;
+
+//  for(auto &i : vrx){
+//      cout << i.interval.bottom << " " << i.<< " 0" << endl;
+//  }
+  for(auto &i : contour){
+    for(auto &j: i){
+      cout << j << " ";
+    }
+    cout << 1 << endl;
+  }
+
+
   return measure;
 }
 
-void MeasureHelper ::dfs(Ctree *root) {
-  if(!root)return;
-  cerr << root->x << endl;
-  dfs(root->leftson);
-  dfs(root->rightson);
-}
-void MeasureHelper::dfs(Ctree *root, Interval query, vector<Interval> &s) {
-  if(root == nullptr or (root->leftson == nullptr and root->rightson == nullptr) )return;
+//void MeasureHelper ::dfs(Ctree *root) {
+//  if(!root)return;
+//  cerr << root->x;
+//  if(root->leftson)cerr << " left " << root->leftson->x;
+//  if(root->rightson)cerr << " right " << root->rightson->x;
+//  cerr << endl;
+//  dfs(root->leftson);
+//  dfs(root->rightson);
+//}
 
-  if(root->leftson == nullptr and root->rightson != nullptr)
-  {
-    cerr << "FFF1" << endl;
-  }
-
-  if(root->rightson == nullptr and root-> leftson != nullptr)
-  {
-    cerr << "FFF2" << endl;
-  }  dfs(root->rightson,query,s);
-  dfs(root->leftson,query,s);
-
-//  if(root == nullptr or (root->leftson == nullptr and root->rightson == nullptr))return;
+//void MeasureHelper::dfs(Ctree *root, Interval query, vector<Interval> &s) {
+//  if(root == nullptr or (root->leftson == nullptr and root->rightson == nullptr) )return;
 //
-//  if(root->rightson->rightson == nullptr and
-//      root->rightson->leftson == nullptr and
-//      root->leftson->leftson == nullptr and
-//      root->leftson->rightson == nullptr){
-//     s.push_back(Interval(root->leftson->x, root->rightson->x));
-//     return;
+//
+//  if(root->leftson and root->rightson)
+//  {
+//    if(!root->leftson->leftson and !root->leftson->rightson and !root->rightson->leftson and !root->rightson->rightson)
+//    {
+//      s.push_back(Interval(root->leftson->x, root->rightson->x));
+//    }
 //  }
-//  if(root->x < query.bottom){
+//
+//    if(root->x < query.bottom){
 //    dfs(root->rightson,query,s);
 //  }
 //  else if(root->x > query.top){
@@ -439,6 +487,170 @@ void MeasureHelper::dfs(Ctree *root, Interval query, vector<Interval> &s) {
 //    dfs(root->leftson,query,s);
 //    dfs(root->rightson,query,s);
 //  }
+//
+////  if(root == nullptr or (root->leftson == nullptr and root->rightson == nullptr))return;
+////
+////  if(root->rightson->rightson == nullptr and
+////      root->rightson->leftson == nullptr and
+////      root->leftson->leftson == nullptr and
+////      root->leftson->rightson == nullptr){
+////     s.push_back(Interval(root->leftson->x, root->rightson->x));
+////     return;
+////  }
+//
+//
+//
+//}
+//void MeasureHelper::preorder(Ctree *root) {
+//  if(!root)return ;
+//  cerr << root->x;
+//  if(root->leftson)cerr << " left " << root->leftson->x;
+//  if(root->rightson)cerr << " right " << root->rightson->x;
+//  cerr << endl;
+//  preorder(root->leftson);
+//  preorder(root->rightson);
+//}
 
+void MeasureHelper::inorder(Ctree *root,vector<long double> &v1) {
+  if(!root)return;
+  inorder(root->leftson,v1);
+  if(!root->leftson and !root->rightson)v1.push_back(root->x);
+  inorder(root->rightson,v1);
+}
+ vector<vector<int>> MeasureHelper::freeIntervalQuery(vector<long double> leaf, Interval hrx, int ycoord,bool flag,vector<vector<int>> &ans) {
+
+   int idx = lower_bound(leaf.begin(),leaf.end(),hrx.bottom)-leaf.begin();
+   if(idx%2 == 1)idx--;
+
+  for(int i = idx; i < leaf.size(); i += 2){
+    long double &curr = leaf[i];
+    long double &nxt = leaf[i+1];
+    if(i%2 == 0 and curr >= hrx.top)break;
+    if(curr < nxt)
+    {
+//      if(nxt <= hrx.bottom and curr >= hrx.top)continue;
+      if(max((int)curr,hrx.bottom) != min((int)nxt,hrx.top))ans.push_back({ycoord,max((int)curr,hrx.bottom),min((int)nxt,hrx.top),flag});
+   //   cerr << ycoord << " " << max((int)curr,hrx.bottom) << " " << min((int)nxt,hrx.top) << endl;
+    }
+  }
+
+  return ans;
 
 }
+
+vector<vector<int>> MeasureHelper::getContourEdges(vector<Stripe> &S, vector<Edge> &hrx) {
+
+   vector<vector<int>> contour;
+
+   auto it = hrx.begin();
+   auto jt = S.begin();
+  vector<vector<int>> ans;
+
+   while(it != hrx.end() and jt != S.end())
+   {
+     if(it->type == BOTTOM){
+        if(it->interval.top < it->coord)jt++;
+        else if(jt->y_interval.top == it->coord){
+          freeIntervalQuery(jt->v,it->interval,it->coord,0,ans);
+          it++;
+        }
+        else it++;
+     }
+     else{
+       if(jt->y_interval.bottom < it->coord)jt++;
+       else if(jt->y_interval.bottom == it->coord){
+         freeIntervalQuery(jt->v,it->interval,it->coord,1,ans);
+         it++;
+       }
+       else it++;
+     }
+   }
+
+
+   for(auto &i : ans){
+     for(auto &j : i)
+     {
+       cerr << j << " ";
+     }
+     cerr << endl;
+   }
+   
+   int perimeter = 0;
+
+//   cerr << "Horizontal Contour Edges" << endl;
+
+   map<int,vector<Interval>> mp;
+
+   for(auto &v : ans){
+
+    mp[v[0]].push_back(Interval(v[1],v[2]));
+   }
+
+
+   cout << "Horizontal contour edges" << endl;
+
+
+   for(auto &v : mp)
+   {
+     vector<Interval> v1;
+
+     v.second = IntervalHelper ::find_union(v.second,v1);
+
+
+
+     for(int i = 0; i < v.second.size(); i++)
+     {
+       cout << v.second[i].bottom << " " << v.first << " " << v.second[i].top << " " << v.first << " " << endl;
+       contour.push_back({v.second[i].bottom,v.first,v.second[i].top,v.first});
+       perimeter += v.second[i].top - v.second[i].bottom;
+     }
+   }
+
+  cout << endl << endl;
+
+    vector<vector<int>> ep;
+
+    for(auto &v : mp){
+      for(auto &j : v.second){
+        ep.push_back({j.bottom,v.first});
+        ep.push_back({j.top,v.first});
+      }
+    }
+
+    sort(ep.begin(),ep.end());
+//    cerr << "endpoints" << endl;
+
+//    for(auto i : ep)
+//    {
+//      for(auto j : i)
+//      {
+//        cerr << j << " ";
+//      }
+//      cerr << endl;
+//    }
+
+
+ cout << "Vertical Contour Edges " << endl;
+
+  for(int i = 0 ; i < ep.size()-1; i++)
+  {
+      int cx = ep[i][0], cy = ep[i][1];
+      int nx = ep[i+1][0], ny = ep[i+1][1];
+      if(cx == nx)
+      {
+        if(cy != ny)
+        {
+          perimeter += ny - cy;
+        cout << nx << " " << cy << " " << nx << " " << ny << endl;
+          contour.push_back({nx,cy,nx,ny});
+        }
+      }
+
+  }
+
+//
+  cout << "Perimeter is " << perimeter << endl;
+
+  return contour;
+
+ }

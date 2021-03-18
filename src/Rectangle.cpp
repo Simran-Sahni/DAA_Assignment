@@ -15,3 +15,7 @@ vector<Edge> Rectangle ::getVerticalEdges() const {
   return vector<Edge>{Edge(LEFT, Interval(y_bottom, y_top), x_left,x_right),
                       Edge(RIGHT, Interval(y_bottom, y_top), x_right,x_left)};
 }
+vector<Edge> Rectangle::getHorizontalEdges() const {
+  return vector<Edge>{Edge(BOTTOM,Interval(x_left,x_right),y_bottom,y_top),
+                      Edge(UP,Interval(x_left,x_right),y_top,y_bottom)};
+}

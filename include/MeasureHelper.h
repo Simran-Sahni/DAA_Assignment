@@ -27,7 +27,11 @@ public:
   static long double rectangle_dac(vector<Rectangle> r);
   static void dfs(Ctree *root,Interval query,vector<Interval> &s);
   static void dfs(Ctree *root);
+  static void preorder(Ctree *root);
+  static void inorder(Ctree*root,vector<long double> &v1);
   static void contour();
+  static vector<vector<int>> freeIntervalQuery(vector<long double> leaf, Interval hrx, int ycoord,bool flag,vector<vector<int>> &ans);
+  static vector<vector<int>> getContourEdges(vector<Stripe> &S,vector<Edge> &hrx);
 };
 
 #endif // DAA_ASSIGNMENT_MEASUREHELPER_H
