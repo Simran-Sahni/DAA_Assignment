@@ -84,7 +84,6 @@ vector<Interval> IntervalHelper::find_intersection(vector<Interval> i1,
   return ans;
 }
 
-
 /**
  * Should return set of intervals that form compliment of the two
  * @param i1
@@ -95,7 +94,6 @@ vector<Interval> IntervalHelper::compliment(vector<Interval> i1,
                                             vector<Interval> i2) {
   return vector<Interval>();
 }
-
 
 /**
  * Checks if the two intervals intersect
@@ -113,7 +111,6 @@ bool IntervalHelper::do_they_intersect(Interval i1, Interval i2) {
 
   return intersect;
 }
-
 
 /**
  * Overloaded function to return the union of the two intervals
@@ -177,18 +174,9 @@ Interval IntervalHelper::compliment(Interval i1, Interval i2) {
  * @return Merged integer vector
  */
 vector<int> IntervalHelper::find_union(vector<int> v1, vector<int> v2) {
-  set<int> s(v1.begin(),v1.end());
-  for(auto &i : v2)s.insert(i);
-  vector<int> ans(s.begin(),s.end());
+  set<int> s(v1.begin(), v1.end());
+  for (auto &i : v2)
+    s.insert(i);
+  vector<int> ans(s.begin(), s.end());
   return ans;
 }
-// to make L
- // put L2 in L
-// then iteratate L1
-// take edge in L1 which does not have partner in R2
-
-// to Make R
- // put R1
- // then iterate R2
-// take edge in R2 which does not have partner in L1
-

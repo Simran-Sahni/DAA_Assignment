@@ -3,4 +3,9 @@
 //
 
 #include "../include/Point.h"
+/**
+ *
+ * @param x
+ * @param y
+ */
 Point ::Point(int x, int y) : x(x), y(y) {}

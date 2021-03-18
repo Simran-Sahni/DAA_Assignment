@@ -15,8 +15,6 @@ const int INF = (1LL << 30) - 1;
 
 class MeasureHelper {
 public:
-  static vector<Point> union_of_rectangle(vector<Rectangle> &r);
-  static vector<int> y_set(vector<Rectangle> &r);
   static vector<Interval> partition(vector<int> &coordinates);
   static vector<Stripe> copy(vector<Stripe> S, vector<int> coord_P,
                              Interval x_int);
@@ -25,11 +23,7 @@ public:
                                vector<int> &coord_p, Interval x_int);
   static StripeOutput stripes(vector<Edge> V, Interval x_ext);
   static long double rectangle_dac(vector<Rectangle> r);
-  static void dfs(Ctree *root,Interval query,vector<Interval> &s);
-  static void dfs(Ctree *root);
-  static void preorder(Ctree *root);
   static void inorder(Ctree*root,vector<long double> &v1);
-  static void contour();
   static vector<vector<int>> freeIntervalQuery(vector<long double> leaf, Interval hrx, int ycoord,bool flag,vector<vector<int>> &ans);
   static vector<vector<int>> getContourEdges(vector<Stripe> &S,vector<Edge> &hrx);
 };

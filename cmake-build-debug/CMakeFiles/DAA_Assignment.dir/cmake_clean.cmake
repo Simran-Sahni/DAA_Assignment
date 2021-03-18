@@ -1,11 +1,9 @@
 file(REMOVE_RECURSE
   "CMakeFiles/DAA_Assignment.dir/main.cpp.obj"
-  "CMakeFiles/DAA_Assignment.dir/src/ContourHelper.cpp.obj"
   "CMakeFiles/DAA_Assignment.dir/src/Ctree.cpp.obj"
   "CMakeFiles/DAA_Assignment.dir/src/Edge.cpp.obj"
   "CMakeFiles/DAA_Assignment.dir/src/Interval.cpp.obj"
   "CMakeFiles/DAA_Assignment.dir/src/IntervalHelper.cpp.obj"
-  "CMakeFiles/DAA_Assignment.dir/src/LineSegment.cpp.obj"
   "CMakeFiles/DAA_Assignment.dir/src/MeasureHelper.cpp.obj"
   "CMakeFiles/DAA_Assignment.dir/src/Point.cpp.obj"
   "CMakeFiles/DAA_Assignment.dir/src/Rectangle.cpp.obj"
