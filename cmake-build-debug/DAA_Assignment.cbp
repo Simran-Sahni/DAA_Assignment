@@ -80,9 +80,6 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="D:/Dev/DAA_Assignment/include/ContourHelper.h">
-			<Option target="DAA_Assignment"/>
-		</Unit>
 		<Unit filename="D:/Dev/DAA_Assignment/include/Ctree.h">
 			<Option target="DAA_Assignment"/>
 		</Unit>
@@ -93,9 +90,6 @@
 			<Option target="DAA_Assignment"/>
 		</Unit>
 		<Unit filename="D:/Dev/DAA_Assignment/include/IntervalHelper.h">
-			<Option target="DAA_Assignment"/>
-		</Unit>
-		<Unit filename="D:/Dev/DAA_Assignment/include/LineSegment.h">
 			<Option target="DAA_Assignment"/>
 		</Unit>
 		<Unit filename="D:/Dev/DAA_Assignment/include/MeasureHelper.h">
@@ -116,9 +110,6 @@
 		<Unit filename="D:/Dev/DAA_Assignment/main.cpp">
 			<Option target="DAA_Assignment"/>
 		</Unit>
-		<Unit filename="D:/Dev/DAA_Assignment/src/ContourHelper.cpp">
-			<Option target="DAA_Assignment"/>
-		</Unit>
 		<Unit filename="D:/Dev/DAA_Assignment/src/Ctree.cpp">
 			<Option target="DAA_Assignment"/>
 		</Unit>
@@ -129,9 +120,6 @@
 			<Option target="DAA_Assignment"/>
 		</Unit>
 		<Unit filename="D:/Dev/DAA_Assignment/src/IntervalHelper.cpp">
-			<Option target="DAA_Assignment"/>
-		</Unit>
-		<Unit filename="D:/Dev/DAA_Assignment/src/LineSegment.cpp">
 			<Option target="DAA_Assignment"/>
 		</Unit>
 		<Unit filename="D:/Dev/DAA_Assignment/src/MeasureHelper.cpp">

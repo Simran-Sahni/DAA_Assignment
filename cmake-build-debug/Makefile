@@ -169,33 +169,6 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\DAA_Assignment.dir\build.make CMakeFiles/DAA_Assignment.dir/main.cpp.s
 .PHONY : main.cpp.s
 
-src/ContourHelper.obj: src/ContourHelper.cpp.obj
-
-.PHONY : src/ContourHelper.obj
-
-# target to build an object file
-src/ContourHelper.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\DAA_Assignment.dir\build.make CMakeFiles/DAA_Assignment.dir/src/ContourHelper.cpp.obj
-.PHONY : src/ContourHelper.cpp.obj
-
-src/ContourHelper.i: src/ContourHelper.cpp.i
-
-.PHONY : src/ContourHelper.i
-
-# target to preprocess a source file
-src/ContourHelper.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\DAA_Assignment.dir\build.make CMakeFiles/DAA_Assignment.dir/src/ContourHelper.cpp.i
-.PHONY : src/ContourHelper.cpp.i
-
-src/ContourHelper.s: src/ContourHelper.cpp.s
-
-.PHONY : src/ContourHelper.s
-
-# target to generate assembly for a file
-src/ContourHelper.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\DAA_Assignment.dir\build.make CMakeFiles/DAA_Assignment.dir/src/ContourHelper.cpp.s
-.PHONY : src/ContourHelper.cpp.s
-
 src/Ctree.obj: src/Ctree.cpp.obj
 
 .PHONY : src/Ctree.obj
@@ -303,33 +276,6 @@ src/IntervalHelper.s: src/IntervalHelper.cpp.s
 src/IntervalHelper.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\DAA_Assignment.dir\build.make CMakeFiles/DAA_Assignment.dir/src/IntervalHelper.cpp.s
 .PHONY : src/IntervalHelper.cpp.s
-
-src/LineSegment.obj: src/LineSegment.cpp.obj
-
-.PHONY : src/LineSegment.obj
-
-# target to build an object file
-src/LineSegment.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\DAA_Assignment.dir\build.make CMakeFiles/DAA_Assignment.dir/src/LineSegment.cpp.obj
-.PHONY : src/LineSegment.cpp.obj
-
-src/LineSegment.i: src/LineSegment.cpp.i
-
-.PHONY : src/LineSegment.i
-
-# target to preprocess a source file
-src/LineSegment.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\DAA_Assignment.dir\build.make CMakeFiles/DAA_Assignment.dir/src/LineSegment.cpp.i
-.PHONY : src/LineSegment.cpp.i
-
-src/LineSegment.s: src/LineSegment.cpp.s
-
-.PHONY : src/LineSegment.s
-
-# target to generate assembly for a file
-src/LineSegment.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\DAA_Assignment.dir\build.make CMakeFiles/DAA_Assignment.dir/src/LineSegment.cpp.s
-.PHONY : src/LineSegment.cpp.s
 
 src/MeasureHelper.obj: src/MeasureHelper.cpp.obj
 
@@ -478,9 +424,6 @@ help:
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
-	@echo ... src/ContourHelper.obj
-	@echo ... src/ContourHelper.i
-	@echo ... src/ContourHelper.s
 	@echo ... src/Ctree.obj
 	@echo ... src/Ctree.i
 	@echo ... src/Ctree.s
@@ -493,9 +436,6 @@ help:
 	@echo ... src/IntervalHelper.obj
 	@echo ... src/IntervalHelper.i
 	@echo ... src/IntervalHelper.s
-	@echo ... src/LineSegment.obj
-	@echo ... src/LineSegment.i
-	@echo ... src/LineSegment.s
 	@echo ... src/MeasureHelper.obj
 	@echo ... src/MeasureHelper.i
 	@echo ... src/MeasureHelper.s

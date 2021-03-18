@@ -5,25 +5,12 @@ CMakeFiles/DAA_Assignment.dir/main.cpp.obj: ../include/Ctree.h
 CMakeFiles/DAA_Assignment.dir/main.cpp.obj: ../include/Edge.h
 CMakeFiles/DAA_Assignment.dir/main.cpp.obj: ../include/Interval.h
 CMakeFiles/DAA_Assignment.dir/main.cpp.obj: ../include/IntervalHelper.h
-CMakeFiles/DAA_Assignment.dir/main.cpp.obj: ../include/LineSegment.h
 CMakeFiles/DAA_Assignment.dir/main.cpp.obj: ../include/MeasureHelper.h
 CMakeFiles/DAA_Assignment.dir/main.cpp.obj: ../include/Point.h
 CMakeFiles/DAA_Assignment.dir/main.cpp.obj: ../include/Rectangle.h
 CMakeFiles/DAA_Assignment.dir/main.cpp.obj: ../include/Stripe.h
 CMakeFiles/DAA_Assignment.dir/main.cpp.obj: ../include/StripeOutput.h
 CMakeFiles/DAA_Assignment.dir/main.cpp.obj: ../main.cpp
-
-CMakeFiles/DAA_Assignment.dir/src/ContourHelper.cpp.obj: ../include/ContourHelper.h
-CMakeFiles/DAA_Assignment.dir/src/ContourHelper.cpp.obj: ../include/Ctree.h
-CMakeFiles/DAA_Assignment.dir/src/ContourHelper.cpp.obj: ../include/Edge.h
-CMakeFiles/DAA_Assignment.dir/src/ContourHelper.cpp.obj: ../include/Interval.h
-CMakeFiles/DAA_Assignment.dir/src/ContourHelper.cpp.obj: ../include/IntervalHelper.h
-CMakeFiles/DAA_Assignment.dir/src/ContourHelper.cpp.obj: ../include/MeasureHelper.h
-CMakeFiles/DAA_Assignment.dir/src/ContourHelper.cpp.obj: ../include/Point.h
-CMakeFiles/DAA_Assignment.dir/src/ContourHelper.cpp.obj: ../include/Rectangle.h
-CMakeFiles/DAA_Assignment.dir/src/ContourHelper.cpp.obj: ../include/Stripe.h
-CMakeFiles/DAA_Assignment.dir/src/ContourHelper.cpp.obj: ../include/StripeOutput.h
-CMakeFiles/DAA_Assignment.dir/src/ContourHelper.cpp.obj: ../src/ContourHelper.cpp
 
 CMakeFiles/DAA_Assignment.dir/src/Ctree.cpp.obj: ../include/Ctree.h
 CMakeFiles/DAA_Assignment.dir/src/Ctree.cpp.obj: ../src/Ctree.cpp
@@ -38,10 +25,6 @@ CMakeFiles/DAA_Assignment.dir/src/Interval.cpp.obj: ../src/Interval.cpp
 CMakeFiles/DAA_Assignment.dir/src/IntervalHelper.cpp.obj: ../include/Interval.h
 CMakeFiles/DAA_Assignment.dir/src/IntervalHelper.cpp.obj: ../include/IntervalHelper.h
 CMakeFiles/DAA_Assignment.dir/src/IntervalHelper.cpp.obj: ../src/IntervalHelper.cpp
-
-CMakeFiles/DAA_Assignment.dir/src/LineSegment.cpp.obj: ../include/Interval.h
-CMakeFiles/DAA_Assignment.dir/src/LineSegment.cpp.obj: ../include/LineSegment.h
-CMakeFiles/DAA_Assignment.dir/src/LineSegment.cpp.obj: ../src/LineSegment.cpp
 
 CMakeFiles/DAA_Assignment.dir/src/MeasureHelper.cpp.obj: ../include/Ctree.h
 CMakeFiles/DAA_Assignment.dir/src/MeasureHelper.cpp.obj: ../include/Edge.h

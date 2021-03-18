@@ -16,8 +16,6 @@ public:
   vector<Edge> R;
   vector<int> coord_p;
   vector<Stripe> S;
-  StripeOutput(const vector<Edge> l, const vector<Edge> r,
-               const vector<int> coordP, const vector<Stripe> s);
   StripeOutput();
 };
 

@@ -18,7 +18,6 @@ public:
  Ctree *rightson;
  Ctree(long double x, string lru, Ctree *leftson, Ctree *rightson);
  Ctree(long double x, string lru);
- Ctree(long double x);
 };
 
 #endif // DAA_ASSIGNMENT_CTREE_H
