@@ -7,148 +7,158 @@
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-
+    <link href="index.css" rel = "stylesheet">
     <title>Report</title>
 </head>
-<body>
-<h1>Report</h1>
+<body class="container-fluid">
+<h2  class="text-center">Team members</h2>
+<ul>
+    <li>Radhesh Sarma: 2017B4A70886H</li>
+    <li>Chatrik Singh Mangat: 2017B5A70822H</li>
+    <li>Simran Sahni: 2017B5A70856H</li>
+    <li>Ashi Sinha: 2017B5A71149H</li>
+</ul>
 
-<h2>Discussion on algorithm</h2>
+<hr>
 
+<h2 class="text-center">Results</h2>
+<div class="row col-md-12">
+    <p><b>Testcase #1:</b></p><br>
+    <br><p><b>Testcase #1:</b></p><br>
+    <br><p><b>Testcase #1:</b></p><br>
+
+</div>
+
+<hr>
+<h2 class="text-center">Discussion on algorithm</h2>
+<div class="row col-md-12">
 <p>
-    The measure and contour problem can easily be solved once it is known how to compute the set of stripes S. </p>
-<h4>Measure problem:</h4>
+    Computing the measure and the contour of the union of a  set of iso rectangles has been achieved previously using line sweep algorithms. We attempted to tackle the problems using a divide and conquer algorithm called Rectangele_DAC, with a subroutine named STRIPES. This algorithm helps in converting the cartesian representation of iso rectangles into a more abstract representation, one which includes horizontal stripes spanning the plane of the rectangles. The measure and contour problem can easily be solved once it is known how to compute the set of stripes S, where the borders of each stripe coincide with the horizontal edges of the corresponding rectangle. Both the problems are based on the same divide and conquer principle, but implement a few data structures differently.</p>
+</div>
 
-<p>Once we know the set of stripes , measure of union(R) is given by
-∑ (measure(s . x_ union) * (s . y_ interval.top - s . y_ interval.bottom)) over all stripes in S
-where measure (s. x _union).is the total length of the contained intervals in stripe s
-</p>
-<br>
+<div class = "row col-md-12">
+    <p>
+        <u class="text-center"> Measure problem:</u><br>
+        This problem is tackled by using a representational notation of the abstract datatype stripe that consists of x_interval, y_interval & union of x_intervals falling in that rectangular region of the stripe. The rectangle’s vertical edges are divided across the median into two groups left & right, which are then merged in the STRIPE subroutine, after using copy,blacken & concat helper functions on this set of stripes. The end result is a real number denoting the extent of overlap or measure of this set of iso-rectangles. The formula is:<br>
+        union(R) = ∑ (measure(s . x_ union) * (s . y_ interval.top - s . y_ interval.bottom))
+    </p>
+</div>
 
-<h4>Contour problem:</h4>
+<div class = "row col-md-12">
+    <p>
+        <u class="text-center">Contour problem:</u> <br>
+        The contour problem is solved by looking for free intervals i.e. parts of the stripe’s border which are not occupied by rectangles on both sides of the border. To do this, we first generate a binary tree for each stripe such that the leaves of the tree contain the x coordinates of the rectangles overlapping with the stripe’s border. These intervals are then subtracted out of the query interval to give us the final contour pieces. These pieces are then joined with others using the width of each stripe. The union of all the contour pieces will give us the entire contour.
+        Computing the Set of Stripes: Algorithm STRIPES
+    </p>
 
-<p>
-Given the set of stripes S,any horizontal contour piece is a fragment of some rectangle edge ,so we consider the set H of horizontal rectangle edges. Any edge h∈H coincides with the boundary between two stripes in S, with its rectangle either above or below it.
-First, that stripe is selected ,not covered by h’s rectangle in the following manner :
-function contour_ pieces (edge h, set of stripe S) set of line segment :
-if h. side = bottom
-then select s∈S
-such that s. y­_interval.top = h.coord
-else select s∈S such that s. y_interval.bottom=h.coord
-fi;
-Intersecting and forming the complement with h. x_interval we obtain the subintervals of h. x_interval. Together with h's y-coordinate this yields the contour pieces created by h.
-set of interval J:= intervals(h. x_interval\ (h . x _ interval∩union(s . x_ union)));
-{(i, y) | i ∈J and y = h. coord}
-    Taking union of the contour pieces, we can get the final contour.
-</p>
+</div>
 
+<div class = "row col-md-12">
+    <p>
+        Once the set of stripes is known ,both measure and contour problem can be solved as described before ,hence we need to determine how to compute the set of stripes.
 
-
-
-<h4>Computing the Set of Stripes :Algorithm STRIPES</h4>
-
-Once the set of stripes is known ,both measure and contour problem can be solved as described before ,hence we need to determine how to compute the set of stripes.
-
-The task of STRIPES is to construct sets L, R, P and S from a given set of vertical rectangle edges V.Sets L, R and P produced are needed to support the merge step.
-set of edge V: a set of vertical rectangle edges.
-set of interval L: contains the y-projections of all left edges whose partner is not in V.
-set of interval R: symmetric to L (for right edges).
-set of cord P: contains the y-projection of all endpoints of line segments in V plus the
-frame boundaries in y-direction, namely -∞ and +∞.
-set of stripe S: S = stripes (rect (V), (x_ext, [ -∞, + ∞])).
+        The task of STRIPES is to construct sets L, R, P and S from a given set of vertical rectangle edges V. Sets L, R and P produced are needed to support the merge step.<br>
+        set of edge V: a set of vertical rectangle edges.<br>
+        set of interval L: contains the y-projections of all left edges whose partner is not in V.<br>
+        set of interval R: symmetric to L (for right edges).<br>
+        set of coord P: contains the y-projection of all endpoints of line segments in V plus the frame boundaries in y-direction, namely -∞ and +∞.<br>
+        set of stripe S: S = stripes (rect (V), (x_ext, [ -∞, + ∞])).<br>
+        The maximal frame inside which all edges are located is called as f.<br>
+        S is the ultimate output we are interested in.
+    </p>
+</div>
 
 
-S is the ultimate output we are interested in.
-
-The maximal frame inside which all edges are located is called as f.
-A vertical line is chosen that splits f into two smaller subframes f1 and f2 and V into two subsets V1 and V2 of approximately equal size enclosed by f1 and f2, respectively. Recursively this process is repeated yielding smaller and smaller frames until finally a frame contains only one vertical edge. This is Case 1 of the STRIPES algorithm.
-
-
-In Case 2, the set of vertical edges is located in a frame f =(x_ext, [- ∞, + ∞]).
-The divide step divides this frame f into f1 and f2 and also V into V1 and V2.The Set of stripes is constructed in the conquer step for both the sub-areas.The merge step constructs L,R,P and S from L1,L2,R1,R2,P1,P2 from both frames f1 and f2 in the following manner:
-
-L: =(L1\LR) U L2;
-R: =R1 ∪ (R2\LR);
-P:=P1 ∪ P2;
-where LR=L1∩R2
-
-Taking complement with respect to set LR corresponds to removing rectangles that are completed in the merge step, that is rectangles whose left edge is in V1 and whose right edge is in V2.So L and R represent only the edges of incomplete rectangles.
-
-The construction of the set of stripes S is done in three steps: copy, blacken and concat.
-
-Copy :
-First, stripe boundaries of S1 are extended into S2 and vice versa to make the y partitions equal in both frames.The copies hence made are called  S-left and S-right, respectively.
-
-Blacken:
-Those stripes in S-right, whose y-interval is enclosed by some y-interval in L1 \LR , are completely covered and have to be blackened.Basically, they are completely covered by a rectangle.
+<div class = "row col-md-12">
+    <p>
+        <u>Divide Step:</u><br>
+        A vertical line is chosen that splits f into two smaller subframes f1 and f2 and V into two subsets V1 and V2 of approximately equal size enclosed by f1 and f2, respectively. Recursively this process is repeated yielding smaller and smaller frames until finally a frame contains only one vertical edge.
+    </p>
+</div>
 
 
-Concat:
-Every two adjacent stripes in S-left and S-right (stripes with the same y-interval) are concatenated to form the stripes of S.
+<div class = "row col-md-12">
+    <p>
+        <u class="text-center">Conquer Step:</u><br>
+        Stripes are constructed on either side of the dividing line. During the merge step, the rectangles which are completed within the left and right sets of stripes are excluded from further processing. This keeps going till the final frame encloses all the rectangles.
+    </p>
+
+</div>
+
+<div class = "row col-md-12">
+    <p>
+        The construction of the set of stripes S is done in three steps: copy, blacken and concat.<br>
+
+        <u>Copy :</u><br>
+        First, stripe boundaries of S1 are extended into S2 and vice versa to make the y partitions equal in both frames.The copies hence made are called  S-left and S-right, respectively.
+        <br>
+        <u>Blacken:</u><br>
+        Those stripes in S-right, whose y-interval is enclosed by some y-interval in L1 \LR , are completely covered and have to be blackened.Basically, they are completely covered by a rectangle.
+        <br>
+        <u>Concat:</u><br>
+        Every two adjacent stripes in S-left and S-right (stripes with the same y-interval) are concatenated to form the stripes of S.
+    </p>
+</div>
 
 
-We therefore have the set of stripes S constructed which can be further used to compute the required measure and contour of the set of iso-rectangles.
+<div class = "row col-md-12">
+    <h3 class="text-center">Time and Space complexity analysis</h3>
+    <p>
+        <b class="text-center">TIME :</b> <br>
+        Let T(n) denote the worst-case time algorithm STRIPES takes, where cardinality of the set is n.<br>
+        <u>CASE 1:</u>  V contains only one edge v<br>
+        All operations are either assignment or conditional statements, so time complexity is O(1).<br>
+
+        <u>Case 2:</u> V contains more than one edge. <br>
+        Divide: O(1) constant time.<br>
+        Conquer: 2T(n/2) since we are dividing into 2 parts.<br>
+        Merge: All operations for example copy, concat and blacken require parallel scanning of lists   and operations during  scans need constant time for each element ,hence O(n)  complexity.<br>
+        Therefore we have T(n) = O(1) + 2 T(n/2) + O(n)<br>
+        =>T(n) = O(nlog(n)) [From Master's theorem]<br>
+        Therefore for a set of n rectangles the measure problem and the contour problem can be solved by divide-and-conquer which takes O(nlog(n)) time.
+
+    </p>
+    <p>
+        <b class="text-center">SPACE:</b>
+
+        The array representing V and the linked lists representing L, R and P in the algorithm require O(n) space. But space requirements of the data structure representing the set of stripes S is different for the measure and the contour problem.
+
+        For the measure problem, the representation of each stripe takes constant space, so for the whole set of stripes S, O(n) space is needed.
+
+        For contour problem, let SP(n) denote the worst-case space-requirements of a set of stripes constructed by algorithm STRIPES.<br>
+        Case 1 constructs S using constant space, hence SP(1) = O(1)<br>
+        Case 2 constructs the set of stripes in the merge step.<br>
+
+        A new linked list is created with O(n) elements (each element representing a stripe) and that for each list element at most a new root node and two pointers are created. The tree structures belonging to stripes of S1 and S2 are retained.
+
+        Hence SP(n) = 2 SP(n/2) + O(n)<br>
+        =>SP(n) = O(nlog(n))<br>
+
+        For each horizontal edge a free subinterval query is performed on the corresponding stripe's tree. Since the height of this tree is O(log n), each query takes O(log n+ p) time (p is the number of reported contour pieces) yielding a total time of O(nlog(n)+p) where p is the total size of the contour (the number of contour pieces).
+        <br>
+        Thus the described divide and conquer algorithm  takes O(nlog n) time and O(n) space in case of the measure problem and O(nlog(n)+p) time and space for the contour problem, where p is the size of the contour.
+
+    </p>
+</div>
 
 
 
 
-<h3>Time and Space complexity analysis</h3>
 
-<h4> TIME : </h4>
+<hr>
 
-<p>
-Let T(n) denote the worst-case time algorithm STRIPES takes, where cardinality of the set is n.
-<b>CASE 1:</b>V contains only one edge v
-All operations are either assignment or conditional statements, so time complexity is O(1)
-
-<b>Case 2:</b> V contains more than one edge.
-Divide: O(1) constant time
-Conquer: 2T(n/2) since we are dividing into 2 parts
-Merge: All operations for example copy, concat and blacken require parallel scanning of lists
-and operations during  scans need constant time for each element ,hence O(n)  complexity.
-
-Therefore we have T(n) = O(1) + 2 T(n/2) + O(n)
-=>T(n) = O(n log n) (Which implies this time complexity from Master's Theorem)
-
-Therefore for a set of n rectangles the measure problem and the contour problem can be solved by divide-and-conquer which takes O(nlog n) time
-</p>
-
-
-
-<h4>SPACE:</h4>
-
-<p>
-The array representing V and the linked lists representing L, R and P in the algorithm require O(n) space.  But space requirements of the data structure representing the set of stripes S is different for the measure and the contour problem
-For measure problem , the representation of each stripe takes constant space, so for the whole set of stripes S ,O(n) space is needed.
-</p>
-
-<br>
-
-<p>
-For contour problem,
-Let SP(n) denote the worst-case space-requirements of a set of stripes constructed by algorithm STRIPES.
-Case 1 constructs S using constant space, hence SP(1) = O(1)
-Case 2 constructs the set of stripes in the merge step.
-A new linked list is created with O(n) elements (each element representing a stripe) and that for each list element at most a new root node and two pointers are created. The tree structures belonging to stripes of S1 and S2 are retained.
-Hence SP(n) = 2 SP(n/2) + O(n)
-=>SP(n) = O(n log n)
-
-For each horizontal edge a free subinterval query is performed on the corresponding stripe's tree. Since the height of this tree is O(log n), each query takes O(log n+ p) time (p is the number of reported contour pieces) yielding a total time of O(nlogn+p) where p is the total size of the contour (the number of contour pieces).
-
-Thus the described divide and conquer algorithm  takes O(nlog n) time and O(n) space in case of the measure problem and O(nlogn+p) time and space for the contour problem, where p is the size of the contour.
-</p>
-
-<h2>Issues in Coding</h2>
+<h2 class="text-center">Issues in Coding</h2>
 <p>
     <ul>
     <li>Setting up the whole project structure as different header and source files</li>
-    <li>Working on this large modular project</li>
     <li>Writing classes for all the different entities/data-structure types involved in the paper</li>
     <li>Representation of s.x_union for the Contour problem was quite hard to understand</li>
+    <li>Compliment & intersection on intervals isnt specified clearly in the paper</li>
+    <li>Paper mentions using blacken & concat procedures as O(n) functions, but doesnt clarify how, they seem O(n^2) to us, since one interval is being picked from each half set of stripes.</li>
 </ul>
 </p>
 
-<h2>Observations</h2>
+<h2 class="text-center">Observations</h2>
  <p>Better and faster results than the line-sweep algorithm</p>
 
 <!-- Optional JavaScript; choose one of the two! -->
