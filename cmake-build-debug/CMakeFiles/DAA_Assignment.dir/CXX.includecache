@@ -6,16 +6,6 @@
 
 #IncludeRegexTransform: 
 
-D:/Dev/DAA_Assignment/include/ContourHelper.h
-Stripe.h
-D:/Dev/DAA_Assignment/include/Stripe.h
-Edge.h
-D:/Dev/DAA_Assignment/include/Edge.h
-StripeOutput.h
-D:/Dev/DAA_Assignment/include/StripeOutput.h
-Rectangle.h
-D:/Dev/DAA_Assignment/include/Rectangle.h
-
 D:/Dev/DAA_Assignment/include/Ctree.h
 string
 -
@@ -31,10 +21,6 @@ D:/Dev/DAA_Assignment/include/Interval.h
 D:/Dev/DAA_Assignment/include/IntervalHelper.h
 vector
 D:/Dev/DAA_Assignment/include/vector
-Interval.h
-D:/Dev/DAA_Assignment/include/Interval.h
-
-D:/Dev/DAA_Assignment/include/LineSegment.h
 Interval.h
 D:/Dev/DAA_Assignment/include/Interval.h
 
@@ -78,39 +64,13 @@ D:/Dev/DAA_Assignment/include/Edge.h
 vector
 -
 
-D:/Dev/DAA_Assignment/main.cpp
-iostream
--
-iomanip
--
-include/Point.h
-D:/Dev/DAA_Assignment/include/Point.h
-include/Interval.h
-D:/Dev/DAA_Assignment/include/Interval.h
-include/IntervalHelper.h
-D:/Dev/DAA_Assignment/include/IntervalHelper.h
-include/LineSegment.h
-D:/Dev/DAA_Assignment/include/LineSegment.h
-include/Rectangle.h
-D:/Dev/DAA_Assignment/include/Rectangle.h
-include/MeasureHelper.h
-D:/Dev/DAA_Assignment/include/MeasureHelper.h
-
-D:/Dev/DAA_Assignment/src/ContourHelper.cpp
-../include/ContourHelper.h
-D:/Dev/DAA_Assignment/include/ContourHelper.h
-../include/MeasureHelper.h
-D:/Dev/DAA_Assignment/include/MeasureHelper.h
-../include/IntervalHelper.h
-D:/Dev/DAA_Assignment/include/IntervalHelper.h
-algorithm
--
-
 D:/Dev/DAA_Assignment/src/MeasureHelper.cpp
 ../include/MeasureHelper.h
 D:/Dev/DAA_Assignment/include/MeasureHelper.h
 ../include/IntervalHelper.h
 D:/Dev/DAA_Assignment/include/IntervalHelper.h
 algorithm
+-
+map
 -
 

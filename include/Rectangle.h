@@ -16,6 +16,8 @@ public:
   Rectangle(int x_left, int x_right, int y_bottom, int y_top);
   Rectangle(Interval xInterval, Interval yInterval);
   vector<Edge> getVerticalEdges() const;
+  vector<Edge> getHorizontalEdges() const;
+
 };
 
 #endif // DAA_ASSIGNMENT_RECTANGLE_H

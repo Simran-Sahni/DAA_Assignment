@@ -16,9 +16,12 @@ public:
   Interval y_interval;
   Ctree *tree;
   long double x_measure;
+  void setV(vector<long double> &v);
+  vector<long double> v;
   Stripe(Interval x_interval, Interval y_interval, long double x_measure);
   Stripe(Interval x_interval, Interval y_interval, long double x_measure, Ctree *tree);
   void setXMeasure(long double xMeasure);
+
 };
 
 #endif // DAA_ASSIGNMENT_STRIPE_H
