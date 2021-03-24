@@ -8,136 +8,140 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="D:/Dev/DAA_Assignment/cmake-build-debug"/>
+				<Option working_dir="/home/dell/Desktop/DAA_Assignment/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Dev/DAA_Assignment/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Dev/DAA_Assignment/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Dev/DAA_Assignment/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Dev/DAA_Assignment/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="DAA_Assignment">
-				<Option output="D:/Dev/DAA_Assignment/cmake-build-debug/DAA_Assignment.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="D:/Dev/DAA_Assignment/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++"/>
-					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/mingw32"/>
-					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/backward"/>
-					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include"/>
-					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../include"/>
-					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include-fixed"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Dev/DAA_Assignment/cmake-build-debug/Makefile&quot;  VERBOSE=1 DAA_Assignment"/>
-					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Dev/DAA_Assignment/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Dev/DAA_Assignment/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Dev/DAA_Assignment/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="DAA_Assignment/fast">
-				<Option output="D:/Dev/DAA_Assignment/cmake-build-debug/DAA_Assignment.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="D:/Dev/DAA_Assignment/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++"/>
-					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/mingw32"/>
-					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/backward"/>
-					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include"/>
-					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../include"/>
-					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include-fixed"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Dev/DAA_Assignment/cmake-build-debug/Makefile&quot;  VERBOSE=1 DAA_Assignment/fast"/>
-					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Dev/DAA_Assignment/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Dev/DAA_Assignment/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Dev/DAA_Assignment/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="edit_cache">
-				<Option working_dir="D:/Dev/DAA_Assignment/cmake-build-debug"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Dev/DAA_Assignment/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Dev/DAA_Assignment/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Dev/DAA_Assignment/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Dev/DAA_Assignment/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/dell/Desktop/DAA_Assignment/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/dell/Desktop/DAA_Assignment/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/dell/Desktop/DAA_Assignment/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/dell/Desktop/DAA_Assignment/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="D:/Dev/DAA_Assignment/cmake-build-debug"/>
+				<Option working_dir="/home/dell/Desktop/DAA_Assignment/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Dev/DAA_Assignment/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Dev/DAA_Assignment/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Dev/DAA_Assignment/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Dev/DAA_Assignment/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/dell/Desktop/DAA_Assignment/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/dell/Desktop/DAA_Assignment/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/dell/Desktop/DAA_Assignment/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/dell/Desktop/DAA_Assignment/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/dell/Desktop/DAA_Assignment/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/dell/Desktop/DAA_Assignment/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/dell/Desktop/DAA_Assignment/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/dell/Desktop/DAA_Assignment/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/dell/Desktop/DAA_Assignment/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="DAA_Assignment">
+				<Option output="/home/dell/Desktop/DAA_Assignment/cmake-build-debug/DAA_Assignment" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/dell/Desktop/DAA_Assignment/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/dell/Desktop/DAA_Assignment/cmake-build-debug/Makefile&quot;  VERBOSE=1 DAA_Assignment"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/dell/Desktop/DAA_Assignment/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/dell/Desktop/DAA_Assignment/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/dell/Desktop/DAA_Assignment/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="DAA_Assignment/fast">
+				<Option output="/home/dell/Desktop/DAA_Assignment/cmake-build-debug/DAA_Assignment" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/dell/Desktop/DAA_Assignment/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/dell/Desktop/DAA_Assignment/cmake-build-debug/Makefile&quot;  VERBOSE=1 DAA_Assignment/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/dell/Desktop/DAA_Assignment/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/dell/Desktop/DAA_Assignment/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/dell/Desktop/DAA_Assignment/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="D:/Dev/DAA_Assignment/include/Ctree.h">
+		<Unit filename="/home/dell/Desktop/DAA_Assignment/include/Ctree.h">
 			<Option target="DAA_Assignment"/>
 		</Unit>
-		<Unit filename="D:/Dev/DAA_Assignment/include/Edge.h">
+		<Unit filename="/home/dell/Desktop/DAA_Assignment/include/Edge.h">
 			<Option target="DAA_Assignment"/>
 		</Unit>
-		<Unit filename="D:/Dev/DAA_Assignment/include/Interval.h">
+		<Unit filename="/home/dell/Desktop/DAA_Assignment/include/Interval.h">
 			<Option target="DAA_Assignment"/>
 		</Unit>
-		<Unit filename="D:/Dev/DAA_Assignment/include/IntervalHelper.h">
+		<Unit filename="/home/dell/Desktop/DAA_Assignment/include/IntervalHelper.h">
 			<Option target="DAA_Assignment"/>
 		</Unit>
-		<Unit filename="D:/Dev/DAA_Assignment/include/MeasureHelper.h">
+		<Unit filename="/home/dell/Desktop/DAA_Assignment/include/MeasureHelper.h">
 			<Option target="DAA_Assignment"/>
 		</Unit>
-		<Unit filename="D:/Dev/DAA_Assignment/include/Point.h">
+		<Unit filename="/home/dell/Desktop/DAA_Assignment/include/Point.h">
 			<Option target="DAA_Assignment"/>
 		</Unit>
-		<Unit filename="D:/Dev/DAA_Assignment/include/Rectangle.h">
+		<Unit filename="/home/dell/Desktop/DAA_Assignment/include/Rectangle.h">
 			<Option target="DAA_Assignment"/>
 		</Unit>
-		<Unit filename="D:/Dev/DAA_Assignment/include/Stripe.h">
+		<Unit filename="/home/dell/Desktop/DAA_Assignment/include/Stripe.h">
 			<Option target="DAA_Assignment"/>
 		</Unit>
-		<Unit filename="D:/Dev/DAA_Assignment/include/StripeOutput.h">
+		<Unit filename="/home/dell/Desktop/DAA_Assignment/include/StripeOutput.h">
 			<Option target="DAA_Assignment"/>
 		</Unit>
-		<Unit filename="D:/Dev/DAA_Assignment/main.cpp">
+		<Unit filename="/home/dell/Desktop/DAA_Assignment/main.cpp">
 			<Option target="DAA_Assignment"/>
 		</Unit>
-		<Unit filename="D:/Dev/DAA_Assignment/src/Ctree.cpp">
+		<Unit filename="/home/dell/Desktop/DAA_Assignment/src/Ctree.cpp">
 			<Option target="DAA_Assignment"/>
 		</Unit>
-		<Unit filename="D:/Dev/DAA_Assignment/src/Edge.cpp">
+		<Unit filename="/home/dell/Desktop/DAA_Assignment/src/Edge.cpp">
 			<Option target="DAA_Assignment"/>
 		</Unit>
-		<Unit filename="D:/Dev/DAA_Assignment/src/Interval.cpp">
+		<Unit filename="/home/dell/Desktop/DAA_Assignment/src/Interval.cpp">
 			<Option target="DAA_Assignment"/>
 		</Unit>
-		<Unit filename="D:/Dev/DAA_Assignment/src/IntervalHelper.cpp">
+		<Unit filename="/home/dell/Desktop/DAA_Assignment/src/IntervalHelper.cpp">
 			<Option target="DAA_Assignment"/>
 		</Unit>
-		<Unit filename="D:/Dev/DAA_Assignment/src/MeasureHelper.cpp">
+		<Unit filename="/home/dell/Desktop/DAA_Assignment/src/MeasureHelper.cpp">
 			<Option target="DAA_Assignment"/>
 		</Unit>
-		<Unit filename="D:/Dev/DAA_Assignment/src/Point.cpp">
+		<Unit filename="/home/dell/Desktop/DAA_Assignment/src/Point.cpp">
 			<Option target="DAA_Assignment"/>
 		</Unit>
-		<Unit filename="D:/Dev/DAA_Assignment/src/Rectangle.cpp">
+		<Unit filename="/home/dell/Desktop/DAA_Assignment/src/Rectangle.cpp">
 			<Option target="DAA_Assignment"/>
 		</Unit>
-		<Unit filename="D:/Dev/DAA_Assignment/src/Stripe.cpp">
+		<Unit filename="/home/dell/Desktop/DAA_Assignment/src/Stripe.cpp">
 			<Option target="DAA_Assignment"/>
 		</Unit>
-		<Unit filename="D:/Dev/DAA_Assignment/src/StripeOutput.cpp">
+		<Unit filename="/home/dell/Desktop/DAA_Assignment/src/StripeOutput.cpp">
 			<Option target="DAA_Assignment"/>
 		</Unit>
-		<Unit filename="D:/Dev/DAA_Assignment/CMakeLists.txt">
+		<Unit filename="/home/dell/Desktop/DAA_Assignment/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

@@ -4,6 +4,7 @@
 
 #include "../include/Edge.h"
 #include <iostream>
+using namespace std;
 using std::runtime_error;
 /**
  *
@@ -22,3 +23,8 @@ Edge::Edge(string type, Interval interval, int coord)
  */
 Edge::Edge(string type, Interval interval, int coord,int partner_coordinate)
     : type(type), interval(interval), coord(coord),partner_coordinate(partner_coordinate) {}
+
+void Edge::print() {
+    cout << type << " Interval(" << interval.bottom << " " << interval.top << ") following are coord & partner coord"
+         << coord <<" "<<partner_coordinate<<"\n";
+}

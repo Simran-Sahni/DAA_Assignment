@@ -21,6 +21,7 @@ public:
   Stripe(Interval x_interval, Interval y_interval, long double x_measure);
   Stripe(Interval x_interval, Interval y_interval, long double x_measure, Ctree *tree);
   void setXMeasure(long double xMeasure);
+  void print();
 
 };
 
