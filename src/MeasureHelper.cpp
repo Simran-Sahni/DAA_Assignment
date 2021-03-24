@@ -118,7 +118,7 @@ void MeasureHelper::blacken(vector<Stripe> &S, vector<Edge> &J) {
  * @return StripeOutput object
  */
 StripeOutput MeasureHelper::stripes(vector<Edge> V, Interval x_ext) {
-    cout<<"Call to stripes with params "<<x_ext.bottom<<" "<<x_ext.top<<" size of V as "<<V.size()<<"\n";
+    //cout<<"Call to stripes with params "<<x_ext.bottom<<" "<<x_ext.top<<" size of V as "<<V.size()<<"\n";
   vector<Edge> L;
   vector<Edge> R;
   vector<int> coord_P;
@@ -156,16 +156,14 @@ StripeOutput MeasureHelper::stripes(vector<Edge> V, Interval x_ext) {
     ans.L = L;
     ans.R = R;
     ans.coord_p = coord_P;
-    ans.print();
+    //ans.print();
     //cout<<"Size of returned StripeOutput L and R is "<<ans.L.size()<<" "<<ans.R.size()<<"\n";
     return ans;
 
   } else {
     vector<Edge> V1;
     vector<Edge> V2;
-    sort(V.begin(), V.end(), [](const auto &lhs, const auto &rhs) {
-      return lhs.coord < rhs.coord;
-    });
+
     int m = V.size() / 2;
     for (int i = 0; i < V.size(); i++) {
       if (i < m)
@@ -234,24 +232,66 @@ long double MeasureHelper::rectangle_dac(vector<Rectangle> r) {
     }
   }
   sort(vrx.begin(), vrx.end(),
-       [](const auto &lhs, const auto &rhs) { return lhs.coord < rhs.coord; });
-  sort(hrx.begin(), hrx.end(), [](const auto &lhs, const auto &rhs) {
-    if (lhs.coord == rhs.coord) {
-      if (lhs.interval.bottom != rhs.interval.bottom)
-        return lhs.interval.bottom < rhs.interval.bottom;
-      if (lhs.interval.top != rhs.interval.top)
-        return lhs.interval.top < rhs.interval.top;
-      if (lhs.type == BOTTOM)
-        return false;
-      if (rhs.type == BOTTOM)
-        return false;
-      return true;
-    }
+       [](const auto &lhs, const auto &rhs) {
+           if (lhs.coord == rhs.coord) {
+               //1.first coordinate,
+               //2. then side
+               //3. then interval
 
-    return lhs.coord < rhs.coord;
+               /* cout<<"Inside sorting function\n";
+
+               cout << lhs.type << " Interval(" << lhs.interval.bottom << " " << lhs.interval.top << ") following are coord & partner coord"
+                    << lhs.coord <<" "<<lhs.partner_coordinate<<"\n";
+               cout << rhs.type << " Interval(" << rhs.interval.bottom << " " << rhs.interval.top << ") following are coord & partner coord"
+                    << rhs.coord <<" "<<rhs.partner_coordinate<<"\n";
+
+
+                cout<<"Above was in sorting function\n";*/
+               if(lhs.type != rhs.type)
+               {
+                   if(lhs.type == LEFT)
+                       return true;
+                   else
+                       return false;
+               }
+               else {
+                   return lhs.interval < rhs.interval;
+               }
+           }
+           else
+                return lhs.coord < rhs.coord;
+  });
+  sort(hrx.begin(), hrx.end(), [](const auto &lhs, const auto &rhs) {
+      if (lhs.coord == rhs.coord) {
+          //1.first coordinate,
+          //2. then side
+          //3. then interval
+
+          if(lhs.type != rhs.type)
+          {
+              if(lhs.type == BOTTOM)
+                  return true;
+              else
+                  return false;
+          }
+          else {
+              return lhs.interval < rhs.interval;
+
+          }
+      }
+      else
+        return lhs.coord < rhs.coord;
   });
 
   //Printing horizontal & vertical intervals after sorting
+  /*for(auto i:hrx)
+      i.print();
+  for(auto i:vrx)
+      i.print();*/
+
+
+  //cout<<"To give the plotter\n";
+
   for (auto &i : hrx) {
     cout << i.interval.bottom << " " << i.coord << " " << i.interval.top << " "
          << i.coord << " " << 0 << endl;
@@ -274,6 +314,7 @@ long double MeasureHelper::rectangle_dac(vector<Rectangle> r) {
     inorder(stripe.tree, v);
     v.push_back(INF);
     stripe.setV(v);
+    //cerr<<stripe.x_measure<<" "<<stripe.y_interval.top<<" "<<stripe.y_interval.bottom<<"\n";
     measure +=
         stripe.x_measure * (stripe.y_interval.top - stripe.y_interval.bottom);
   }
@@ -360,11 +401,11 @@ vector<vector<int>> MeasureHelper::getContourEdges(vector<Stripe> &S,
         }
     }
 
-    for (auto x: ans)
-    {       for (auto y: x)
-            cout << y << " ";
-    cout << "\n";
-   }
+//    for (auto x: ans)
+//    {       for (auto y: x)
+//            cout << y << " ";
+//    cout << "\n";
+//   }
   int perimeter = 0;
 
   map<int, vector<Interval>> mp;

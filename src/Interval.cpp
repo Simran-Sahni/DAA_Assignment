@@ -12,11 +12,18 @@ using std ::min;
  */
 Interval ::Interval(int bottom, int top)
     : bottom(min(bottom, top)), top(max(bottom, top)) {}
-/**
- *
- * @param i
- * @return
- */
-bool Interval::operator==(const Interval &i) {
-  return this->bottom == i.bottom and this->top == i.top;
+
+bool Interval::operator==(const Interval &i) const {
+    return this->bottom == i.bottom and this->top == i.top;
 }
+
+
+
+bool Interval::operator <(const Interval &i) const {
+    if (this->bottom == i.bottom)
+        return this->top < i.top;
+    else
+        return this->bottom < i.bottom;
+}
+
+
