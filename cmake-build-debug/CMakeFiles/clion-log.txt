@@ -1,4 +1,4 @@
-"C:\Program Files\JetBrains\CLion 2020.3.2\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" D:\Dev\DAA_Assignment
+/snap/clion/145/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/dell/Desktop/DAA_Assignment
 -- Configuring done
 -- Generating done
--- Build files have been written to: D:/Dev/DAA_Assignment/cmake-build-debug
+-- Build files have been written to: /home/dell/Desktop/DAA_Assignment/cmake-build-debug

@@ -17,6 +17,7 @@ public:
   vector<int> coord_p;
   vector<Stripe> S;
   StripeOutput();
+  void print();
 };
 
 #endif // DAA_ASSIGNMENT_STRIPEOUTPUT_H

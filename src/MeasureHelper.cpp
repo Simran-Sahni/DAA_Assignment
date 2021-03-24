@@ -118,6 +118,7 @@ void MeasureHelper::blacken(vector<Stripe> &S, vector<Edge> &J) {
  * @return StripeOutput object
  */
 StripeOutput MeasureHelper::stripes(vector<Edge> V, Interval x_ext) {
+    cout<<"Call to stripes with params "<<x_ext.bottom<<" "<<x_ext.top<<" size of V as "<<V.size()<<"\n";
   vector<Edge> L;
   vector<Edge> R;
   vector<int> coord_P;
@@ -155,6 +156,8 @@ StripeOutput MeasureHelper::stripes(vector<Edge> V, Interval x_ext) {
     ans.L = L;
     ans.R = R;
     ans.coord_p = coord_P;
+    ans.print();
+    //cout<<"Size of returned StripeOutput L and R is "<<ans.L.size()<<" "<<ans.R.size()<<"\n";
     return ans;
 
   } else {
@@ -220,7 +223,7 @@ StripeOutput MeasureHelper::stripes(vector<Edge> V, Interval x_ext) {
  */
 long double MeasureHelper::rectangle_dac(vector<Rectangle> r) {
   vector<Edge> vrx, hrx;
-  cerr << r.size() << endl;
+  //cerr << r.size() << endl;
 
   for (auto &rectangle : r) {
     for (auto edge : rectangle.getVerticalEdges()) {
@@ -248,6 +251,7 @@ long double MeasureHelper::rectangle_dac(vector<Rectangle> r) {
     return lhs.coord < rhs.coord;
   });
 
+  //Printing horizontal & vertical intervals after sorting
   for (auto &i : hrx) {
     cout << i.interval.bottom << " " << i.coord << " " << i.interval.top << " "
          << i.coord << " " << 0 << endl;
@@ -257,6 +261,7 @@ long double MeasureHelper::rectangle_dac(vector<Rectangle> r) {
     cout << i.coord << " " << i.interval.bottom << " " << i.coord << " "
          << i.interval.top << " " << 0 << endl;
   }
+
   if (vrx.empty())
     return 0.0;
   StripeOutput ans = stripes(vrx, Interval(-INF, INF));
@@ -265,7 +270,7 @@ long double MeasureHelper::rectangle_dac(vector<Rectangle> r) {
   for (auto &stripe : ans.S) {
     vector<long double> v;
     v.push_back(-INF);
-
+    //need for inorder here?
     inorder(stripe.tree, v);
     v.push_back(INF);
     stripe.setV(v);
@@ -336,18 +341,30 @@ vector<vector<int>> MeasureHelper::freeIntervalQuery(vector<long double> leaf,
  */
 vector<vector<int>> MeasureHelper::getContourEdges(vector<Stripe> &S,
                                                    vector<Edge> &hrx) {
-  vector<vector<int>> contour;
-  vector<vector<int>> ans;
+    vector<vector<int>> contour;
+    vector<vector<int>> ans;
 
-  for (auto &it : hrx) {
-    for (auto &jt : S) {
-      if (it.type == BOTTOM and jt.y_interval.top == it.coord) {
-        freeIntervalQuery(jt.v, it.interval, it.coord, 0, ans);
-      } else if (it.type == UP and jt.y_interval.bottom == it.coord) {
-        freeIntervalQuery(jt.v, it.interval, it.coord, 1, ans);
-      }
+    for (auto s: S) {
+        s.print();
     }
-  }
+
+    for (auto h: hrx)
+        h.print();
+    for (auto &it : hrx) {
+        for (auto &jt : S) {
+            if (it.type == BOTTOM and jt.y_interval.top == it.coord) {
+                freeIntervalQuery(jt.v, it.interval, it.coord, 0, ans);
+            } else if (it.type == UP and jt.y_interval.bottom == it.coord) {
+                freeIntervalQuery(jt.v, it.interval, it.coord, 1, ans);
+            }
+        }
+    }
+
+    for (auto x: ans)
+    {       for (auto y: x)
+            cout << y << " ";
+    cout << "\n";
+   }
   int perimeter = 0;
 
   map<int, vector<Interval>> mp;

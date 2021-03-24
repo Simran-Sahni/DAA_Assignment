@@ -3,6 +3,8 @@
 //
 
 #include "../include/Stripe.h"
+#include <bits/stdc++.h>
+using namespace  std;
 /**
  *
  * @param x_interval
@@ -32,3 +34,12 @@ void Stripe::setXMeasure(long double xMeasure) { x_measure = xMeasure; }
  * @param v
  */
 void Stripe::setV(vector<long double> &v) { Stripe::v = v; }
+
+void Stripe::print() {
+    cout<<"X_interval is: "<<x_interval.bottom<<" "<<x_interval.top<<"\n";
+    cout<<"Y_interval is: "<<y_interval.bottom<<" "<<y_interval.top<<"\n";
+    cout<<"X_measure is "<<x_measure<<"\n";
+    if(tree)
+    cout<<"Tree is: "<<tree->lru<<" "<<tree->leftson<<" "<<tree->rightson<<" "<<tree->x<<"\n";
+    cout<<"\n";
+}

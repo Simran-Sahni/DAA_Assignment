@@ -1,4 +1,4 @@
-#include <iostream>
+#include <bits/stdc++.h>
 #include <iomanip>
 #include "include/Point.h"
 #include "include/Interval.h"
@@ -12,9 +12,7 @@ using std :: swap;
 
 int main() {
 
-
   vector<Rectangle> v;
-
 
   int n;
   cin >> n;
