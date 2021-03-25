@@ -10,6 +10,7 @@ CMakeFiles/DAA_Assignment.dir/main.cpp.obj: ../include/Rectangle.h
 CMakeFiles/DAA_Assignment.dir/main.cpp.obj: ../include/Stripe.h
 CMakeFiles/DAA_Assignment.dir/main.cpp.obj: ../include/StripeOutput.h
 CMakeFiles/DAA_Assignment.dir/main.cpp.obj: ../main.cpp
+CMakeFiles/DAA_Assignment.dir/main.cpp.obj: ../src/Stopwatch.hpp
 
 CMakeFiles/DAA_Assignment.dir/src/Ctree.cpp.obj: ../include/Ctree.h
 CMakeFiles/DAA_Assignment.dir/src/Ctree.cpp.obj: ../src/Ctree.cpp

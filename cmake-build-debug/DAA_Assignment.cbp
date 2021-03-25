@@ -131,6 +131,9 @@
 		<Unit filename="D:/Dev/DAA_Assignment/src/Rectangle.cpp">
 			<Option target="DAA_Assignment"/>
 		</Unit>
+		<Unit filename="D:/Dev/DAA_Assignment/src/Stopwatch.hpp">
+			<Option target="DAA_Assignment"/>
+		</Unit>
 		<Unit filename="D:/Dev/DAA_Assignment/src/Stripe.cpp">
 			<Option target="DAA_Assignment"/>
 		</Unit>
