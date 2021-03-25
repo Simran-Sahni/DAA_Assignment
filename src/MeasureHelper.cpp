@@ -6,12 +6,13 @@
 #include "../include/IntervalHelper.h"
 #include <algorithm>
 #include <map>
-
+#include <fstream>
 using std ::map;
 using std ::max;
 using std ::min;
-
+using std:: ofstream;
 using namespace std;
+#include <bits/stdc++.h>
 
 /**
  *
@@ -118,7 +119,7 @@ void MeasureHelper::blacken(vector<Stripe> &S, vector<Edge> &J) {
  * @return StripeOutput object
  */
 StripeOutput MeasureHelper::stripes(vector<Edge> V, Interval x_ext) {
-    cout<<"Call to stripes with params "<<x_ext.bottom<<" "<<x_ext.top<<" size of V as "<<V.size()<<"\n";
+//    cout<<"Call to stripes with params "<<x_ext.bottom<<" "<<x_ext.top<<" size of V as "<<V.size()<<"\n";
   vector<Edge> L;
   vector<Edge> R;
   vector<int> coord_P;
@@ -156,7 +157,7 @@ StripeOutput MeasureHelper::stripes(vector<Edge> V, Interval x_ext) {
     ans.L = L;
     ans.R = R;
     ans.coord_p = coord_P;
-    ans.print();
+//    ans.print();
     //cout<<"Size of returned StripeOutput L and R is "<<ans.L.size()<<" "<<ans.R.size()<<"\n";
     return ans;
 
@@ -221,7 +222,8 @@ StripeOutput MeasureHelper::stripes(vector<Edge> V, Interval x_ext) {
  * @return double value: measure, that is the extent of union of these
  * rectangles
  */
-long double MeasureHelper::rectangle_dac(vector<Rectangle> r) {
+long double MeasureHelper::rectangle_dac(vector<Rectangle> r,ofstream &text,ofstream &image,ofstream &image_input) {
+
   vector<Edge> vrx, hrx;
   //cerr << r.size() << endl;
 
@@ -252,13 +254,24 @@ long double MeasureHelper::rectangle_dac(vector<Rectangle> r) {
   });
 
   //Printing horizontal & vertical intervals after sorting
+
+  cout << "Edges in the Rectangle are" << endl;
+  text << "Edges in the Rectangle are" << endl;
   for (auto &i : hrx) {
     cout << i.interval.bottom << " " << i.coord << " " << i.interval.top << " "
+         << i.coord << " " << 0 << endl;
+    text << i.interval.bottom << " " << i.coord << " " << i.interval.top << " "
+          << i.coord << " " << endl;
+    image_input << i.interval.bottom << " " << i.coord << " " << i.interval.top << " "
          << i.coord << " " << 0 << endl;
   }
 
   for (auto &i : vrx) {
     cout << i.coord << " " << i.interval.bottom << " " << i.coord << " "
+         << i.interval.top << " " << 0 << endl;
+    text << i.coord << " " << i.interval.bottom << " " << i.coord << " "
+          << i.interval.top << " " << endl;
+    image_input << i.coord << " " << i.interval.bottom << " " << i.coord << " "
          << i.interval.top << " " << 0 << endl;
   }
 
@@ -277,14 +290,49 @@ long double MeasureHelper::rectangle_dac(vector<Rectangle> r) {
     measure +=
         stripe.x_measure * (stripe.y_interval.top - stripe.y_interval.bottom);
   }
-  vector<vector<int>> contour = getContourEdges(ans.S, hrx);
+  text << endl;
+  int perimeter = 0;
+
+  vector<vector<int>> contour = getContourEdges(ans.S, hrx,perimeter);
+
+
+
+
+  text << "Measure is " << setprecision(15) << measure << endl;
+  image << "Measure is " << setprecision(15) << measure << endl;
+  text << "Perimeter is " << perimeter << endl;
+  image << "Perimeter is " << perimeter << endl;
+
+
+
+
+  for (auto &i : hrx) {
+    image << i.interval.bottom << " " << i.coord << " " << i.interval.top << " "
+                << i.coord << " " << 0 << endl;
+  }
+
+  for (auto &i : vrx) {
+    image << i.coord << " " << i.interval.bottom << " " << i.coord << " "
+                << i.interval.top << " " << 0 << endl;
+  }
+
   cout << "Contour Edges are " << endl;
+  text << endl;
+
+  text << "Contour Edges are " << endl;
   for (auto &i : contour) {
     for (auto &j : i) {
       cout << j << " ";
+      text << j << " ";
+      image << j << " ";
     }
     cout << 1 << endl;
+    image << 1 << endl;
+    text << endl;
   }
+
+  text << endl;
+
   return measure;
 }
 /**
@@ -328,7 +376,7 @@ vector<vector<int>> MeasureHelper::freeIntervalQuery(vector<long double> leaf,
         continue;
       ans.push_back(
           {ycoord, max((int)curr, hrx.bottom), min((int)nxt, hrx.top), flag});
-      cerr << endl;
+//      cerr << endl;
     }
   }
   return ans;
@@ -340,16 +388,17 @@ vector<vector<int>> MeasureHelper::freeIntervalQuery(vector<long double> leaf,
  * @return
  */
 vector<vector<int>> MeasureHelper::getContourEdges(vector<Stripe> &S,
-                                                   vector<Edge> &hrx) {
+                                                   vector<Edge> &hrx,int &perimeter) {
     vector<vector<int>> contour;
     vector<vector<int>> ans;
 
-    for (auto s: S) {
-        s.print();
-    }
 
-    for (auto h: hrx)
-        h.print();
+//    for (auto s: S) {
+//        s.print();
+//    }
+
+//    for (auto h: hrx)
+//        h.print();
     for (auto &it : hrx) {
         for (auto &jt : S) {
             if (it.type == BOTTOM and jt.y_interval.top == it.coord) {
@@ -360,12 +409,12 @@ vector<vector<int>> MeasureHelper::getContourEdges(vector<Stripe> &S,
         }
     }
 
-    for (auto x: ans)
-    {       for (auto y: x)
-            cout << y << " ";
-    cout << "\n";
-   }
-  int perimeter = 0;
+//    for (auto x: ans)
+//    {       for (auto y: x)
+//            cout << y << " ";
+//    cout << "\n";
+//   }
+
 
   map<int, vector<Interval>> mp;
 
@@ -409,5 +458,8 @@ vector<vector<int>> MeasureHelper::getContourEdges(vector<Stripe> &S,
   }
 
   cout << "Perimeter is " << perimeter << endl;
+
+
+
   return contour;
 }

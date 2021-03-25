@@ -1,0 +1,15 @@
+Edges in the Rectangle are
+10 5 20 5 
+10 15 20 15 
+10 5 10 15 
+20 5 20 15 
+
+Measure is 100
+Perimeter is 40
+
+Contour Edges are 
+10 5 20 5 
+10 15 20 15 
+10 5 10 15 
+20 5 20 15 
+

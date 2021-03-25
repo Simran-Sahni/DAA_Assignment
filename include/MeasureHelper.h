@@ -12,6 +12,7 @@
 #include "StripeOutput.h"
 #include <vector>
 const int INF = (1LL << 30) - 1;
+using std :: ofstream;
 
 class MeasureHelper {
 public:
@@ -22,10 +23,10 @@ public:
   static vector<Stripe> concat(vector<Stripe> &s1, vector<Stripe> &s2,
                                vector<int> &coord_p, Interval x_int);
   static StripeOutput stripes(vector<Edge> V, Interval x_ext);
-  static long double rectangle_dac(vector<Rectangle> r);
+  static long double rectangle_dac(vector<Rectangle> r,ofstream &text_filename,ofstream &plotting_filename,ofstream &image_input);
   static void inorder(Ctree*root,vector<long double> &v1);
   static vector<vector<int>> freeIntervalQuery(vector<long double> leaf, Interval hrx, int ycoord,bool flag,vector<vector<int>> &ans);
-  static vector<vector<int>> getContourEdges(vector<Stripe> &S,vector<Edge> &hrx);
+  static vector<vector<int>> getContourEdges(vector<Stripe> &S,vector<Edge> &hrx,int &perimeter);
 };
 
 #endif // DAA_ASSIGNMENT_MEASUREHELPER_H
